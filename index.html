@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Launch Home</title>
+        <meta name="description" content="" />
+         <script language="JavaScript" type="text/javascript">
+        function targetPageParams() {
+ 		  return {
+      		"entity": {
+         		"id": "100201",
+                "name":"How to feed'on a child",
+                "categoryId": "20181118",
+         		"value": 1520,
+         		"inventory": 1
+    			  },
+              "user":{
+                "categoryId": "women:activewear,wo1,wo2"
+             },
+              "profile":{
+                  "lastLoginV1" : "true"
+              },
+              "productPurchasedId":"100201"
+   			};
+		};
+    </script>
+        <!--Development library 2-->
+      
+       <script src="//assets.adobedtm.com/launch-EN0e9e268b5d3c4449bedf05a107ca18f1-development.min.js"></script>
+       <!-- <script src="//assets.adobedtm.com/launch-EN3b36418b0d8c46d98b0c91b7eff4ed9c.min.js" async></script>-->
+        <script>
+        var pageInfo = pageInfo || {};
+        pageInfo = {
+            page: {
+                pageName:"Launch Page",
+                siteSection:"",
+                siteSubsection:"",
+                server:""
+            },
+            customer: {
+                loginStatus:"1",
+                customerID:"a001"
+            }
+        };
+        </script>	
+
+    </head>
+    <body>
+        <div id="all">
+        <h3>Launch is an MVP</h3>
+        <!--<script type="text/javascript">
+            var imglist = new Array(
+                                            "../img/blackdress.jpg",
+                                            "../img/skijacket.jpg",
+                                            "../img/mujihero.jpg");
+   var selectnum = Math.floor(Math.random() * imglist.length);
+   var output = "<img src=" + imglist[selectnum] + ">";
+   document.write(output);
+</script>-->
+        <img id="mypic" src="../img/blackdress.jpg" width="400" height="500">
+        <input type="button" value="<<" onclick="go_back()">
+        <input type="button" value=">>" onclick="go_forward()">
+            <script>
+            var pics_src = new Array("../img/blackdress.jpg","../img/skijacket.jpg","../img/mujihero.jpg");
+            var num = 0;
+ 
+            function go_forward(){
+                if (num == 2) {
+                    num = 0;
+                }
+                else {
+                    num ++;
+                }
+                document.getElementById("mypic").src=pics_src[num];
+            }
+ 
+            function go_back(){
+                if (num == 0) {
+                    num = 2;
+                }
+                else {
+                    num --;
+                }
+                document.getElementById("mypic").src=pics_src[num];
+            }
+            </script>
+        <!--<img src="../img/blackdress.jpg" alt="blackdress" />-->
+        <br>
+        <div a-click_catalog>
+            <a href="detail.html">a-click_catalog</a>
+            </div>
+            <a href="#" class="btn-link" onclick="window.alert('Hello world! #'); return false;"> Hello #</a>
+            
+            <div id="btnCheck">
+                <input type="submit" value="お問い合わせ" >
+            </div>
+            
+        <div class="target-home-mbox">recommendations</div>
+
+        
+        <div class="orderConfirmMbox">orderConfirm</div>
+   </div>
+        <script>
+            console.log ("before pageBottom");
+        </script>
+        <script type="text/javascript">_satellite.pageBottom();</script>
+        <script>
+            console.log ("after pageBottom");
+        </script>
+   </body>
+</html>
