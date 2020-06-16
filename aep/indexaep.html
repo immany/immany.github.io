@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AEP Launch Home</title>
+        <meta name="description" content="" />
+         <script language="JavaScript" type="text/javascript">
+        function targetPageParams() {
+ 		  return {
+      		"entity": {
+         		"id": "100201",
+                "name":"How to feed on a child",
+                "categoryId": "20181118",
+         		"value": 1520,
+         		"inventory": 1
+    			  },
+              "user":{
+                "categoryId": "women:activewear"
+             },
+              "productPurchasedId":"100201"
+   			}
+		}
+    </script>
+        <!--No Platform-->
+      
+     <!--<script src="//assets.adobedtm.com/6a203c8a0ff8/e3264367f8e0/launch-d67076b1df22-development.min.js" async></script>-->
+        <script src="//assets.adobedtm.com/launch-EN4aa8e84762b8475ea1279daaa40ea203-development.min.js" async></script>
+<script>
+        var dataLayer = dataLayer || {};
+        dataLayer = {
+            "web": {
+                "webPageDetails": {
+                    "name": "AEP Web SDK Home",
+                    "server": "Japan",
+                    "siteSection": "home",
+                    "pageViews": {
+                        "value": 1
+                    }
+                }
+        
+            },
+            "analytics":{
+                "customerDimensions": {
+                    "evars":{
+                        "evar1": "Internal campaign",
+                        "evar2": "AEP Web SDK"
+                    }
+                }
+            }
+        };
+</script>	
+
+    </head>
+    <body>
+        <h3>AEP SDK without Platform</h3>
+        
+        <img id="mypic" src="../img/blackdress.jpg" width="400" height="500">
+        <input type="button" value="<<" onclick="go_back()">
+        <input type="button" value=">>" onclick="go_forward()">
+            <script>
+            var pics_src = new Array("../img/blackdress.jpg","../img/skijacket.jpg","../img/mujihero.jpg");
+            var num = 0;
+ 
+            function go_forward(){
+                if (num == 2) {
+                    num = 0;
+                }
+                else {
+                    num ++;
+                }
+                document.getElementById("mypic").src=pics_src[num];
+            }
+ 
+            function go_back(){
+                if (num == 0) {
+                    num = 2;
+                }
+                else {
+                    num --;
+                }
+                document.getElementById("mypic").src=pics_src[num];
+            }
+            </script>
+        <!--<img src="../img/blackdress.jpg" alt="blackdress" />-->
+        <br>
+
+        <div class="target-home-mbox">recommendations</div>
+   </body>
+</html>
