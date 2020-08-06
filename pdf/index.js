@@ -9,11 +9,6 @@ then your use, modification, or distribution of it requires the prior
 written permission of Adobe.
 */
 
-/* Pass the embed mode option here */
-const viewerConfig = {
-    embedMode: "IN_LINE"
-};
-
 /* Wait for Adobe Document Services PDF Embed API to be ready */
 document.addEventListener("adobe_dc_view_sdk.ready", function () {
     /* Initialize the AdobeDC View object */
@@ -40,7 +35,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
             /* file name */
             fileName: "Bodea Brochure.pdf"
         }
-    }, viewerConfig);
+    }, {};
 
     /* Register the callback to receive the events */
     adobeDCView.registerCallback(
