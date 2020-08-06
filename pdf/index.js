@@ -19,7 +19,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
     /* Initialize the AdobeDC View object */
     var adobeDCView = new AdobeDC.View({
         /* Pass your registered client id */
-        clientId: "09f175c588b34a2690c6207b75c428ce",
+        clientId: "a0829e796e1442219081caa42dde547d",
         /* Pass the div id in which PDF should be rendered */
         divId: "adobe-dc-view",
         reportSuiteId: "mcc024wemedia01"
@@ -41,4 +41,19 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
             fileName: "Bodea Brochure.pdf"
         }
     }, viewerConfig);
+
+    /* Register the callback to receive the events */
+    adobeDCView.registerCallback(
+        /* Type of call back */
+        AdobeDC.View.Enum.CallbackType.EVENT_LISTENER,
+        /* call back function */
+        function (event) {
+            console.log(event);
+        },
+        /* options to control the callback execution */
+        {
+            /* Enable PDF analytics events on user interaction. */
+            enablePDFAnalytics: true,
+        }
+    );
 });
