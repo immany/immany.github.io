@@ -35,22 +35,8 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
             /* file name */
             fileName: "Bodea Brochure.pdf"
         }
-    }, {};
+    }, {});
 
-    /* Register the callback to receive the events */
-    adobeDCView.registerCallback(
-        /* Type of call back */
-        AdobeDC.View.Enum.CallbackType.EVENT_LISTENER,
-        /* call back function */
-        function (event) {
-            console.log(event);
-        },
-        /* options to control the callback execution */
-        {
-            /* Enable PDF analytics events on user interaction. */
-            enablePDFAnalytics: true,
-        }
-    );
     /* Register the callback to receive the events */
     adobeDCView.registerCallback(
         /* Type of call back */
