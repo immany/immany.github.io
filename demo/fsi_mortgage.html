@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class="no-js">
+    <head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="WVG" />
+
+<title>Mortgage Loan Simulation</title>
+
+<link rel="stylesheet" href="./css/bootstrap.min.css" />
+<link rel="stylesheet" href="./css/font-awesome.min.css" />
+<link rel="stylesheet" href="./css/flexslider.css" />
+<link rel="stylesheet" href="./js/tfingi-megamenu/tfingi-megamenu-frontend.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+<link rel="stylesheet" href="./css/xray.css"/>
+<link rel="stylesheet" href="./css/color-schemes/alizarin.css" id="color_scheme" />
+<script src="./js/scjl.js"></script>
+<script src="./js/clipboard.js"></script>
+
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=7; IE=8" />-->
+<link rel="icon" id="faviconlink" href="favicon.ico" type="image/x-icon" />
+
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Shadows+Into+Light" rel="stylesheet">
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.92.0.min.js"></script>
+    
+<!-- Start of Adobe Experience Platform Launch Tag -->   
+    <script src="./js/launch.js"></script>
+<!-- End of Adobe Experience Platform Launch Tag --> 
+
+<script src="https://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"></script>  
+    
+<!---The Data Layer--->
+    <script type="text/javascript">
+        var digitalData = {
+            page: {
+                pageName: window.document.title,
+                custompagenumber: 1,
+                home: false,
+                productdtl: false,
+                custompage: false,
+                testdrivepage: true,
+                loadxray: true
+            },
+            category: {
+                primaryCategory:"Website",
+                pageType:"Test Drive",
+                siteSection:"General"
+            },
+            customer: {
+                customerId:"",
+                accessCustomerName:"",
+                uuid:"",
+                mcid:"",
+                logged_in:"",
+                image_url:"",
+                firstName:"",
+                lastName:"",
+                gender:"",
+                birthDay:"",
+                birthMonth:"",
+                birthYear:"",
+                postalCode:"",
+                country:"",
+                countryCode:"",
+                city:"",
+                street:"",
+                email:"",
+                mobileNr:"",
+                shoeSize:"",
+                preferredColor:"",
+                shirtSize:"",
+                profilePicture:"",
+                children:"",
+                maritalStatus:"",
+                password:"",
+                propBuy:"",
+                brandEng:"",
+                tpd:"",
+                adblock:""
+            },  
+            product: {
+                imageUrl: "",
+                price: "",
+                name: "",
+                category: "",
+                color: "",
+                description: ""
+            }
+        };
+    </script>
+
+    </head>
+    <body onLoad="">
+        <script src="./js/tags_body.js"></script>
+    
+        <div class="wrapper">
+        
+            <!-- Header -->
+<div class="header">
+    
+
+    <!-- Logo & Search bar -->
+    <div id="logobar" class="bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 col-md-6">
+                    
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="index.html" title="&larr; Back home">
+                            <img id="brandlogo" alt="" />
+                        </a>
+                    </div>
+                    <!-- End class="logo"-->
+                
+                </div>
+                <div class="col-sm-5 col-sm-offset-1 col-md-3">
+                    
+                    
+                    
+                </div>
+                    
+                <!-- Mini cart -->
+                <div id="carticon" class="mini-cart">
+                    <a href="cart.html" title="Go to cart &rarr;">
+                        <span id="carticonqty" style="display:none;"></span>
+                    </a>                                    
+                </div>
+                <!-- End class="mini-cart" -->
+
+            </div>
+        </div>
+    </div>
+    <!-- End class="bottom" -->
+    
+</div>
+<!-- End class="header" -->
+            <!-- Navigation -->
+<nav class="navigation">
+    <div class="container">
+     
+        <div class="row">
+            <div class="col-md-12">
+                
+<a href="#" class="main-menu-button">Navigation</a>
+<!-- Begin Menu Container -->
+<div class="megamenu_container">
+    <div class="menu-main-navigation-container">
+        <ul id="menu-main-navigation" class="main-menu">
+            <li id="page0"></li>
+            <li id="page1"></li>
+            <li id="page2"></li>
+            <li id="page3"></li>
+            <li id="page4"></li>
+            <li id="page5"></li>
+            <li id="page6"></li>
+            <li id="page7"></li>
+            <li id="page8"></li>
+            <li class="menu-item-has-children">
+                <a href="#">...</a>
+                <ul class="sub-menu">
+                    <li class="" id="pageDMP"></li>
+                    <li class="" id="pageCallCenter"></li>
+                    <li class="" id="pagePersonalShopper"></li>
+                    <li class="" id="pagePOS"></li>
+                    <li class="" id="pageInStoreDisplay"></li>
+                    <li class="" id="page9"></li>
+                    <li class="" id="page10"></li>
+                </ul>
+            </li>
+        </ul>
+    </div>    
+</div>    
+
+
+
+            </div>
+
+        </div>        
+    
+    </div>
+</nav>
+<!-- End class="navigation" -->
+
+            
+            <!-- Content section -->    
+            <section class="main" style="background-image: url(./images/mortgage.jpeg);background-size: cover; -ms-background-size: cover; -o-background-size: cover; -moz-background-size: cover; -webkit-background-size: cover;">
+            
+                
+
+<!-- Login / Register -->
+<section class="login_register">
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <!-- Login -->
+<div class="login">
+    <div class="box">
+            <div class="hgroup title">
+                <h3>Your plans</h3>
+                <h5></h5>
+            </div>
+
+            <div class="box-content">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label" for="">Do you have a mortgage with us already?</label>
+                            <div class="controls">
+                                <select id="mortgageAlready" name="mortgageAlready" style="width:200px;">
+                                    <option value="Yes">Yes</option>
+                                    <option value="No" selected>No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label" for="">Is the mortgage for...?</label>
+                            <div class="controls">
+                                <select id="mortgageGoal" name="mortgageGoal" style="width:200px;">
+                                    <option value="ownhome" selected>Your Home</option>
+                                    <option value="buytolet">A buy to let property</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label" for="">Are you...?</label>
+                            <div class="controls">
+                                <select id="mortgageContext" name="mortgageContext" style="width:200px;">
+                                    <option value="firsttimebuyer" selected>First Time Buyer</option>
+                                    <option value="movinghome">Moving Home</option>
+                                    <option value="remortgage">Planning to remortgage</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label" for="">Approximate price of property?</label>
+                            <div class="controls">
+                                <input class="form-control" id="mortgagePropertyPrice" type="text" name="mortgagePropertyPrice" value="300000"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label" for="">Deposit</label>
+                            <div class="controls">
+                                <input class="form-control" id="mortgageDeposit" type="text" name="mortgageDeposit" value="50000"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label" for="">Mortgage Term</label>
+                            <div class="controls">
+                                <select id="mortgageTerm" name="mortgageTerm" style="width:200px;">
+                                    <option value="5">5 years</option>
+                                    <option value="6">6 years</option>
+                                    <option value="7">7 years</option>
+                                    <option value="8">8 years</option>
+                                    <option value="9">9 years</option>
+                                    <option value="10" selected>10 years</option>
+                                    <option value="15">15 years</option>
+                                    <option value="20">20 years</option>
+                                    <option value="25">25 years</option>
+                                    <option value="30">30 years</option>
+                                    <option value="35">35 years</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+
+            <div class="buttons">
+                <button type="submit" onClick="goToStep2()" class="btn btn-primary btn-sm btn-block-xs" name="login" value="Login">
+                    Continue
+                </button>
+                <label id="gotostep2status" class="control-label" for=""></label>
+            </div>    
+    
+        </div>
+    </div>
+    </div>
+    <div class="col-sm-6" id="personalInputForm" style="display:none;">
+      <!-- Login -->
+      <div class="login">
+        <div class="box">
+          <div class="hgroup title">
+            <h3>Something about yourself</h3>
+          </div>
+          <div class="box-content">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label" for="">How many people are applying?</label>
+                            <div class="controls">
+                                <select id="mortgageApplicants" name="mortgageApplicants" style="width:200px;">
+                                    <option value="1">1</option>
+                                    <option value="2" selected>2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label" for="">Your joint net annual income?</label>
+                            <div class="controls">
+                                <input class="form-control" id="mortgageAnnualIncome" type="text" name="mortgageAnnualIncome" value="50000"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label" for="">Any other loans? <br/> Enter the monthly loan repayments.</label>
+                            <div class="controls">
+                                <input class="form-control" id="mortgageOtherLoanRepayments" type="text" name="mortgageOtherLoanRepayments" value="300"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label" for="">Any Credit Cards? <br/> Enter your latest Credit Card balance.</label>
+                            <div class="controls">
+                                <input class="form-control" id="mortgageCCBalance" type="text" name="mortgageCCBalance" value="0"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label" for="">Dependents under 18</label>
+                            <div class="controls">
+                                <select id="mortgageDependentsU18" name="mortgageDependentsU18" style="width:200px;">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2" selected>2</option>
+                                    <option value="3">3</option>
+                                    <option value="3+">3+</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label" for="">Dependents over 18</label>
+                            <div class="controls">
+                                <select id="mortgageDependentsO18" name="mortgageDependentsO18" style="width:200px;">
+                                    <option value="0" selected>0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="3+">3+</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+              
+
+              <div class="buttons">
+                <button class="btn btn-primary btn-sm btn-block-xs" onClick="getQuote();">Get your quote</button>
+                <label id="quotestatus" class="control-label" for=""></label>
+              </div>
+            
+        </div>   
+    </div>
+</div>
+<!-- End Register modal window --> 
+    
+</section>                
+<!-- End Login / Register -->
+            
+            </section>
+            <!-- End class="main" -->
+            
+            
+            
+<!-- Footer -->
+<div id="footerbar" class="footer">
+    <div class="container">
+        <div class="row">   
+                        
+            <div class="col-sm-2">
+                
+                <!-- My account -->
+                <div class="account">
+                    <h6 id="accountsection">My account</h6>
+
+                    <ul id="loginsection" class="links">                                
+                        <li>
+                            <a href="login-register.html" title="Login / Register">Login / Register</a>                                 
+                        </li>
+                    </ul>
+                </div>
+                <!-- End class="account"-->
+                
+            </div>
+
+            <div class="col-sm-2">
+                
+                
+            </div>
+
+            <div class="col-sm-4">
+                
+            </div>
+
+            <div class="col-sm-4">              
+
+                <!-- Newsletter subscription -->
+                <div class="newsletter">
+                    <h6 id="newslettersection">Newsletter subscription</h6>
+
+                    <form onsubmit="return false;" enctype="multipart/form-data" action="#" method="post">                       
+                        
+                        <div class="input-group">
+                            <input type="text" name="email" class="form-control" />
+                            <span class="input-group-addon btn" type="submit" id="newsletter_submit" data-toggle="modal" data-target="#newsletter_subscribe">Go!</span>
+                        </div>                       
+
+                    </form>                             
+
+                    <p>Sign up to receive our latest news and updates direct to your inbox</p>
+                </div>
+                <!-- End class="newsletter" -->
+                
+
+                <hr />
+                
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End id="footer" -->
+
+            <!-- Credits bar -->
+<div class="credits">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <p id="footerCredits">
+                </p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- End class="credits" -->
+            <!-- Newsletter modal window -->
+<div id="newsletter_subscribe" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+                <div class="hgroup title">
+                    <h3 id="modal-label">You are now subscribed to our newsletter</h3>
+                    <h5>All the latest deals and offers will be making their way to your inbox shortly!</h5>
+                </div>
+            </div>
+        
+            <div class="modal-footer">  
+                <button data-dismiss="modal" aria-hidden="true" class="btn btn-sm btn-block-xs">
+                    Close &nbsp; <i class="fa fa-check"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- End id="newsletter_subscribe" -->
+        
+        </div>
+        
+        <!-- BEGIN JAVASCRIPTS -->
+        <script>
+
+            function validateFormOnSubmit() {
+                            
+                localStorage.setItem('mortgageAlready', document.getElementById("mortgageAlready").value);
+                localStorage.setItem('mortgageGoal', document.getElementById("mortgageGoal").value);
+                localStorage.setItem('mortgageContext', document.getElementById("mortgageContext").value);
+                localStorage.setItem('mortgagePropertyPrice', document.getElementById("mortgagePropertyPrice").value);
+                localStorage.setItem('mortgageDeposit', document.getElementById("mortgageDeposit").value);
+                localStorage.setItem('mortgageTerm', document.getElementById("mortgageTerm").value);
+
+                localStorage.setItem('mortgageApplicants', document.getElementById("mortgageApplicants").value);
+                localStorage.setItem('mortgageAnnualIncome', document.getElementById("mortgageAnnualIncome").value);
+                localStorage.setItem('mortgageOtherLoanRepayments', document.getElementById("mortgageOtherLoanRepayments").value);
+                localStorage.setItem('mortgageCCBalance', document.getElementById("mortgageCCBalance").value);
+                localStorage.setItem('mortgageDependentsU18', document.getElementById("mortgageDependentsU18").value);
+                localStorage.setItem('mortgageDependentsO18', document.getElementById("mortgageDependentsO18").value);
+            }
+
+            function goToStep2() {
+                localStorage.setItem('mortgageSalesPrediction', '0.5');
+                calculateSalesPredictionStep1();
+                validateFormOnSubmit();
+                $('#personalInputForm').show();
+                _satellite.track('mortgagestep1');
+            }
+
+            function calculateSalesPredictionStep1() {
+                mortgageSalesPrediction = Number(localStorage.getItem("mortgageSalesPrediction"));
+                mortgagePropertyPrice = Number(document.getElementById("mortgagePropertyPrice").value);
+                mortgageDeposit = Number(document.getElementById("mortgageDeposit").value);
+                mortgageContext = document.getElementById("mortgageContext").value;
+
+                if(mortgageDeposit/mortgagePropertyPrice > 0.15){
+                    mortgageSalesPrediction += 0.13;
+                }else{
+                    mortgageSalesPrediction -= 0.09;
+                }
+
+                if(mortgageContext === "firsttimebuyer"){
+                    mortgageSalesPrediction -= 0.18;
+                }else{
+                    mortgageSalesPrediction += 0.05;
+                }
+
+                localStorage.setItem('mortgageSalesPrediction', mortgageSalesPrediction);
+            }
+
+            function calculateSalesPredictionStep2() {
+                mortgageSalesPrediction = Number(localStorage.getItem("mortgageSalesPrediction"));
+                mortgageApplicants = Number(document.getElementById("mortgageApplicants").value);
+                mortgageAnnualIncome = Number(document.getElementById("mortgageAnnualIncome").value);
+
+                if(mortgageApplicants > 1){
+                    mortgageSalesPrediction += 0.17;
+                }else{
+                    mortgageSalesPrediction -= 0.19;
+                }
+
+                if(mortgageAnnualIncome > 45000){
+                    mortgageSalesPrediction += 0.07;
+                }else{
+                    mortgageSalesPrediction -= 0.12;
+                }
+
+                localStorage.setItem('mortgageSalesPrediction', mortgageSalesPrediction);
+            }
+
+        </script>
+
+<script src="./js/loadFromLocalStorage.js"></script>
+<script src="./js/jquery-1.11.3.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+
+<script src="./js/jquery-migrate-1.2.1.min.js"></script>
+<script src="./js/isotope.pkgd.min.js"></script>
+<script src="./js/imagesloaded.pkgd.min.js"></script>
+<script src="./js/jquery.flexslider.js"></script>
+<script src="./js/jquery-ui-1.10.2.custom.js"></script>
+<script src="./js/jquery.easing.min.js"></script>
+<script src="./js/jquery.elevatezoom.js"></script>
+<script src="./js/jquery.sharrre-1.3.5.js"></script>
+<script src="./js/jquery.cookie.js"></script>
+<script src="./js/la_boutique.js"></script>
+<script src="./js/tfingi-megamenu/tfingi-megamenu-frontend.js"></script>
+<script>
+    function getQuote() {
+        calculateSalesPredictionStep2();
+        validateFormOnSubmit();
+        _satellite.track('mortgagestep2');
+
+        $("#getquotestatus").text("SUCCESS! Your request has been submitted. You will be redirected to the homepage in 3 seconds.");
+        setTimeout(function(){document.location.href = "./index.html";}, 3000);
+    }
+</script>
+
+
+<!-- END JAVASCRIPTS -->
+    
+    </body>
+</html>
