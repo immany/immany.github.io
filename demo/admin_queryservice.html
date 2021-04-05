@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class="no-js">
+    <head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="WVG" />
+
+<title id="titlename">Admin - Query Service</title>
+
+<link rel="stylesheet" href="./css/bootstrap.min.css" />
+<link rel="stylesheet" href="./css/font-awesome.min.css" />
+<link rel="stylesheet" href="./css/flexslider.css" />
+<link rel="stylesheet" href="./css/admin.css" />
+<link rel="stylesheet" href="./js/tfingi-megamenu/tfingi-megamenu-frontend.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="./css/xray.css"/>
+<link rel="stylesheet" href="./css/color-schemes/alizarin.css" id="color_scheme" />
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=7; IE=8" />-->
+<link rel="icon" id="faviconlink" href="favicon.ico" type="image/x-icon" />
+<script src="https://npmcdn.com/parse/dist/parse.min.js"></script> 
+<script src="./js/b4a.js"></script> 
+    <meta name="description" content="Execute SQL queries in Adobe Experience Platform then download results in various formats.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/query.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/a11y-dark.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/tabulator-tables@4.5.3/dist/css/tabulator.min.css">
+<style>
+ html, body {
+  height: 100%;
+  margin: 0;
+  font-family: AdobeClean;
+}
+.wrapper {
+  min-height: 100%;
+
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -20px;
+}
+.footer,
+.push {
+  height: 10px;
+}
+
+</style>
+
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Shadows+Into+Light" rel="stylesheet">
+    
+<!-- Start of Adobe Experience Platform Launch Tag -->   
+    <!--<script src="./js/launch.js"></script>--> 
+    <!--<script src="./js/adobeprivacy.js"></script>--> 
+    <script src="//assets.adobedtm.com/b754ed1bed61/cc9d614268b2/launch-4029d4b1783d-development.min.js" async></script>
+<!-- End of Adobe Experience Platform Launch Tag --> 
+   
+<script src="https://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="./js/adminpages.js"></script> 
+    
+<!---The Data Layer--->
+    <script type="text/javascript">
+        var digitalData = {
+            page: {
+                pageName: window.document.title,
+                home: false,
+                productdtl: false,
+                custompage: false,
+                adminpage: false,
+                loadxray: false
+            },
+            category: {
+                primaryCategory:"Website",
+                pageType:"Home",
+                siteSection:"General"
+            },
+            customer: {
+                customerId:"",
+                accessCustomerName:"",
+                uuid:"",
+                mcid:"",
+                logged_in:"",
+                image_url:"",
+                firstName:"",
+                lastName:"",
+                gender:"",
+                birthDay:"",
+                birthMonth:"",
+                birthYear:"",
+                postalCode:"",
+                country:"",
+                countryCode:"",
+                city:"",
+                street:"",
+                email:"",
+                mobileNr:"",
+                shoeSize:"",
+                preferredColor:"",
+                shirtSize:"",
+                profilePicture:"",
+                children:"",
+                maritalStatus:"",
+                password:"",
+                propBuy:"",
+                brandEng:"",
+                tpd:"",
+                adblock:""
+            },  
+            product: {
+                imageUrl: "",
+                price: "",
+                name: "",
+                category: "",
+                color: "",
+                description: ""
+            }
+        };
+    </script>
+
+    </head>
+    <body onLoad="" style="background-color:#f0f0f0;">
+        <div class="wrapper" style="">
+          <!-- Header -->
+            <div class="header" style="">
+                <!-- Logo & Search bar -->
+                <div id="logobar" class="logobar">
+
+                    <a href="./admin.html" title="&larr; Back home">
+                        <img id="" alt="" src="./images/experience_platform_offtile_RGB.png">
+                        &nbsp;&nbsp;Adobe Experience Platform
+                    </a>
+                    <div id="logobarright">
+                        Experience Platform EMEA - SYTYCD
+                    </div>
+                </div>
+                <!-- End class="bottom" -->
+            </div>
+            <!-- End class="header" -->
+            <!-- Navigation -->
+            <nav class="navigation" style="background-color:#f0f0f0;display:none;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="#" class="main-menu-button">Navigation</a>
+                                <!-- Begin Menu Container -->
+                                <div class="megamenu_container" style="background-color: #f0f0f0; color:white;">
+                                    <div class="menu-main-navigation-container">
+                                        <ul id="menu-main-navigation" class="main-menu">
+                                            <li id="page0"></li>
+                                            <li id="page1"></li>
+                                            <li id="page2"></li>
+                                            <li id="page3"></li>
+                                            <li id="page4"></li>
+                                            <li id="page5"></li>
+                                            <li id="page6"></li>
+                                            <li id="page7"></li>
+                                            <li id="page8"></li>
+                                            <li class="menu-item-has-children">
+                                                <a href="#">...</a>
+                                                <ul class="sub-menu">
+                                                    <li class="" id="pageDMP"></li>
+                                                    <li class="" id="pageCallCenter"></li>
+                                                    <li class="" id="pagePersonalShopper"></li>
+                                                    <li class="" id="pagePOS"></li>
+                                                    <li class="" id="pageInStoreDisplay"></li>
+                                                    <li class="" id="page9"></li>
+                                                    <li class="" id="page10"></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>    
+                                </div> 
+                        </div>
+                    </div>
+                </div>    
+            </nav>
+            <!-- End class="navigation" -->
+
+            <div id="adminmenu" class="w3-sidebar w3-bar-block content adminleftmenutext">
+            </div>
+            
+            <div style="margin-left:12%;overflow:hidden;background-color: #f0f0f0;">
+                <div class="w3-container" >
+                    <h5 class="text-center" style="margin-top: 50px;color: #0e6de0;">Execute standard SQL queries in Adobe Experience Platform</h5>
+    <p class="text-center" id="intro" style="margin-bottom: 50px;">Explore, analyse and download query results in various formats</p>
+    <div id="credentials" style="margin-bottom: 100px;">
+        <div class="container">
+            <form>
+                <div class="form-row">
+                    <div class="col-md-12">
+                        <h4 class="text-left" style="margin-top: 10px;">Postgres credentials<a href="https://www.adobe.io/apis/experienceplatform/home/query-service/connect.html"><i class="fa fa-question-circle-o fa-lg"></i></a></h4>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <div class="form-group"><label>Host<input class="form-control" type="text" id="host" required="" name="host" placeholder="<instance>.platform-query.adobe.io" style="min-width: 400px;"></label></div>
+                        <div class="form-group"><label>Port<input class="form-control" type="text" id="port" required="" name="port" placeholder="80" style="min-width: 400px;"></label></div>
+                        <div class="form-group"><label>Database<input class="form-control" type="text" id="database" required="" name="database" placeholder="<sandbox>:all" style="min-width: 400px;"></label></div>
+                        <div class="form-group"><label>Username<input class="form-control" type="text" id="username" required="" name="username" placeholder="123456@AdobeOrg" style="min-width: 400px;"></label></div>
+                        <div class="form-group"><label>Password<input class="form-control" type="password" id="password" name="password" placeholder="*********" required="" style="min-width: 400px;"></label></div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>From a PSQL command</h6>
+                        <p>You can copy and paste the PSQL command from your Adobe Experience Platform to set up Postgres credentials.</p>
+                        <form>
+                            <div class="form-group"><textarea class="form-control" id="psql" style="min-height: 224px;"></textarea></div>
+                        </form>
+                        <div><p>Local queries</p>
+<label class="switch" >
+  <input type="checkbox" id="offline">
+  <span class="slider round"></span>
+</label></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col text-right"><button class="btn btn-primary border rounded" id="form-submit" type="button">Submit</button></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="queries" style="margin-top: 50px;margin-bottom: 50px;height: auto;">
+        <div class="container">
+            <form>
+                <div class="form-row">
+                    <div class="col-md-12">
+                        <div class="text-right text-dark"><button class="btn btn-outline-dark" id="config" type="button">&nbsp;Credentials</button></div>
+                        <div>
+                            <ul class="nav nav-tabs" style="background-color:#f0f0f0;">
+                                <li class="nav-item"><a class="nav-link active" role="tab" data-toggle="tab" href="#tab-analysis" style="background-color:#f0f0f0;">Data Analysis</a></li>
+                                <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-logs" style="background-color:#f0f0f0;">Execution logs</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" role="tabpanel" id="tab-analysis">
+                                    <h4 class="text-center" style="margin: 25px 0px 50px 0px;">Data Analysis</h4>
+                                    <div class="form-group" id="grp-query-example" style="margin-bottom: 30px;"><label style="color: rgb(110, 110, 110) !important;">Examples of common queries</label><select class="form-control" id="query-example" name="query-example" value="html" style="color: rgb(142, 142, 142);"><option value="-" selected="">Select a query...</option><optgroup label="Basic queries"><option value="0">How many product views do we have on a daily basis?</option><option value="1">What are the top 5 products viewed?</option><option value="2">Product Interaction funnel, from viewing to buying</option><option value="3">Identify visitors with risk to Churn (visit page =&gt; Cancel Service)</option></optgroup><optgroup label="Adobe Defined Functions"><option value="4">What do people do on the site before reaching the "Cancel Service" page as the 3rd page in a session?</option><option value="5">How much time do we have before a visitor calls the call center after visiting the "Cancel Service" Page?</option><option value="6">What is the outcome of that contact?</option><option value="7">What is the loyalty profile of these customers?</option><option value="8">From what region do the visit us?</option></optgroup></select></div>
+                                    <div
+                                        class="form-group"><label id="request">SQL query</label><span id="copy-query" style="padding-left: 10px;" data-clipboard-target="#query"><i class="fa fa-copy" style="cursor: pointer;"></i></span><span id="copy-status" style="padding-left: 10px;color: #1eb53a;font-size: 14px;"></span><pre>
+<code class="language-sql" contenteditable="true" id="query" style="display:block;white-space:pre-wrap"></code>
+</pre>
+                                        <div
+                                            class="text-right"><button class="btn btn-primary" id="executeQuery" type="button">Execute</button></div>
+                            </div>
+                            <div class="form-group" id="queries-res"><label id="response">Query results</label>
+                                <div id="table-res-container">
+                                    <div id="filters"></div><div class="table-controls" style="text-align:center;font-size:14px;">
+    <span>
+      <label>Field: </label>
+      <select id="filter-field">
+          <option></option>
+          <option value="name">Name</option>
+          <option value="progress">Progress</option>
+          <option value="gender">Gender</option>
+      </select>
+    </span>
+
+    <span>
+      <label>Type: </label>
+      <select id="filter-type">
+          <option value="=">=</option>
+          <option value="<">&lt;</option>
+          <option value="<=">&lt;=</option>
+          <option value=">">&gt;</option>
+          <option value=">=">&gt;=</option>
+          <option value="!=">!=</option>
+          <option value="like">like</option>
+      </select>
+    </span>
+
+      <span><label>Value: </label> <input id="filter-value" type="text" placeholder="value to filter"></span>
+
+      <button id="filter-clear">Clear Filter</button>
+</div>
+
+<div id="count-container" style="float:right;font-size:13px;">
+    <label><b>Count:</b> <span id="count"></span></label>
+</div>
+                                    <div class="table-responsive highchart" id="table-res" style="margin-top: 10px;">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Column 1</th>
+                                                    <th>Column 2</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Example col 1</td>
+                                                    <td>Example col 2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Example col 2</td>
+                                                    <td>Example col 2</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="btn-group" role="group" id="table-download" style="margin-top: 10px;margin-bottom: 20px;"><button class="btn btn-dark btn-sm" id="download-csv" type="button" style="margin-right: 30px;height: 31px;">Download CSV</button><button class="btn btn-dark btn-sm" id="download-json" type="button" style="margin-right: 30px;height: 31px;">Download JSON</button>
+                                        <button
+                                            class="btn btn-dark btn-sm" id="download-xlsx" type="button" style="margin-right: 30px;height: 31px;">Download XLSX</button><button class="btn btn-dark btn-sm" id="download-pdf" style="height: 31px;margin-right: 30px;">Download PDF</button></div>
+                                    <div id="graph-row" style="margin-top: 15px;margin-bottom: 15px;">
+                                        <div class="d-xl-flex justify-content-xl-end" id="build-graph"><button class="btn btn-primary" type="button">Data visualization</button></div>
+                                    </div><canvas id="graph-res" width="800" height="300"></canvas></div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="tab-logs">
+                            <h4 class="text-center" style="margin: 25px 0px 50px 0px;">Execution logs</h4>
+                            <div class="form-group"><pre>
+    <code class="language-plaintext" id="logs" style="display:block;white-space:pre-wrap;background: #2b2b2b;color:#FFF;overflow: scroll;max-height: 450px;"></code>
+</pre></div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </form>
+    </div>
+    </div></div>
+        </div>
+	    <!-- Credits bar -->
+        <div class="push"></div>
+        <div class="credits" style="display:none;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <p id="footerCredits"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End class="credits" -->
+
+        <!-- JAVASCRIPT -->
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/tabulator-tables@4.5.3/dist/js/tabulator.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <script src="https://oss.sheetjs.com/sheetjs/xlsx.full.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.2/jspdf.plugin.autotable.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+        <script src="https://unpkg.com/sql-formatter@latest/dist/sql-formatter.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+        <script src="./js/query.min.js"></script>
+        <style>
+
+        .selected{
+            border: 1px solid #888;
+            padding-left: 0px;
+            padding-right: 110px;
+            background-color: #white;
+            background-image:none;
+        }
+        </style>
+
+        <!-- JAVASCRIPT -->
+        <script src="./js/loadFromLocalStorage.js"></script>
+        <script src="./js/jquery-1.11.3.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+
+    
+    </body>
+</html>

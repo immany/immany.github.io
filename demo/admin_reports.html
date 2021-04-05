@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class="no-js">
+    <head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="WVG" />
+
+<title id="titlename">Admin - Reports</title>
+
+<link rel="stylesheet" href="./css/bootstrap.min.css" />
+<link rel="stylesheet" href="./css/font-awesome.min.css" />
+<link rel="stylesheet" href="./css/flexslider.css" />
+<link rel="stylesheet" href="./css/admin.css" />
+<link rel="stylesheet" href="./js/tfingi-megamenu/tfingi-megamenu-frontend.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="./css/xray.css"/>
+<link rel="stylesheet" href="./css/color-schemes/alizarin.css" id="color_scheme" />
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=7; IE=8" />-->
+<link rel="icon" id="faviconlink" href="favicon.ico" type="image/x-icon" />
+<script src="https://npmcdn.com/parse/dist/parse.min.js"></script> 
+<script src="./js/b4a.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css" />
+<style>
+ html, body {
+  height: 100%;
+  margin: 0;
+  font-family: AdobeClean;
+}
+.wrapper {
+  min-height: 100%;
+
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -20px;
+}
+.footer,
+.push {
+  height: 10px;
+}
+
+</style>
+
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Shadows+Into+Light" rel="stylesheet">
+    
+<!-- Start of Adobe Experience Platform Launch Tag -->   
+    <!--<script src="./js/launch.js"></script>--> 
+    <!--<script src="./js/adobeprivacy.js"></script>--> 
+    <script src="//assets.adobedtm.com/b754ed1bed61/cc9d614268b2/launch-4029d4b1783d-development.min.js" async></script>
+<!-- End of Adobe Experience Platform Launch Tag --> 
+   
+<script src="https://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="./js/adminpages.js"></script> 
+    
+<!---The Data Layer--->
+    <script type="text/javascript">
+        var digitalData = {
+            page: {
+                pageName: window.document.title,
+                home: false,
+                productdtl: false,
+                custompage: false,
+                adminpage: false,
+                loadxray: false
+            },
+            category: {
+                primaryCategory:"Website",
+                pageType:"Home",
+                siteSection:"General"
+            },
+            customer: {
+                customerId:"",
+                accessCustomerName:"",
+                uuid:"",
+                mcid:"",
+                logged_in:"",
+                image_url:"",
+                firstName:"",
+                lastName:"",
+                gender:"",
+                birthDay:"",
+                birthMonth:"",
+                birthYear:"",
+                postalCode:"",
+                country:"",
+                countryCode:"",
+                city:"",
+                street:"",
+                email:"",
+                mobileNr:"",
+                shoeSize:"",
+                preferredColor:"",
+                shirtSize:"",
+                profilePicture:"",
+                children:"",
+                maritalStatus:"",
+                password:"",
+                propBuy:"",
+                brandEng:"",
+                tpd:"",
+                adblock:""
+            },  
+            product: {
+                imageUrl: "",
+                price: "",
+                name: "",
+                category: "",
+                color: "",
+                description: ""
+            }
+        };
+    </script>
+
+    </head>
+    <body onLoad="getActiveUsers();">
+        <div class="wrapper" style="">
+          <!-- Header -->
+            <div class="header" style="">
+                <!-- Logo & Search bar -->
+                <div id="logobar" class="logobar">
+
+                    <a href="./admin.html" title="&larr; Back home">
+                        <img id="" alt="" src="./images/experience_platform_offtile_RGB.png">
+                        &nbsp;&nbsp;Adobe Experience Platform
+                    </a>
+                    <div id="logobarright">
+                        Experience Platform EMEA - SYTYCD
+                    </div>
+                </div>
+                <!-- End class="bottom" -->
+            </div>
+            <!-- End class="header" -->
+            <!-- Navigation -->
+            <nav class="navigation" style="background-color: #f0f0f0;display:none;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="#" class="main-menu-button">Navigation</a>
+                                <!-- Begin Menu Container -->
+                                <div class="megamenu_container" style="background-color: #f0f0f0; color:white;">
+                                    <div class="menu-main-navigation-container">
+                                        <ul id="menu-main-navigation" class="main-menu">
+                                            <li id="page0"></li>
+                                            <li id="page1"></li>
+                                            <li id="page2"></li>
+                                            <li id="page3"></li>
+                                            <li id="page4"></li>
+                                            <li id="page5"></li>
+                                            <li id="page6"></li>
+                                            <li id="page7"></li>
+                                            <li id="page8"></li>
+                                            <li class="menu-item-has-children">
+                                                <a href="#">...</a>
+                                                <ul class="sub-menu">
+                                                    <li class="" id="pageDMP"></li>
+                                                    <li class="" id="pageCallCenter"></li>
+                                                    <li class="" id="pagePersonalShopper"></li>
+                                                    <li class="" id="pagePOS"></li>
+                                                    <li class="" id="pageInStoreDisplay"></li>
+                                                    <li class="" id="page9"></li>
+                                                    <li class="" id="page10"></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>    
+                                </div> 
+                        </div>
+                    </div>
+                </div>    
+            </nav>
+            <!-- End class="navigation" -->
+
+            <div id="adminmenu" class="w3-sidebar w3-bar-block content adminleftmenutext">
+            </div>
+            
+            <div style="margin-left:12%" style="overflow:hidden;">
+                <div class="w3-container" >
+                    <canvas id="myChart" width="400" height="400"></canvas>
+
+                    
+                </div>
+            </div>
+	    <!-- Credits bar -->
+        <div class="push"></div>
+        <div class="credits" style="display:none;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <p id="footerCredits"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End class="credits" -->
+
+        <!-- JAVASCRIPT -->
+        <script>
+            ////////////////////////////////
+            // LDAP Section
+            ////////////////////////////////
+
+            function getActiveUsers() {
+                const User = Parse.Object.extend('User');
+                const query = new Parse.Query(User);
+                //query.equalTo("ldap", 'A string');
+                
+                query.limit(1000);
+                query.descending("updatedAt");
+
+                query.find().then(
+                    (results) => {
+                        // You can use the "get" method to get the value of an attribute
+                        // Ex: response.get("<ATTRIBUTE_NAME>")
+                        if (typeof document !== 'undefined'){
+                            console.log(results);
+                            processReports(results);
+                            }
+                        }, 
+                    (error) => {
+                        if (typeof document !== 'undefined'){
+                            console.error('Error while fetching AdobeUserInfo', error);
+                        }
+                    }
+                );
+            };
+
+            function processReports(userList){
+
+                var todayDate = new Date();
+                var todayDay = todayDate.getDate();
+                var todayMonth = todayDate.getMonth(); 
+
+                console.log(userList[0].attributes.updatedAt);
+
+                var date = new Date((userList[0].attributes.updatedAt));
+                console.log("dt: " + date);
+                var n = date.getDate();
+                console.log(n);
+
+
+                var ctx = document.getElementById('myChart').getContext('2d');
+
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                        datasets: [{
+                            label: '# of Votes',
+                            data: [12, 19, 3, 5, 2, 3],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
+            }
+        </script>
+        <style>
+
+        .selected{
+            border: 1px solid #888;
+            padding-left: 0px;
+            padding-right: 110px;
+            background-color: #white;
+            background-image:none;
+        }
+        </style>
+
+        <!-- JAVASCRIPT -->
+        <script src="./js/loadFromLocalStorage.js"></script>
+        <script src="./js/jquery-1.11.3.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+
+    
+    </body>
+</html>

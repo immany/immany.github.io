@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class="no-js">
+    <head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="WVG" />
+
+<title id="titlename">Admin - Profile Viewer Invite</title>
+
+<link rel="stylesheet" href="./css/bootstrap.min.css" />
+<link rel="stylesheet" href="./css/font-awesome.min.css" />
+<link rel="stylesheet" href="./css/flexslider.css" />
+<link rel="stylesheet" href="./css/admin.css" />
+<link rel="stylesheet" href="./js/tfingi-megamenu/tfingi-megamenu-frontend.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="./css/xray.css"/>
+<link rel="stylesheet" href="./css/color-schemes/alizarin.css" id="color_scheme" />
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=7; IE=8" />-->
+<link rel="icon" id="faviconlink" href="favicon.ico" type="image/x-icon" />
+<script src="https://npmcdn.com/parse/dist/parse.min.js"></script> 
+<script src="./js/b4a.js"></script> 
+<style>
+ html, body {
+  height: 100%;
+  margin: 0;
+  font-family: AdobeClean;
+}
+.wrapper {
+  min-height: 100%;
+
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -20px;
+}
+
+</style>
+
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Shadows+Into+Light" rel="stylesheet">
+    
+<!-- Start of Adobe Experience Platform Launch Tag -->   
+    <!--<script src="./js/launch.js"></script>--> 
+    <!--<script src="./js/adobeprivacy.js"></script>--> 
+    <script src="//assets.adobedtm.com/b754ed1bed61/cc9d614268b2/launch-4029d4b1783d-development.min.js" async></script>
+<!-- End of Adobe Experience Platform Launch Tag --> 
+   
+<script src="https://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="./js/adminpages.js"></script> 
+    
+<!---The Data Layer--->
+    <script type="text/javascript">
+        var digitalData = {
+            page: {
+                pageName: window.document.title,
+                home: false,
+                productdtl: false,
+                custompage: false,
+                adminpage: false,
+                loadxray: false
+            },
+            category: {
+                primaryCategory:"Website",
+                pageType:"Home",
+                siteSection:"General"
+            }
+        };
+    </script>
+
+    </head>
+    <body onLoad="">
+
+        <div class="wrapper" style="width:100%;">
+            
+          <!-- Header -->
+            <div class="header">
+                <!-- Logo & Search bar -->
+                <div id="logobar" class="logobar">
+
+                    <a href="./admin.html" title="&larr; Back home">
+                        <img id="" alt="" src="./images/experience_platform_offtile_RGB.png">
+                        &nbsp;&nbsp;Adobe Experience Platform
+                    </a>
+                    <div id="logobarright">
+                        Experience Platform EMEA - SYTYCD
+                    </div>
+                    <a id="gotodemosite" href="./index.html" style="display:none;">
+                        &nbsp;&nbsp;Go to Demo Site
+                    </a>
+                </div>
+                <!-- End class="bottom" -->
+            </div>
+            <!-- End class="header" --><!-- Navigation -->
+            <nav class="navigation" style="background-color: #f0f0f0;display:none;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="#" class="main-menu-button">Navigation</a>
+                                <!-- Begin Menu Container -->
+                                <div class="megamenu_container" style="background-color: #f0f0f0; color:white;">
+                                    <div class="menu-main-navigation-container">
+                                        <ul id="menu-main-navigation" class="main-menu">
+                                            <li id="page0"></li>
+                                            <li id="page1"></li>
+                                            <li id="page2"></li>
+                                            <li id="page3"></li>
+                                            <li id="page4"></li>
+                                            <li id="page5"></li>
+                                            <li id="page6"></li>
+                                            <li id="page7"></li>
+                                            <li id="page8"></li>
+                                            <li class="menu-item-has-children">
+                                                <a href="#">...</a>
+                                                <ul class="sub-menu">
+                                                    <li class="" id="pageDMP"></li>
+                                                    <li class="" id="pageCallCenter"></li>
+                                                    <li class="" id="pagePersonalShopper"></li>
+                                                    <li class="" id="pagePOS"></li>
+                                                    <li class="" id="pageInStoreDisplay"></li>
+                                                    <li class="" id="page9"></li>
+                                                    <li class="" id="page10"></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>    
+                                </div> 
+                        </div>
+                    </div>
+                </div>    
+            </nav>
+            <!-- End class="navigation" -->
+
+            <div id="adminmenu" class="w3-sidebar w3-bar-block content adminleftmenutext">
+            </div>
+
+
+
+            
+            <div style="margin-left:12%;margin-right:5%;">
+                <div class="w3-container" style="height: 100vh;">
+                    <br/>
+                    <div class="box-content" id="ldapAlarmSection" style="display:none;">
+                        <h5 style="color:red;">ERROR! No LDAP Selected </h5>
+                        You can't view this page without having selected your LDAP.
+                        <br/>
+                        Please go <a href="./admin_selectldap.html">here</a> to select your LDAP and then come back to this page to create your brand.
+                    </div>
+                    <!-- Modal: Set ID -->
+                    <div id="setupARD" class="" >
+                            <div class="row">
+                                <div class="col-sm-12"><h5>Profile Viewer</h5>
+                                </div>
+                            </div>
+                            <div>
+                                <p>
+                                    Hi <span id="customerName">Presenter</span>!<br><br>
+                                    First, select your preferred Namespace and Identifier. 
+                                    <br/>Next, click Generate Link.
+                                    <br/>Finally, share the link with your customers.
+                                </p>
+                                <div id="formInvite">
+                                    <div class="row">
+                                        <div class="col-sm-1">
+                                            Active LDAP:
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div id="ldapForm"></div>
+                                        </div>  
+                                    </div>
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <select name="eventNs" id="eventNS" class="form-control">
+                                                <option value="ecid" selected>ECID</option>
+                                                <option value="email">Email</option>
+                                                <option value="mobilenr">Mobile Number</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <input type="input" id="eventID" class="form-control">
+                                        </div>  
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="custom-control custom-checkbox" style="display:none;">
+                                                <input type="checkbox" checked="checked" class="custom-control-input" id="autoPlay">
+                                                    <label class="custom-control-label" for="autoPlay">Auto-Play Profile Viewer</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="inviteLink"  style="display: none;"></div>
+                            </div>
+                            <br/>
+                            <div class="">
+                                <button id="generateURL" type="button" class="btn btn-primary btn-sm btn-block-xs">Generate Link</button>
+                                <button id="copyClipboard" type="button"  data-clipboard-target="#theLink" style="display: none;" class="btCopy btn btn-primary">Copy to Clipboard</button>
+                            </div>
+                            <div>
+                                <br/><br/>
+                                <img id='barcode' src="" alt="" title="" width="150" height="150" />
+                            </div>
+                        </div>
+                        
+                </div>
+            </div>
+
+                    
+        <!-- Credits bar -->
+        <div class="credits">
+		    <div class="container">
+		        <div class="row">
+		            <div class="col-sm-8">
+		                <p id="footerCredits">
+		                </p>
+		            </div>
+		            
+		        </div>
+		    </div>
+		</div>
+        <!-- End class="credits" -->
+</div>
+        </div>
+        <!-- JAVASCRIPT -->
+        <script src="./js/loadFromLocalStorage.js"></script>
+        <script src="./js/jquery-1.11.3.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/bootstrap.bundle.min.js"></script>
+        <script src="./js/clipboard.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            function generateBarCode(pvurl)
+            {
+                var url = 'https://api.qrserver.com/v1/create-qr-code/?data=' + pvurl + '&amp;size=50x50';
+                $('#barcode').attr('src', url);
+            }
+        </script>
+        <script>
+            $(document).ready(function(){
+
+               clipboard = new ClipboardJS('.btCopy');
+               clipboard.on('success', function(e) {
+                alert('Link copied!')
+               });
+
+              $('#generateURL').on('click', function(){
+                var evNS = $("#eventNS option:selected").val();
+                var evID = $("#eventID").val();
+                var ldap = localStorage.getItem('admin_ldap');
+                var autoPlay = $("#autoPlay").is(':checked');
+                var evBrand = localStorage.getItem('brandName');
+
+                if(evNS != '' && evID != '' && ldap != ''){
+                    
+                    var longURL = 'https://profileviewer.aepdemo.eu/?eventNS='+encodeURI(evNS)+'&eventID='+encodeURI(evID)+'&ldap='+encodeURI(ldap)+'&ap='+autoPlay+'&brand='+encodeURI(evBrand);
+                    var formatedBody = {}
+                    formatedBody.data = []
+                    formatedBody.data.push({"longURL": longURL})
+
+                    generateBarCode(longURL);
+                    localStorage.setItem("qrCodeUrl",longURL);
+
+                    //$('#busy-modal').modal('show');
+
+                    $.ajax(
+                        {
+                            url: "https://adobeioruntime.net/api/v1/web/mlopes/default/urlARD", 
+                            type: "POST",
+                            contentType: "application/json",
+                            data: JSON.stringify(formatedBody),
+                            success: function(response) {
+                            showLink(response)
+                            },
+                            error: function(code, status, error) {
+                                console.log("Error : " + error);
+                            }
+                        }
+                    );
+                }else { 
+                    alert('All fields are required.')
+                }
+              })
+            })
+
+            function showLink(payload){
+                
+
+                console.log(payload.data[0].shortLink)
+
+                generateBarCode(payload.data[0].shortLink);
+                localStorage.setItem("qrCodeUrl",payload.data[0].shortLink);
+
+                $('#formInvite').hide().prev().hide();
+                $('#inviteLink').html('<p>Share the link <strong><span id="theLink" style="font-weight: bold">'+payload.data[0].shortLink+'</span> </strong> with your customer.</p>').show();
+                
+                $('#generateURL').hide();
+                $('#copyClipboard').show();
+            }
+            
+
+        </script>
+
+        <script>
+            var brandLdap = localStorage.getItem('admin_ldap');
+
+                if(brandLdap === null){
+                    $("#setupARD").attr("style", "display:none;");
+                    $("#ldapAlarmSection").attr("style", "display:block;");
+
+                }else{
+                    $("#setupARD").attr("style", "width:100%; height:100%;border:none;display:block;");
+                    $("#ldapAlarmSection").attr("style", "display:none;");
+                    $("#ldapForm").text(brandLdap);
+                    setTimeout(function(){
+                        var ecid = Visitor.getInstance('907075E95BF479EC0A495C73@AdobeOrg')._fields['MCMID'];
+                        //console.log(ecid);
+                        $("#eventID").val(ecid);
+                    }, 500);
+                }
+        </script>
+    
+    </body>
+</html>

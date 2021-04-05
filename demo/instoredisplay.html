@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class="no-js">
+	<head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="La Boutique HTML v10.0" />
+
+<title id="custompagetitle">Store Display</title>
+
+<link rel="stylesheet" href="./css/bootstrap.min.css" />
+<link rel="stylesheet" href="./css/font-awesome.min.css" />
+<link rel="stylesheet" href="./css/flexslider.css" />
+<link rel="stylesheet" href="./js/tfingi-megamenu/tfingi-megamenu-frontend.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+<link rel="stylesheet" href="./css/xray.css"/>
+<link rel="stylesheet" href="./css/color-schemes/alizarin.css" id="color_scheme" />
+<script src="./js/scjl.js"></script>
+<script src="./js/clipboard.js"></script>
+
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=7; IE=8" />-->
+<link rel="icon" id="faviconlink" href="favicon.ico" type="image/x-icon" />
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.92.0.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Shadows+Into+Light" rel="stylesheet">
+    
+<!-- Start of Adobe Experience Platform Launch Tag -->   
+<script src="./js/launch.js"></script> 
+<!-- End of Adobe Experience Platform Launch Tag --> 
+   
+<script src="./js/jquery-1.11.3.min.js"></script>
+    
+<!---The Data Layer--->
+    <script type="text/javascript">
+        var digitalData = {
+            page: {
+                pageName: window.document.title,
+                home: false,
+                productdtl: false,
+                cart: false,
+                custompage: false,
+                dashboardpage: true,
+                pos: false,
+                instoredisplay: true,
+                loadxray: false
+            },
+            category: {
+                primaryCategory:"Website",
+                pageType:"Cart",
+                siteSection:"Cart"
+            },
+            customer: {
+                customerId:"",
+                accessCustomerName:"",
+                uuid:"",
+                mcid:"",
+                logged_in:"",
+                image_url:"",
+                firstName:"",
+                lastName:"",
+                gender:"",
+                birthDay:"",
+                birthMonth:"",
+                birthYear:"",
+                postalCode:"",
+                country:"",
+                countryCode:"",
+                city:"",
+                street:"",
+                email:"",
+                mobileNr:"",
+                shoeSize:"",
+                preferredColor:"",
+                shirtSize:"",
+                profilePicture:"",
+                children:"",
+                maritalStatus:"",
+                password:"",
+                propBuy:"",
+                brandEng:"",
+                tpd:"",
+                adblock:""
+            },  
+            product: {
+                imageUrl: "",
+                price: "",
+                name: ""
+            }
+        };
+    </script>
+
+    </head>
+	<body onLoad="">
+        <script src="./js/tags_body.js"></script>
+        
+		<div class="wrapper">
+		
+			<!-- Header -->
+<div class="header">
+    
+
+    <!-- Logo & Search bar -->
+    <div id="logobar" class="bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 col-md-6">
+                	
+                	<!-- Logo -->
+                    <div class="logo">
+                        <a href="index.html" title="&larr; Back home">
+                            <img id="brandlogo" alt="" />
+                        </a>
+                    </div>
+                    <!-- End class="logo"-->
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End class="bottom" -->
+    
+</div>
+<!-- End class="header" -->
+			
+<!-- Cart container -->
+<section class="cart">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <br/><br/>
+                <img id="imagetest" style="display:block;margin:auto;">
+
+                <script type="text/javascript">
+
+                    // Configure AWS SDK for JavaScript & set region and credentials
+                    // Initialize the Amazon Cognito credentials provider
+                    AWS.config.region = 'us-west-2'; // Region
+                    AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+                        IdentityPoolId: 'us-west-2:b1ea8892-442a-4276-a1f1-f09aee2828ce',
+                    });
+                    var sqs = new AWS.SQS({apiVersion: '2012-11-05'});
+                    var queueURL = "https://sqs.us-west-2.amazonaws.com/765050914486/AEP_InStoreDisplay";
+
+                    var params = {
+                     AttributeNames: [
+                        "eventImageURL",
+                        "eventLocation"
+                     ],
+                     MaxNumberOfMessages: 1,
+                     MessageAttributeNames: [
+                        "eventImageURL",
+                        "eventLocation"
+                     ],
+                     QueueUrl: queueURL,
+                     VisibilityTimeout: 20,
+                     WaitTimeSeconds:3
+                    };
+
+                    window.setInterval(function(){
+                        sqs.receiveMessage(params, function(err, data) {
+                            //console.log('Message received', JSON.stringify(data));
+                          if (err) {
+                            console.log("Receive Error", err);
+                          } else if (data.Messages) {
+                            try{
+                                var message = data.Messages[0];
+                                const eventImageURL = data.Messages[0].MessageAttributes.eventImageURL.StringValue;
+                                const eventLocation = data.Messages[0].MessageAttributes.eventLocation.StringValue;
+                                //console.log('Image URL', eventImageURL);
+                                //console.log('Event Location', eventLocation);
+
+                                if(localStorage.getItem("brandStoreLocation") === eventLocation){
+                                    console.log(">>>>> FYI: brandStoreLocation matches eventLocation");
+                                    $("#imagetest").attr("src", eventImageURL);
+                                    console.log(">>>>> FYI: New promotion to display:" + eventImageURL);
+                                
+                                    removeFromQueue(message);
+                                }else{
+                                    console.log(">>>>> FYI: brandStoreLocation doesn't match eventLocation");
+                                }
+                            }catch(err) {
+                                console.log(">>>>> FYI: Just checked, no new promotion to display. Will check again in 5 seconds.");
+                            }
+                          }
+
+                          });
+                    }, 5000);
+
+                    var removeFromQueue = function(message) {
+                        sqs.deleteMessage({
+                            QueueUrl : queueURL,
+                            ReceiptHandle : message.ReceiptHandle
+                        }, function(err, data) {
+                            err && console.log(err);
+                        });
+                    };
+
+                </script> 
+            </div>
+        </div>
+    </div>
+</section>         
+<!-- End Cart container -->
+		     <!-- Credits bar -->
+<div class="credits" style="display:none;">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <p id="footerCredits">
+                </p>
+            </div>
+            
+        </div>
+    </div>
+</div>	
+			
+			
+			
+
+
+		
+		<!-- BEGIN JAVASCRIPTS -->
+
+<script src="./js/addToPOS.js"></script>
+<script src="./js/loadFromLocalStorage.js"></script>
+<script src="./js/jquery-1.11.3.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+
+<script src="./js/jquery-migrate-1.2.1.min.js"></script>
+<script src="./js/isotope.pkgd.min.js"></script>
+<script src="./js/imagesloaded.pkgd.min.js"></script>
+<script src="./js/jquery.flexslider.js"></script>
+<script src="./js/jquery-ui-1.10.2.custom.js"></script>
+<script src="./js/jquery.easing.min.js"></script>
+<script src="./js/jquery.elevatezoom.js"></script>
+<script src="./js/jquery.sharrre-1.3.5.js"></script>
+<script src="./js/jquery.cookie.js"></script>
+<script src="./js/la_boutique.js"></script>
+<script src="./js/tfingi-megamenu/tfingi-megamenu-frontend.js"></script>
+<!-- END JAVASCRIPTS -->
+
+	</body>
+</html>

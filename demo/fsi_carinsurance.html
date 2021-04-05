@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class="no-js">
+    <head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="WVG" />
+
+<title>Car Insurance Simulator</title>
+
+<link rel="stylesheet" href="./css/bootstrap.min.css" />
+<link rel="stylesheet" href="./css/font-awesome.min.css" />
+<link rel="stylesheet" href="./css/flexslider.css" />
+<link rel="stylesheet" href="./js/tfingi-megamenu/tfingi-megamenu-frontend.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+<link rel="stylesheet" href="./css/xray.css"/>
+<link rel="stylesheet" href="./css/color-schemes/alizarin.css" id="color_scheme" />
+<script src="./js/scjl.js"></script>
+<script src="./js/clipboard.js"></script>
+
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=7; IE=8" />-->
+<link rel="icon" id="faviconlink" href="favicon.ico" type="image/x-icon" />
+
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Shadows+Into+Light" rel="stylesheet">
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.92.0.min.js"></script>
+    
+<!-- Start of Adobe Experience Platform Launch Tag -->   
+    <script src="./js/launch.js"></script>
+<!-- End of Adobe Experience Platform Launch Tag --> 
+
+<script src="https://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"></script>  
+    
+<!---The Data Layer--->
+    <script type="text/javascript">
+        var digitalData = {
+            page: {
+                pageName: window.document.title,
+                custompagenumber: 1,
+                home: false,
+                productdtl: false,
+                custompage: false,
+                testdrivepage: true,
+                loadxray: true
+            },
+            category: {
+                primaryCategory:"Website",
+                pageType:"Car Insurance",
+                siteSection:"General"
+            },
+            customer: {
+                customerId:"",
+                accessCustomerName:"",
+                uuid:"",
+                mcid:"",
+                logged_in:"",
+                image_url:"",
+                firstName:"",
+                lastName:"",
+                gender:"",
+                birthDay:"",
+                birthMonth:"",
+                birthYear:"",
+                postalCode:"",
+                country:"",
+                countryCode:"",
+                city:"",
+                street:"",
+                email:"",
+                mobileNr:"",
+                shoeSize:"",
+                preferredColor:"",
+                shirtSize:"",
+                profilePicture:"",
+                children:"",
+                maritalStatus:"",
+                password:"",
+                propBuy:"",
+                brandEng:"",
+                tpd:"",
+                adblock:""
+            },  
+            product: {
+                imageUrl: "",
+                price: "",
+                name: "",
+                category: "",
+                color: "",
+                description: ""
+            }
+        };
+    </script>
+
+    </head>
+    <body onLoad="">
+        <script src="./js/tags_body.js"></script>
+    
+        <div class="wrapper">
+        
+            <!-- Header -->
+<div class="header">
+    
+
+    <!-- Logo & Search bar -->
+    <div id="logobar" class="bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 col-md-6">
+                    
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="index.html" title="&larr; Back home">
+                            <img id="brandlogo" alt="" />
+                        </a>
+                    </div>
+                    <!-- End class="logo"-->
+                
+                </div>
+                <div class="col-sm-5 col-sm-offset-1 col-md-3">
+                    
+                    
+                    
+                </div>
+                    
+                <!-- Mini cart -->
+                <div id="carticon" class="mini-cart">
+                    <a href="cart.html" title="Go to cart &rarr;">
+                        <span id="carticonqty" style="display:none;"></span>
+                    </a>                                    
+                </div>
+                <!-- End class="mini-cart" -->
+
+            </div>
+        </div>
+    </div>
+    <!-- End class="bottom" -->
+    
+</div>
+<!-- End class="header" -->
+            <!-- Navigation -->
+<nav class="navigation">
+    <div class="container">
+     
+        <div class="row">
+            <div class="col-md-12">
+                
+<a href="#" class="main-menu-button">Navigation</a>
+<!-- Begin Menu Container -->
+<div class="megamenu_container">
+    <div class="menu-main-navigation-container">
+        <ul id="menu-main-navigation" class="main-menu">
+            <li id="page0"></li>
+            <li id="page1"></li>
+            <li id="page2"></li>
+            <li id="page3"></li>
+            <li id="page4"></li>
+            <li id="page5"></li>
+            <li id="page6"></li>
+            <li id="page7"></li>
+            <li id="page8"></li>
+            <li class="menu-item-has-children">
+                <a href="#">...</a>
+                <ul class="sub-menu">
+                    <li class="" id="pageDMP"></li>
+                    <li class="" id="pageCallCenter"></li>
+                    <li class="" id="pagePersonalShopper"></li>
+                    <li class="" id="pagePOS"></li>
+                    <li class="" id="pageInStoreDisplay"></li>
+                    <li class="" id="page9"></li>
+                    <li class="" id="page10"></li>
+                </ul>
+            </li>
+        </ul>
+    </div>    
+</div>    
+
+
+
+            </div>
+
+        </div>        
+    
+    </div>
+</nav>
+<!-- End class="navigation" -->
+
+            
+            <!-- Content section -->    
+            <section class="main" style="background-image: url(./images/carinsurance.jpg);background-size: cover; -ms-background-size: cover; -o-background-size: cover; -moz-background-size: cover; -webkit-background-size: cover;">
+            
+                
+
+<!-- Login / Register -->
+<section class="login_register">
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- Login -->
+<div class="login">
+    <div class="box">
+            <div class="hgroup title">
+                <h3>Your Car Insurance</h3>
+                <h5></h5>
+            </div>
+
+            <div class="box-content">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="control-label" for="">What is your age?</label>
+                                <div class="controls">
+                                    <input class="form-control" id="insuranceAge" type="text" name="insuranceAge" value="37" style="width:200px;"/>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="control-label" for="">What is your gender?</label>
+                            <div class="controls">
+                                <select id="insuranceGender" name="insuranceGender" style="width:200px; height: 35px;">
+                                    <option value="male">Male</option>
+                                    <option value="female" selected>Female</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label" for="">What is your nationality?</label>
+                            <div class="controls">
+                                <select id="insuranceNationality" name="insuranceNationality" style="width:200px; height: 35px;">
+                                    <option value="belgium" selected>Belgium</option>
+                                    <option value="us">US</option>
+                                    <option value="uk">UK</option>
+                                    <option value="france">France</option>
+                                    <option value="netherlands">Netherlands</option>
+                                    <option value="germany">Germany</option>
+                                    <option value="switzerland">Switzerland</option>
+                                    <option value="italy">Italy</option>
+                                    <option value="spain">Spain</option>
+                                    <option value="india">India</option>
+                                    <option value="australia">Australia</option>
+                                    <option value="china">China</option>
+                                    <option value="japan">Japan</option>
+                                    <option value="canada">Canada</option>
+                                    <option value="sweden">Sweden</option>
+                                    <option value="denmark">Denmark</option>
+                                    <option value="norway">Norway</option>
+                                    <option value="finland">Finland</option>
+                                    <option value="russia">Russia</option>
+                                    <option value="czechrep">Czech Republic</option>
+                                    <option value="austria">Austria</option>
+                                    <option value="romania">Romania</option>
+                                    <option value="poland">Poland</option>
+                                    <option value="ukraine">Ukraine</option>
+                                    <option value="greece">Greece</option>
+                                    <option value="portugal">Portugal</option>
+                                    <option value="hungary">Hungary</option>
+                                    <option value="belarus">Belarus</option>
+                                    <option value="serbia">Serbia</option>
+                                    <option value="bulgaria">Bulgaria</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="control-label" for="">In which city do you live?</label>
+                                <div class="controls">
+                                    <input class="form-control" id="insuranceCity" type="text" name="insuranceCity" value="Brussels"  style="width:200px;"/>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="control-label" for="">In which country do you live?</label>
+                                <div class="controls">
+                                    <select id="insuranceCountry" name="insuranceCountry" style="width:200px; height: 35px;">
+                                    <option value="belgium" selected>Belgium</option>
+                                    <option value="us">US</option>
+                                    <option value="uk">UK</option>
+                                    <option value="france">France</option>
+                                    <option value="netherlands">Netherlands</option>
+                                    <option value="germany">Germany</option>
+                                    <option value="switzerland">Switzerland</option>
+                                    <option value="italy">Italy</option>
+                                    <option value="spain">Spain</option>
+                                    <option value="india">India</option>
+                                    <option value="australia">Australia</option>
+                                    <option value="china">China</option>
+                                    <option value="japan">Japan</option>
+                                    <option value="canada">Canada</option>
+                                    <option value="sweden">Sweden</option>
+                                    <option value="denmark">Denmark</option>
+                                    <option value="norway">Norway</option>
+                                    <option value="finland">Finland</option>
+                                    <option value="russia">Russia</option>
+                                    <option value="czechrep">Czech Republic</option>
+                                    <option value="austria">Austria</option>
+                                    <option value="romania">Romania</option>
+                                    <option value="poland">Poland</option>
+                                    <option value="ukraine">Ukraine</option>
+                                    <option value="greece">Greece</option>
+                                    <option value="portugal">Portugal</option>
+                                    <option value="hungary">Hungary</option>
+                                    <option value="belarus">Belarus</option>
+                                    <option value="serbia">Serbia</option>
+                                    <option value="bulgaria">Bulgaria</option>
+                                </select>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="control-label" for="">Are you the primary driver?</label>
+                            <div class="controls">
+                                <select id="insurancePrimaryDriver" name="insurancePrimaryDriver" style="width:200px; height: 35px;">
+                                    <option value="yes" selected>Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="control-label" for="">Car Brand?</label>
+                            <div class="controls">
+                                <select size="10" id="insuranceCarBrand" name="insuranceCarBrand" style="width:200px; height: 100px;">
+                                    <option value="audi" selected>Audi</option>
+                                    <option value="alfaromeo" selected>Alfa Romeo</option>
+                                    <option value="bmw">BMW</option>
+                                    <option value="buick">Buick</option>
+                                    <option value="cadillac">Cadillac</option>
+                                    <option value="chevrolet">Chevrolet</option>
+                                    <option value="chrysler">Chrysler</option>
+                                    <option value="dodge">Dodge</option>
+                                    <option value="fiat">Fiat</option>
+                                    <option value="ferrari">Ferrari</option>
+                                    <option value="ford">Ford</option>
+                                    <option value="gm">GM</option>
+                                    <option value="gmc">GMC</option>
+                                    <option value="honda">Honda</option>
+                                    <option value="hummer">Hummer</option>
+                                    <option value="hyundai">Hyundai</option>
+                                    <option value="infiniti">Infiniti</option>
+                                    <option value="isuzu">Isuzu</option>
+                                    <option value="jaguar">Jaguar</option>
+                                    <option value="jeep">Jeep</option>
+                                    <option value="kia">Kia</option>
+                                    <option value="lamborghini">Lamborghini</option>
+                                    <option value="landrover">Land Rover</option>
+                                    <option value="lexus">Lexus</option>
+                                    <option value="lincoln">Lincoln</option>
+                                    <option value="lotus">Lotus</option>
+                                    <option value="mazda">Mazda</option>
+                                    <option value="mercedes-benz">Mercedes-Benz</option>
+                                    <option value="mercury">Mercury</option>
+                                    <option value="mitsubishi">Mitsubishi</option>
+                                    <option value="nissan">Nissan</option>
+                                    <option value="peugeot">Peugeot</option>
+                                    <option value="pontiac">Pontiac</option>
+                                    <option value="porsche">Porsche</option>
+                                    <option value="renault">Renault</option>
+                                    <option value="saab">Saab</option>
+                                    <option value="saturn">Saturn</option>
+                                    <option value="seat">Seat</option>
+                                    <option value="skoda">Skoda</option>
+                                    <option value="subaru">Subaru</option>
+                                    <option value="suzuki">Suzuki</option>
+                                    <option value="tesla">Tesla</option>
+                                    <option value="toyota">Toyota</option>
+                                    <option value="volkswagen">Volkswagen</option>
+                                    <option value="volvo">Volvo</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="control-label" for="">Car Type?</label>
+                            <div class="controls">
+                                <select id="insuranceCarType" name="insuranceCarType" style="width:200px; height: 35px;">
+                                    <option value="hatchback" selected>Hatchback</option>
+                                    <option value="sedan">Sedan</option>
+                                    <option value="mpv">MPV</option>
+                                    <option value="suv">SUV</option>
+                                    <option value="crossover">Crossover</option>
+                                    <option value="coupe">Coupe</option>
+                                    <option value="convertible">Convertible</option>
+                                    <option value="minivan">Minivan</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="control-label" for="">How many kilometer do you drive yearly?</label>
+                            <div class="controls">
+                                <select id="insuranceKm" name="insuranceKm" style="width:200px; height: 35px;">
+                                    <option value="0-5000">0-5000</option>
+                                    <option value="5000-10000">5000-10000</option>
+                                    <option value="10000-20000">10000-20000</option>
+                                    <option value="20000-30000">20000-30000</option>
+                                    <option value="30000-50000">30000-50000</option>
+                                    <option value="+50000" selected>+50000</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="control-label" for="">Are you leasing the car?</label>
+                            <div class="controls">
+                                <select id="insuranceLeasing" name="insuranceLeasing" style="width:200px; height: 35px;">
+                                    <option value="yes" selected>Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+
+            <div class="buttons">
+                <button type="submit" onClick="getQuote()" class="btn btn-primary btn-sm btn-block-xs" name="getquote" value="">
+                    Get Quote
+                </button>
+                <label id="gotostep2status" class="control-label" for=""></label>
+            </div>    
+    
+        </div>
+    </div>
+    </div>
+    <div class="col-sm-12" id="quoteForm" style="display:none;">
+      <!-- Login -->
+      <div class="login">
+        <div class="box">
+          <div class="hgroup title">
+            <h3>Here's your quote:</h3>
+          </div>
+              <div class="box-content">
+                    <div class="hgroup title">
+                Your Quote: <br/>
+                    <br/> Basic Price: <span id="basicPrice"></span>
+                    <br/> Medium Price: <span id="mediumPrice"></span>
+                    <br/> Full Option Price: <span id="fullPrice"></span>
+              </div>
+            </div> 
+            <div class="buttons">
+                <button type="submit" onClick="purchase()" class="btn btn-primary btn-sm btn-block-xs" name="purchaseInsurance" value="purchaseInsurance">
+                    Purchase Insurance
+                </button>
+                <label id="purchaseInsuranceLabel" class="control-label" for=""></label>
+            </div>  
+            
+        </div>   
+    </div>
+</div>
+<!-- End Register modal window --> 
+    
+</section>                
+<!-- End Login / Register -->
+            
+            </section>
+            <!-- End class="main" -->
+            
+            
+            
+<!-- Footer -->
+<div id="footerbar" class="footer">
+    <div class="container">
+        <div class="row">   
+                        
+            <div class="col-sm-2">
+                
+                <!-- My account -->
+                <div class="account">
+                    <h6 id="accountsection">My account</h6>
+
+                    <ul id="loginsection" class="links">                                
+                        <li>
+                            <a href="login-register.html" title="Login / Register">Login / Register</a>                                 
+                        </li>
+                    </ul>
+                </div>
+                <!-- End class="account"-->
+                
+            </div>
+
+            <div class="col-sm-2">
+                
+                
+            </div>
+
+            <div class="col-sm-4">
+                
+            </div>
+
+            <div class="col-sm-4">              
+
+                <!-- Newsletter subscription -->
+                <div class="newsletter">
+                    <h6 id="newslettersection">Newsletter subscription</h6>
+
+                    <form onsubmit="return false;" enctype="multipart/form-data" action="#" method="post">                       
+                        
+                        <div class="input-group">
+                            <input type="text" name="email" class="form-control" />
+                            <span class="input-group-addon btn" type="submit" id="newsletter_submit" data-toggle="modal" data-target="#newsletter_subscribe">Go!</span>
+                        </div>                       
+
+                    </form>                             
+
+                    <p>Sign up to receive our latest news and updates direct to your inbox</p>
+                </div>
+                <!-- End class="newsletter" -->
+                
+
+                <hr />
+                
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End id="footer" -->
+
+            <!-- Credits bar -->
+<div class="credits">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <p id="footerCredits">
+                </p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- End class="credits" -->
+            <!-- Newsletter modal window -->
+<div id="newsletter_subscribe" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+                <div class="hgroup title">
+                    <h3 id="modal-label">You are now subscribed to our newsletter</h3>
+                    <h5>All the latest deals and offers will be making their way to your inbox shortly!</h5>
+                </div>
+            </div>
+        
+            <div class="modal-footer">  
+                <button data-dismiss="modal" aria-hidden="true" class="btn btn-sm btn-block-xs">
+                    Close &nbsp; <i class="fa fa-check"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- End id="newsletter_subscribe" -->
+        
+        </div>
+        
+        <!-- BEGIN JAVASCRIPTS -->
+        <script>
+
+            function validateFormOnSubmit() {
+                
+                var insuranceMediumPrice = Math.floor(Math.random() * 500) + 500;
+                var insuranceBasicPrice = Math.round(insuranceMediumPrice * 0.7);
+                var insuranceFullPrice = Math.round(insuranceMediumPrice * 1.25);
+
+                $("#basicPrice").text(insuranceBasicPrice);
+                $("#mediumPrice").text(insuranceMediumPrice);
+                $("#fullPrice").text(insuranceFullPrice);
+
+                localStorage.setItem('insuranceAge', document.getElementById("insuranceAge").value);
+                localStorage.setItem('insuranceGender', document.getElementById("insuranceGender").value);
+                localStorage.setItem('insuranceNationality', document.getElementById("insuranceNationality").value);
+                localStorage.setItem('insuranceCity', document.getElementById("insuranceCity").value);
+                localStorage.setItem('insuranceCountry', document.getElementById("insuranceCountry").value);
+                localStorage.setItem('insurancePrimaryDriver', document.getElementById("insurancePrimaryDriver").value);
+                localStorage.setItem('insuranceCarBrand', document.getElementById("insuranceCarBrand").value);
+                localStorage.setItem('insuranceCarType', document.getElementById("insuranceCarType").value);
+                localStorage.setItem('insuranceKm', document.getElementById("insuranceKm").value);
+                localStorage.setItem('insuranceLeasing', document.getElementById("insuranceLeasing").value);
+                localStorage.setItem('insuranceBasicPrice', insuranceBasicPrice);
+                localStorage.setItem('insuranceMediumPrice', insuranceMediumPrice);
+                localStorage.setItem('insuranceFullPrice', insuranceFullPrice);
+            }
+
+            function getQuote() {
+                localStorage.setItem('insurancePropensity', '0.8');
+                validateFormOnSubmit();
+                $('#quoteForm').show();
+                _satellite.track('insurancegetquote');
+            }
+
+            function purchase() {
+                localStorage.setItem('insurancePurchase', 'yes');
+                _satellite.track('insurancepurchase');
+                $("#purchaseInsuranceLabel").text("SUCCESS! Your car insurance purchase has been received, we'll be in touch. You will be redirected to the homepage in 3 seconds.");
+                setTimeout(function(){document.location.href = "./index.html";}, 3000);
+            }
+
+        </script>
+
+<script src="./js/loadFromLocalStorage.js"></script>
+<script src="./js/jquery-1.11.3.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+
+<script src="./js/jquery-migrate-1.2.1.min.js"></script>
+<script src="./js/isotope.pkgd.min.js"></script>
+<script src="./js/imagesloaded.pkgd.min.js"></script>
+<script src="./js/jquery.flexslider.js"></script>
+<script src="./js/jquery-ui-1.10.2.custom.js"></script>
+<script src="./js/jquery.easing.min.js"></script>
+<script src="./js/jquery.elevatezoom.js"></script>
+<script src="./js/jquery.sharrre-1.3.5.js"></script>
+<script src="./js/jquery.cookie.js"></script>
+<script src="./js/la_boutique.js"></script>
+<script src="./js/tfingi-megamenu/tfingi-megamenu-frontend.js"></script>
+
+
+<!-- END JAVASCRIPTS -->
+    
+    </body>
+</html>

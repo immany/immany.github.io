@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class="no-js">
+    <head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="WVG" />
+
+<title id="titlename">Admin - Complete Module</title>
+
+<link rel="stylesheet" href="./css/bootstrap.min.css" />
+<link rel="stylesheet" href="./css/font-awesome.min.css" />
+<link rel="stylesheet" href="./css/flexslider.css" />
+<link rel="stylesheet" href="./css/admin.css" />
+<link rel="stylesheet" href="./js/tfingi-megamenu/tfingi-megamenu-frontend.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="./css/xray.css"/>
+<link rel="stylesheet" href="./css/color-schemes/alizarin.css" id="color_scheme" />
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=7; IE=8" />-->
+<link rel="icon" id="faviconlink" href="favicon.ico" type="image/x-icon" />
+<script src="https://npmcdn.com/parse/dist/parse.min.js"></script> 
+<script src="./js/b4a.js"></script> 
+<style>
+ html, body {
+  height: 100%;
+  margin: 0;
+  font-family: AdobeClean;
+}
+.wrapper {
+  min-height: 100%;
+
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -20px;
+}
+.footer,
+.push {
+  height: 10px;
+}
+
+</style>
+
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Shadows+Into+Light" rel="stylesheet">
+    
+<!-- Start of Adobe Experience Platform Launch Tag -->   
+    <!--<script src="./js/launch.js"></script>--> 
+    <!--<script src="./js/adobeprivacy.js"></script>--> 
+    <script src="//assets.adobedtm.com/b754ed1bed61/cc9d614268b2/launch-4029d4b1783d-development.min.js" async></script>
+<!-- End of Adobe Experience Platform Launch Tag --> 
+   
+<script src="https://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="./js/adminpages.js"></script> 
+    
+<!---The Data Layer--->
+    <script type="text/javascript">
+        var digitalData = {
+            page: {
+                pageName: window.document.title,
+                home: false,
+                productdtl: false,
+                custompage: false,
+                adminpage: false,
+                loadxray: false
+            },
+            category: {
+                primaryCategory:"Website",
+                pageType:"Home",
+                siteSection:"General"
+            },
+            customer: {
+                customerId:"",
+                accessCustomerName:"",
+                uuid:"",
+                mcid:"",
+                logged_in:"",
+                image_url:"",
+                firstName:"",
+                lastName:"",
+                gender:"",
+                birthDay:"",
+                birthMonth:"",
+                birthYear:"",
+                postalCode:"",
+                country:"",
+                countryCode:"",
+                city:"",
+                street:"",
+                email:"",
+                mobileNr:"",
+                shoeSize:"",
+                preferredColor:"",
+                shirtSize:"",
+                profilePicture:"",
+                children:"",
+                maritalStatus:"",
+                password:"",
+                propBuy:"",
+                brandEng:"",
+                tpd:"",
+                adblock:""
+            },  
+            product: {
+                imageUrl: "",
+                price: "",
+                name: "",
+                category: "",
+                color: "",
+                description: ""
+            }
+        };
+    </script>
+
+    </head>
+    <body onLoad="loadModules();">
+        <div class="wrapper" style="">
+          <!-- Header -->
+            <div class="header" style="">
+                <!-- Logo & Search bar -->
+                <div id="logobar" class="logobar">
+
+                    <a href="./admin.html" title="&larr; Back home">
+                        <img id="" alt="" src="./images/experience_platform_offtile_RGB.png">
+                        &nbsp;&nbsp;Adobe Experience Platform
+                    </a>
+                    <div id="logobarright">
+                        Experience Platform EMEA - SYTYCD
+                    </div>
+                </div>
+                <!-- End class="bottom" -->
+            </div>
+            <!-- End class="header" -->
+            <!-- Navigation -->
+            <nav class="navigation" style="background-color: #f0f0f0;display:none;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="#" class="main-menu-button">Navigation</a>
+                                <!-- Begin Menu Container -->
+                                <div class="megamenu_container" style="background-color: #f0f0f0; color:white;">
+                                    <div class="menu-main-navigation-container">
+                                        <ul id="menu-main-navigation" class="main-menu">
+                                            <li id="page0"></li>
+                                            <li id="page1"></li>
+                                            <li id="page2"></li>
+                                            <li id="page3"></li>
+                                            <li id="page4"></li>
+                                            <li id="page5"></li>
+                                            <li id="page6"></li>
+                                            <li id="page7"></li>
+                                            <li id="page8"></li>
+                                            <li class="menu-item-has-children">
+                                                <a href="#">...</a>
+                                                <ul class="sub-menu">
+                                                    <li class="" id="pageDMP"></li>
+                                                    <li class="" id="pageCallCenter"></li>
+                                                    <li class="" id="pagePersonalShopper"></li>
+                                                    <li class="" id="pagePOS"></li>
+                                                    <li class="" id="pageInStoreDisplay"></li>
+                                                    <li class="" id="page9"></li>
+                                                    <li class="" id="page10"></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>    
+                                </div> 
+                        </div>
+                    </div>
+                </div>    
+            </nav>
+            <!-- End class="navigation" -->
+
+            <div id="adminmenu" class="w3-sidebar w3-bar-block content adminleftmenutext">
+            </div>
+            
+            <div style="margin-left:12%" style="overflow:hidden;">
+                <div class="w3-container" >
+                    <br/>
+                    <div class="box-content" id="ldapAlarmSection" style="display:none;">
+                        <h5 style="color:red;">ERROR! No LDAP Selected </h5>
+                        You can't view this page without having selected your LDAP.
+                        <br/>
+                        Please go <a href="./admin_selectldap.html">here</a> to select your LDAP and then come back to this page to create your brand.
+                    </div>
+                    <div id="modulesection" class="box-content" style="display:block;height: 550px;">
+                    <div class="row">
+                        <div class="col-sm-12"><span id="textCompleteModules" style="display:none;">You have completed all available modules.</span>
+                            <div class="form-group">
+                                <div class="controls" style="overflow: scroll; height: 300px; width:500px;text-align:left;">
+                                    <ul id="modules" style="border: 1px solid #cacaca; color:#cacaca;height:300px;width:500px;list-style-type: none;text-decoration:none; padding: 0;margin: 0;">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="completionReason1" class="col-sm-3" style="display:none;"><span id="completionReasonText1"></span>
+                            <div class="form-group">
+                                <div class="controls" style="height: 30px; width:500px;text-align:left;">
+                                    <input class="form-control" id="completionReasonInfo1" type="text" name="completionReasonInfo1" value="" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="completionReason2" class="col-sm-3" style="display:none;"><span id="completionReasonText2"></span>
+                            <div class="form-group">
+                                <div class="controls" style="height: 30px; width:500px;text-align:left;">
+                                    <input class="form-control" id="completionReasonInfo2" type="text" name="completionReasonInfo2" value="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div id="loader" style="display:none;"></div>
+                    <div class="row">
+                        <label id="modulenr" style="display:none;"></label>
+                        <div class="controls">
+                                <div class="col-sm-6">
+                                    <button id="saveButton" type="submit" class="btn btn-primary btn-sm btn-block-xs" name="saveButton" value="files" onClick="saveModuleCompletion()" style="width:500px;" disabled>
+                                        Submit
+                                    </button>
+                                    <label id="completionstatus" class="control-label" for=""></label>
+                                </div>
+                        </div>         
+                    </div>
+                </div>
+                    
+        </div>
+	    <!-- Credits bar -->
+        <div class="push"></div>
+        <div class="credits" style="display:none;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <p id="footerCredits"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End class="credits" -->
+
+        <!-- JAVASCRIPT -->
+        <script>
+            var brandLdap = localStorage.getItem('admin_ldap');
+
+                if(brandLdap === null){
+                    $("#modulesection").attr("style", "display:none;");
+                    $("#ldapAlarmSection").attr("style", "display:block;");
+
+                }else{
+                    $("#modulesection").attr("style", "display:block;");
+                    $("#ldapAlarmSection").attr("style", "display:none;");
+                }
+            ////////////////////////////////
+            // Modules Section
+            ////////////////////////////////
+
+            function saveModuleCompletion() {
+                $("#loader").attr("style", "display:block;");
+                var modulenr = parseInt(document.getElementById('modulenr').innerHTML);
+                var b4aId = localStorage.getItem("adobeUserB4Aid");
+                var submitCompletionReasonInfo1 = document.getElementById('completionReasonInfo1').value;
+                var submitCompletionReasonInfo2 = document.getElementById('completionReasonInfo2').value;
+
+                console.log(b4aId + " - Submit Completion for Module Nr: " + modulenr);
+
+                const AdobeModuleCompletion = Parse.Object.extend('AdobeModuleCompletion');
+                const newAdobeModuleCompletion = new AdobeModuleCompletion();
+
+                newAdobeModuleCompletion.set('b4aId', b4aId);
+                newAdobeModuleCompletion.set('module', modulenr);
+                newAdobeModuleCompletion.set('completionReason1', submitCompletionReasonInfo1);
+                newAdobeModuleCompletion.set('completionReason2', submitCompletionReasonInfo2);
+                newAdobeModuleCompletion.set('completionApproved', false);
+
+                switch (modulenr) {
+                  case 4:
+                    newAdobeModuleCompletion.set('completionApproved', true);
+                    break;
+                  default:
+                    newAdobeModuleCompletion.set('completionApproved', true);
+                }
+
+                newAdobeModuleCompletion.save().then(
+                  (result) => {
+                    if (typeof document !== 'undefined'){ 
+                        console.log('Module Completion Submitted', result);
+                        localStorage.setItem("completedModuleNr", modulenr);
+                        switch (modulenr) {
+                          case 4:
+                            //do nothing - manual validation required for module 4
+                            updateAdobeUser(modulenr);
+                            break;
+                          default:
+                            updateAdobeUser(modulenr);
+                        }
+                        
+                    }
+                  },
+                  (error) => {
+                    if (typeof document !== 'undefined'){
+                        console.error('Error while creating newAdobeModuleCompletion: ', error);
+                        $("#completionstatus").text("Error!");
+                        $("#loader").attr("style", "display:none;");
+                    }
+                });
+
+            }
+
+            function updateAdobeUser(modulenr) {
+
+                const AdobeUser = Parse.Object.extend('AdobeUser');
+                const query = new Parse.Query(AdobeUser);
+
+                query.get(localStorage.getItem("adobeUserB4Aid")).then((object) => {
+                  object.set('m'+modulenr, true);
+                  object.save().then((response) => {
+                    if (typeof document !== 'undefined'){
+                        console.log('Adobe User Updated', response);
+                        moduleCompletionSubmitted();
+                    }
+                  }, (error) => {
+                    if (typeof document !== 'undefined'){
+                        console.error('Error while updating AdobeUser', error);
+                    }
+                  });
+                });
+            }
+
+            function moduleCompletionSubmitted(){
+                $("#loader").attr("style", "display:none;");
+                $("#submitRegistration").attr("disabled", false);
+                _satellite.track('completemodule');
+                $("#completionstatus").text("SUCCESS! Your registration has been submitted. You will be redirected to the Admin-page in 3 seconds.");
+                setTimeout(function(){document.location.href = "./admin.html";}, 3000);
+            }
+
+            function loadModules() {
+                var allModuleList = [];
+                var moduleList = [];
+
+                allModuleList = JSON.parse(localStorage.getItem("moduleList"));
+                console.log("Module List", allModuleList, allModuleList.length);
+                console.log("Module List Length: " + allModuleList.length);
+                for (i = 0; i < allModuleList.length; i++) {
+                    if(allModuleList[i].moduleActive == true){
+                        moduleList.push(allModuleList[i].moduleName);
+                    }
+                }
+
+                var select = document.getElementById('modules');
+                var firstModuleToCompleteFound = false;
+
+                for (var i = 0; i < moduleList.length; i++) {
+                    if(firstModuleToCompleteFound == false){
+                        if(localStorage.getItem("adobeUserInfoM"+(i+1)+"Complete") !== "true"){
+                            if(i == 4){
+                                if(localStorage.getItem("adobeUserInfoM5Complete") !== "true"){
+                                    $("#textCompleteModules").text("Your next module to complete is:");
+                                    var li = document.createElement("li");
+                                    var link = document.createElement("a");
+                                    link.setAttribute('href', '#');
+                                    li.addEventListener("click", clickLi);
+                                    li.appendChild(link);
+                                    var text = document.createTextNode(moduleList[i]);
+                                    link.appendChild(text);
+                                    select.insertBefore(li, select.childNodes[i]);
+                                }
+                            }else{    
+                                $("#textCompleteModules").text("Your next module to complete is:");
+                                var li = document.createElement("li");
+                                var link = document.createElement("a");
+                                link.setAttribute('href', '#');
+                                li.addEventListener("click", clickLi);
+                                li.appendChild(link);
+                                var text = document.createTextNode(moduleList[i]);
+                                link.appendChild(text);
+                                select.insertBefore(li, select.childNodes[i]);
+                                firstModuleToCompleteFound = true;
+                            }
+                        }
+                    }
+                }
+                $("#textCompleteModules").attr("style", "display:block;");
+            }
+
+            function myFunction() {
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("ldaps");
+                li = ul.getElementsByTagName("li");
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+
+            $("#completionReasonInfo1").keyup(function(){
+                $("#saveButton").attr("disabled", true);
+                //selection changed
+                if(this.value !== ""){
+                    if(document.getElementById('modulenr').innerHTML != "5"){
+                        $("#saveButton").attr("disabled", false);
+                    }
+                }
+            });
+
+            $("#completionReasonInfo2").keyup(function(){
+                $("#saveButton").attr("disabled", true);
+                //selection changed
+                if(this.value !== ""){
+                    if(document.getElementById('modulenr').innerHTML == "5"){
+                        if(document.getElementById('completionReasonInfo1').value != ""){
+                            $("#saveButton").attr("disabled", false);
+                        }
+                    }
+                }
+            });
+
+            function updateModule(module){
+                $("#saveButton").attr("disabled", true);
+                //console.log(module);
+                if(module.includes("Module 1 -")){
+                    $("#completionReason1").attr("style", "display:block;");
+                    $("#completionReasonText1").text("Launch Property ID");
+                    $("#completionReason2").attr("style", "display:none;");
+                    $("#completionReasonText2").text("");
+                    $("#modulenr").text("1");
+                    $("#saveButton").text("Submit completion for Module 1");
+                }else if(module.includes("Module 2 -")){
+                    $("#completionReason1").attr("style", "display:block;");
+                    $("#completionReasonText1").text("ProfileSegmentDatasetID");
+                    $("#completionReason2").attr("style", "display:none;");
+                    $("#completionReasonText2").text("");
+                    $("#modulenr").text("2");
+                    $("#saveButton").text("Submit completion for Module 2");
+                }else if(module.includes("Module 3 -")){
+                    $("#completionReason1").attr("style", "display:block;");
+                    $("#completionReasonText1").text("URL to Video");
+                    $("#completionReason2").attr("style", "display:none;");
+                    $("#completionReasonText2").text("");
+                    $("#modulenr").text("3");
+                    $("#saveButton").text("Submit completion for Module 3");
+                }else if(module.includes("Module 4 -")){
+                    $("#completionReason1").attr("style", "display:block;");
+                    $("#completionReasonText1").text("URL to Video");
+                    $("#completionReason2").attr("style", "display:none;");
+                    $("#completionReasonText2").text("");
+                    $("#modulenr").text("4");
+                    $("#saveButton").text("Submit completion for Module 4");
+                }else if(module.includes("Module 5 -")){
+                    $("#completionReason1").attr("style", "display:block;");
+                    $("#completionReasonText1").text("Unifi Offline Orders Batch ID");
+                    $("#completionReason2").attr("style", "display:block;");
+                    $("#completionReasonText2").text("Unifi Partner Profiles Batch IDs");
+                    $("#modulenr").text("5");
+                    $("#saveButton").text("Submit completion for Module 5");
+                }else if(module.includes("Module 6 -")){
+                    $("#completionReason1").attr("style", "display:block;");
+                    $("#completionReasonText1").text("JO Orchestration eventID");
+                    $("#completionReason2").attr("style", "display:none;");
+                    $("#completionReasonText2").text("");
+                    $("#modulenr").text("6");
+                    $("#saveButton").text("Submit completion for Module 6");
+                }else if(module.includes("Module 7 -")){
+                    $("#completionReason1").attr("style", "display:block;");
+                    $("#completionReasonText1").text("Callcenter Interaction Analysis Dataset ID");
+                    $("#completionReason2").attr("style", "display:none;");
+                    $("#completionReasonText2").text("");
+                    $("#modulenr").text("7");
+                    $("#saveButton").text("Submit completion for Module 7");
+                }else if(module.includes("Module 8 -")){
+                    $("#completionReason1").attr("style", "display:block;");
+                    $("#completionReasonText1").text("DSW Recipe Name");
+                    $("#completionReason2").attr("style", "display:none;");
+                    $("#completionReasonText2").text("");
+                    $("#modulenr").text("8");
+                    $("#saveButton").text("Submit completion for Module 8");
+                }else if(module.includes("Module 9 -")){
+                    $("#completionReason1").attr("style", "display:block;");
+                    $("#completionReasonText1").text("GTM Tag ID");
+                    $("#completionReason2").attr("style", "display:none;");
+                    $("#completionReasonText2").text("");
+                    $("#modulenr").text("9");
+                    $("#saveButton").text("Submit completion for Module 9");
+                }else if(module.includes("Module 10 -")){
+                    $("#completionReason1").attr("style", "display:block;");
+                    $("#completionReasonText1").text("DSW Recipe Name");
+                    $("#completionReason2").attr("style", "display:none;");
+                    $("#completionReasonText2").text("");
+                    $("#modulenr").text("10");
+                    $("#saveButton").text("Submit completion for Module 10");
+                }else if(module.includes("Module 11 -")){
+                    $("#completionReason1").attr("style", "display:block;");
+                    $("#completionReasonText1").text("Adobe Target Activity ID");
+                    $("#completionReason2").attr("style", "display:none;");
+                    $("#completionReasonText2").text("");
+                    $("#modulenr").text("11");
+                    $("#saveButton").text("Submit completion for Module 11");
+                }else if(module.includes("Module 12 -")){
+                    $("#completionReason1").attr("style", "display:block;");
+                    $("#completionReasonText1").text("JO Journey ID");
+                    $("#completionReason2").attr("style", "display:none;");
+                    $("#completionReasonText2").text("");
+                    $("#modulenr").text("12");
+                    $("#saveButton").text("Submit completion for Module 12");
+                }else if(module.includes("Module 13 -")){
+                    $("#completionReason1").attr("style", "display:block;");
+                    $("#completionReasonText1").text("CJA - Analysis Workspace Project ID");
+                    $("#completionReason2").attr("style", "display:none;");
+                    $("#completionReasonText2").text("");
+                    $("#modulenr").text("13");
+                    $("#saveButton").text("Submit completion for Module 13");
+                }else if(module.includes("Module 14 -")){
+                    $("#completionReason1").attr("style", "display:block;");
+                    $("#completionReasonText1").text("Offer Activity ID");
+                    $("#completionReason2").attr("style", "display:none;");
+                    $("#completionReasonText2").text("");
+                    $("#modulenr").text("14");
+                    $("#saveButton").text("Submit completion for Module 14");
+                }else if(module.includes("Module 15 -")){
+                    $("#completionReason1").attr("style", "display:block;");
+                    $("#completionReasonText1").text("ML Service ID");
+                    $("#completionReason2").attr("style", "display:none;");
+                    $("#completionReasonText2").text("");
+                    $("#modulenr").text("15");
+                    $("#saveButton").text("Submit completion for Module 15");
+                }else if(module.includes("Module 16 -")){
+                    $("#completionReason1").attr("style", "display:block;");
+                    $("#completionReasonText1").text("BigQuery Connection ID");
+                    $("#completionReason2").attr("style", "display:none;");
+                    $("#completionReasonText2").text("");
+                    $("#modulenr").text("16");
+                    $("#saveButton").text("Submit completion for Module 16");
+                }else if(module.includes("Module 17 -")){
+                    $("#completionReason1").attr("style", "display:none;");
+                    $("#completionReasonText1").text("");
+                    $("#completionReason2").attr("style", "display:none;");
+                    $("#completionReasonText2").text("");
+                    $("#modulenr").text("17");
+                    $("#saveButton").text("Submit completion for Module 17");
+                    $("#saveButton").attr("disabled", true);
+                }else if(module.includes("Module 18 -")){
+                    $("#completionReason1").attr("style", "display:none;");
+                    $("#completionReasonText1").text("");
+                    $("#completionReason2").attr("style", "display:none;");
+                    $("#completionReasonText2").text("");
+                    $("#modulenr").text("18");
+                    $("#saveButton").text("Submit completion for Module 18");
+                    $("#saveButton").attr("disabled", true);
+                }else if(module.includes("Module 19 -")){
+                    $("#completionReason1").attr("style", "display:none;");
+                    $("#completionReasonText1").text("");
+                    $("#completionReason2").attr("style", "display:none;");
+                    $("#completionReasonText2").text("");
+                    $("#modulenr").text("19");
+                    $("#saveButton").text("Submit completion for Module 19");
+                    $("#saveButton").attr("disabled", true);
+                }else if(module.includes("Module 20 -")){
+                    $("#completionReason1").attr("style", "display:none;");
+                    $("#completionReasonText1").text("");
+                    $("#completionReason2").attr("style", "display:none;");
+                    $("#completionReasonText2").text("");
+                    $("#modulenr").text("20");
+                    $("#saveButton").text("Submit completion for Module 20");
+                    $("#saveButton").attr("disabled", true);
+                }else{
+                    $("#completionReason1").attr("style", "display:none;");
+                    $("#completionReasonText1").text("");
+                    $("#completionReason2").attr("style", "display:none;");
+                    $("#completionReasonText2").text("");
+                    $("#modulenr").text("0");
+                    $("#saveButton").attr("disabled", true);
+                }
+            }
+
+            function clickLi() {
+                //console.log("clicked");
+                $("#modules li").removeClass('selected');
+                $(this).addClass('selected');
+                var module = this.getElementsByTagName("a")[0].innerHTML;
+                console.log(module + " is selected")
+                if(module === "..."){
+                    $("#saveButton").attr("disabled", true);
+                }else{
+                    updateModule(module);
+                }
+                
+            } 
+        </script>
+        <style>
+
+        .selected{
+            border: 1px solid #888;
+            padding-left: 0px;
+            padding-right: 110px;
+            background-color: #white;
+            background-image:none;
+        }
+        </style>
+
+        <!-- JAVASCRIPT -->
+        <script src="./js/loadFromLocalStorage.js"></script>
+        <script src="./js/jquery-1.11.3.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+
+    
+    </body>
+</html>

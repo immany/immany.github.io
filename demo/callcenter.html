@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Call Center</title>
+    <script src="./js/b4a.js"></script>
+    <link rel="icon" id="faviconlink"
+        href="./assets/cc-assets/img/aep-fav.ico"
+        type="image/x-icon" />
+    <!-- XRAY - CSS -->
+    <link rel="stylesheet" href="./css/xray.css" />
+
+    <link rel="stylesheet"
+        href="./assets/cc-assets/css/bootstrap-grid.css">
+    <link rel="stylesheet"
+        href="./assets/cc-assets/css/circle.css">
+    <link rel="stylesheet"
+        href="./assets/cc-assets/css/coral.css">
+    <link href="./assets/cc-assets/css/roundslider.min.css"
+        rel="stylesheet" />
+    <link rel="stylesheet"
+        href="./assets/cc-assets/css/styles.css">
+    <link rel="stylesheet"
+        href="./assets/cc-assets/css/timeline.css">
+    <!-- CUSTOM EXTENDED - CSS -->
+    <link rel="stylesheet"
+        href="./assets/cc-assets/css/extended.css">
+
+    <!-- SWEETALERT -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- JAVASCRIPTS -->
+    <script src="https://kit.fontawesome.com/143be585ea.js"></script>
+    <script
+        src="./assets/cc-assets/js/libs/jquery.js"></script>
+    <script
+        src="./assets/cc-assets/js/roundslider.min.js"></script>
+    <script
+        src="./assets/cc-assets/js/libs/moment.js"></script>
+    <script
+        src="./assets/cc-assets/js/coral.min.js"></script>
+    <script src="./js/launch.js"></script>
+
+</head>
+
+<body class="coral--light">
+    <section class="main-content">
+        <h1 class="brand-title">
+            <img src="#" class="logo" id="brandlogo">Call Center</h1>
+        <div class="history">
+            <div class="page-header">
+                <h1>History of the activity</h1>
+            </div>
+            <div style="display:inline-block;width:100%;overflow-y:auto;padding-left: 20px;">
+                <h5 class="small cus-h5">Scroll horizontally >></h5>
+                <ul class="timeline timeline-horizontal">
+
+                </ul>
+            </div>
+            <div class="timeline-legend">
+                <div class="legend-item">
+                    <span class="color-legend mobile"></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10.085" height="18.153" viewBox="0 0 10.085 18.153">
+                        <path id="Path_15791" data-name="Path 15791"
+                            d="M13.077,0H5.009A1.009,1.009,0,0,0,4,1.009V17.145a1.009,1.009,0,0,0,1.009,1.009h8.068a1.009,1.009,0,0,0,1.009-1.009V1.009A1.009,1.009,0,0,0,13.077,0ZM8.538,1.009H9.547a.525.525,0,0,1,.5.5.524.524,0,0,1-.5.5H8.538a.515.515,0,0,1-.5-.5A.516.516,0,0,1,8.538,1.009Zm.5,16.691A1.059,1.059,0,1,1,10.1,16.641,1.059,1.059,0,0,1,9.043,17.7Zm4.034-2.572H5.009V3.026h8.068Z"
+                            transform="translate(-4)" fill="#707070" />
+                    </svg>
+                    <h5>Mobile App</h5>
+                </div>
+
+                <div class="legend-item">
+                    <span class="color-legend online-shop"></span>
+                    <svg id="Group_80527" data-name="Group 80527" xmlns="http://www.w3.org/2000/svg" width="17"
+                        height="17" viewBox="0 0 17 17">
+                        <rect id="Canvas" width="17" height="17" fill="#ff13dc" opacity="0" />
+                        <rect id="Rectangle_9050" data-name="Rectangle 9050" width="3.778" height="6.611"
+                            transform="translate(10.389 3.778)" fill="#6e6e6e" />
+                        <path id="Path_15793" data-name="Path 15793"
+                            d="M16.528,1H.472A.472.472,0,0,0,0,1.472V12.806a.472.472,0,0,0,.472.472H6.611v2.361a.472.472,0,0,1-.472.472H5.194a.463.463,0,0,0-.472.472v.472h7.556v-.472a.472.472,0,0,0-.472-.472h-.944a.472.472,0,0,1-.472-.472V13.278h6.139A.472.472,0,0,0,17,12.806V1.472A.472.472,0,0,0,16.528,1ZM15.111,11.389H1.889v-8.5H15.111Z"
+                            transform="translate(0 -0.056)" fill="#6e6e6e" />
+                    </svg>
+                    <h5>Online Shop</h5>
+                </div>
+
+                <div class="legend-item">
+                    <span class="color-legend iot-devices"></span>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="59.1px"
+                        height="49.5px" viewBox="0 0 59.1 49.5" class="iot-devices-svg" xml:space="preserve">
+                        <style type="text/css">
+                            .st0 {
+                                fill: #2D2D2D;
+                            }
+                        </style>
+                        <defs></defs>
+                        <g id="IOT_1_">
+                            <g>
+                                <g>
+                                    <path class="st0" d="M19.9,49.5C19.9,49.5,19.8,49.5,19.9,49.5c-0.5,0-0.9-0.3-1.1-0.7l-6.1-10.2H6.9c-3.8,0-6.9-3.1-6.9-6.9V6.9
+											C0,3.1,3.1,0,6.9,0h45.2c3.8,0,6.9,3.1,6.9,6.9v24.8c0,3.8-3.1,6.9-6.9,6.9H27.3L21,48.9C20.8,49.3,20.3,49.5,19.9,49.5z
+											M6.9,2.7c-2.4,0-4.3,1.9-4.3,4.3v24.8c0,2.4,1.9,4.3,4.3,4.3h6.4c0.5,0,0.9,0.2,1.1,0.7l5.4,9l5.6-9c0.2-0.4,0.7-0.6,1.1-0.6
+											h25.6c2.4,0,4.3-1.9,4.3-4.3V6.9c0-2.4-1.9-4.3-4.3-4.3H6.9z" />
+                                </g>
+                                <g>
+                                    <g>
+                                        <path class="st0" d="M11.8,9.4V29H7.4V9.4H11.8z" />
+                                    </g>
+                                    <g>
+                                        <path class="st0"
+                                            d="M36,19c0,6.4-3.9,10.3-9.6,10.3c-5.8,0-9.2-4.4-9.2-10c0-5.9,3.8-10.3,9.5-10.3C32.7,9.1,36,13.6,36,19z
+												M21.8,19.3c0,3.8,1.8,6.5,4.8,6.5c3,0,4.7-2.8,4.7-6.7c0-3.5-1.7-6.5-4.7-6.5C23.5,12.6,21.8,15.5,21.8,19.3z" />
+                                    </g>
+                                    <g>
+                                        <path class="st0" d="M44.2,13.2h-5.3V9.4H54v3.7h-5.3V29h-4.4V13.2z" />
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    <h5>Devices</h5>
+                </div>
+
+                <div class="legend-item">
+                    <span class="color-legend store"></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18.179" height="18.153" viewBox="0 0 18.179 18.153">
+                        <rect id="Canvas" width="18.153" height="18.153" transform="translate(0.026)" fill="#ff13dc"
+                            opacity="0" />
+                        <ellipse id="Ellipse_15" data-name="Ellipse 15" cx="1.344" cy="1.47" rx="1.344" ry="1.47"
+                            transform="translate(3.948 14.233)" fill="#707070" />
+                        <ellipse id="Ellipse_16" data-name="Ellipse 16" cx="1.344" cy="1.47" rx="1.344" ry="1.47"
+                            transform="translate(11.681 14.233)" fill="#707070" />
+                        <path id="Path_15792" data-name="Path 15792"
+                            d="M14.788,12.1H5.279l.384-1.239H14.12a.673.673,0,0,0,.66-.541l2.353-6.389a.673.673,0,0,0-.66-.807h-.064V3.109H3.276L2.622,1.344A.673.673,0,0,0,1.957.771H.673a.673.673,0,1,0,0,1.344h.706L4.368,10.15l-.652,2.56a.791.791,0,0,0,.652.97H14.792a.8.8,0,0,0,.672-.807.774.774,0,0,0-.676-.778ZM3.8,4.521H15.431L13.568,9.512H5.635Z"
+                            transform="translate(0.026 0.007)" fill="#707070" />
+                    </svg>
+                    <h5>Store</h5>
+                </div>
+
+                <div class="legend-item">
+                    <span class="color-legend call-center"></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14.577" height="14.577" viewBox="0 0 14.577 14.577">
+                        <g id="Group_80528" data-name="Group 80528" transform="translate(7.994 -27.863)">
+                            <g id="Group_80502" data-name="Group 80502" transform="translate(-7.994 27.863)">
+                                <path id="Path_15788" data-name="Path 15788"
+                                    d="M10.967,54.291a1.01,1.01,0,0,0-1.527,0c-.357.354-.714.708-1.065,1.068a.21.21,0,0,1-.294.054c-.231-.126-.477-.228-.7-.366a11.076,11.076,0,0,1-2.67-2.43,6.326,6.326,0,0,1-.957-1.533.22.22,0,0,1,.054-.282c.357-.345.705-.7,1.056-1.053a1.014,1.014,0,0,0,0-1.563c-.279-.282-.558-.558-.837-.84s-.573-.579-.864-.864a1.017,1.017,0,0,0-1.527,0c-.36.354-.705.717-1.071,1.065a1.738,1.738,0,0,0-.546,1.173A4.97,4.97,0,0,0,.4,50.861,13,13,0,0,0,2.707,54.7a14.277,14.277,0,0,0,4.728,3.7,6.838,6.838,0,0,0,2.619.762,1.92,1.92,0,0,0,1.647-.627c.306-.342.651-.654.975-.981A1.021,1.021,0,0,0,12.683,56Q11.828,55.144,10.967,54.291Z"
+                                    transform="translate(-0.006 -44.593)" fill="#707070" />
+                                <path id="Path_15789" data-name="Path 15789"
+                                    d="M241.482,100.76l1.235-.211A5.544,5.544,0,0,0,238.028,96l-.174,1.242a4.285,4.285,0,0,1,3.628,3.518Z"
+                                    transform="translate(-230.962 -93.214)" fill="#707070" />
+                                <path id="Path_15790" data-name="Path 15790"
+                                    d="M248.15,2.6A9.107,9.107,0,0,0,242.928,0l-.174,1.242a7.947,7.947,0,0,1,6.724,6.517l1.235-.211A9.174,9.174,0,0,0,248.15,2.6Z"
+                                    transform="translate(-236.136)" fill="#707070" />
+                            </g>
+                        </g>
+                    </svg>
+
+                    <h5>Call Center</h5>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>What’s left in the shopping cart</h2>
+                    <div id="products-in-cart" class="products-thumbs flex">
+
+                    </div>
+
+                    <div style="display: none;" class="view-more-button">
+                        <button is="coral-button">
+                            View more products
+                        </button>
+                    </div>
+
+                </div>
+                <div class="col-md-6" style="display: none;">
+                    <h2>Next Best Offer</h2>
+                    <div id="next-best-offer" class="products-thumbs flex">
+                        <div class="product">
+                            <img src="./assets/cc-assets/img/tshirt-2.png" class="product-thumb" alt=" " />
+                            <p class="price">120</p>
+                            <h3>T-Shirt Quai 54</h3>
+                            <p class="sku">FR092783621</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <coral-tabview class="tablist">
+                <coral-tablist target="coral-demo-panel-1">
+                    <coral-tab>ACTIVITY STATS</coral-tab>
+
+                    <coral-tab>PRODUCTS PURCHASED</coral-tab>
+
+                    <coral-tab>DETAILED PROFILE ACTIVITIES</coral-tab>
+                </coral-tablist>
+                <coral-panelstack id="coral-demo-panel-1">
+                    <coral-panel class="coral-Well">
+                        <div class="table-chart">
+                            <!--<div class="types">
+                            <div class="control">
+                                <div id="type"></div>
+                            </div>
+                            <div class="options">
+                                <select id="Select1" onchange="sliderTypeChanged(this)" style="float: left;">
+                                    <option>Interaction</option>
+                                    <option>Propensity</option>
+                                    <option>Reactions</option>
+                                </select>
+                            </div>
+                        </div>-->
+
+                            <!-- s:TELCO SPECIFIC -->
+                            <div id="churn-chart" class="clearfix"
+                                style="z-index: 1;position: relative;bottom: 1em;text-align: center;margin-left: 1em;display: none;">
+                                <div id="churn-score" class="c100 p1 big center green"
+                                    style="font-size: 190px;box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.15);">
+                                    <span>1%</span>
+                                    <div class="slice">
+                                        <div class="bar"></div>
+                                        <div class="fill"></div>
+                                    </div>
+                                </div>
+                                <span
+                                    style="text-transform: uppercase;letter-spacing: 1px;color: #4B4B4B;font-size: 0.7rem;line-height: 140%;">CHURN
+                                    SCORE</span>
+                            </div>
+                            <!-- e:TELCO SPECIFIC -->
+                            <!--s:FSI SPECIFIC-->
+                            <div id="prediction-chart" class="clearfix"
+                                style="z-index: 1;position: relative;bottom: 1em;text-align: center;margin-left: 1em;display: none;">
+                                <div id="prediction-score" class="c100 p1 big center green"
+                                    style="font-size: 190px;box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.15);">
+                                    <span>1%</span>
+                                    <div class="slice">
+                                        <div class="bar"></div>
+                                        <div class="fill"></div>
+                                    </div>
+                                </div>
+                                <span
+                                    style="text-transform: uppercase;letter-spacing: 1px;color: #4B4B4B;font-size: 0.7rem;line-height: 140%;">MORTGAGE
+                                    LOAN SALES PREDICTION
+                                    SCORE</span>
+                            </div>
+                            <!--e:FSI SPECIFIC-->
+
+                            <div class="table-caption">
+                                <p id="last-call-hdr">Last call on 1st May 2019</p>
+                                <table class="table-view">
+                                    <tr>
+                                        <td colspan="1" style="width: 27%;">
+                                            <h2 id="total-ccInteraction">0</h2><span>Total Calls</span>
+                                        </td>
+                                        <td colspan="1">
+                                            <h2 id="positive-cc">0</h2><span>Promoters</span>
+                                        </td>
+                                        <td colspan="1">
+                                            <h2 id="negative-cc">0</h2><span>Detractors</span>
+                                        </td>
+                                        <td colspan="1">
+                                            <h2 id="contract-cc">0</h2><span>Contract</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+
+                        <!--
+       
+                        <div class="table-caption">
+                            <p id="last-simulation-hdr">Last loan simulation on 1st May 2019</p>
+                            <table class="table-view">
+                                <tr>
+                                    <td colspan="1" style="width: 27%;">
+                                        <h2 id="total-fsiInteraction">0</h2><span>Total Simulations</span>
+                                    </td>
+                                    <td colspan="1">
+                                        <h2 id="positive-cc">0</h2><span>Promoters</span>
+                                    </td>
+                                    <td colspan="1">
+                                        <h2 id="negative-cc">0</h2><span>Detractors</span>
+                                    </td>
+                                    <td colspan="1">
+                                        <h2 id="contract-cc">0</h2><span>Contract</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    -->
+
+                        <div class="table-chart second">
+                            <div class="circle-chart">
+                                <h2 id="total-spent">0 $</h2>
+                                <h5>NET PURCHASES</h5>
+                            </div>
+
+                            <table class="table-view" style="margin-left: 1em;">
+                                <tr>
+                                    <td colspan="1" style="padding: 10px 5px;">
+                                        <h2 id="last-purchase-val">$ 0</h2>
+                                        <span>Last Purchase</span>
+                                    </td>
+                                    <td colspan="1">
+                                        <h2 id="prodview-summay">0</h2><span>Product Views</span>
+                                    </td>
+                                    <td colspan="1" style="width: 36%;">
+                                        <h2 id="purchase-avg-time">00:00</h2><span>Avg. Cart to Purchase</span>
+                                    </td>
+                                    <td colspan="1">
+                                        <h2 id="purchase-netcount">0</h2>
+                                        <span>Purchases</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </coral-panel>
+
+                    <coral-panel class="coral-Well">
+                        <ul id="purchased-product-ul" style="list-style-type: none;">
+                        </ul>
+                    </coral-panel>
+
+                    <coral-panel class="coral-Well">
+                        <select id="activity-filter" class="activity-filter-list">
+                            <option disabled selected value> -- select an activity -- </option>
+                            <option value="productViews">Product view</option>
+                            <option value="addToCart">Added to cart</option>
+                            <option value="callCenterLogs">Call center Logs</option>
+                            <option value="storeEntries">Store entries</option>
+                            <option value="chatbotLogs">Chatbot logs</option>
+                            <option value="flightSearch">Flight search</option>
+                            <option value="flightBooked">Flight booked</option>
+                            <option value="testDrive">Test drive</option>
+                            <option value="mortgageLoanSimulation">Mortgage simulation</option>
+                        </select>
+                        <ul id="activities-ul" style="list-style-type: none;">
+                        </ul>
+                    </coral-panel>
+                </coral-panelstack>
+            </coral-tabview>
+
+    </section>
+
+    <section class="sidebar">
+        <div class="sidebar-scrollable">
+            <div class="row sidebar-content profile-hdr" style="position:relative;width:100%;max-width:500px">
+                <div><img src="#" class="user-photo" alt="" /></div>
+                <div>
+                    <h2 id="fullName">____ ____</h2>
+                </div>
+            </div>
+            <div class="row sidebar-content profile-hdr"
+                style="position:relative;width:100%;max-width:500px;height:70px;justify-content: space-evenly;">
+                <input id="idValue" is="coral-textfield" class="coral3-Textfield" type="text" name="placeholder"
+                    placeholder="ID Value" aria-invalid="false" style="width:14rem" />
+
+
+                <select id="namespace" name="namespace" class="coral3-SelectList coral3-Textfield"
+                    style="color:#000;font-size: small;width:7rem">
+                    <option class="coral3-SelectList-item" value="" disabled>ID Namespace &#8597;
+                    </option>
+                    <option class="coral3-SelectList-item" selected value="mobilenr">MOBILE &#8597;</option>
+                    <option class="coral3-SelectList-item" value="email">EMAIL &#8597;</option>
+                    <option class="coral3-SelectList-item" value="ecid">ECID &#8597;</option>
+                    <option class="coral3-SelectList-item" value="crmid">CRMID &#8597;</option>
+                    <option class="coral3-SelectList-item" value="gigya">GIGYA &#8597;</option>
+                </select>
+
+
+            </div>
+            <div class="row sidebar-content profile-hdr"
+                style="position:relative;width:100%;max-width: 500px;height: 70px;justify-content: space-evenly;">
+                <button id="submit" is="coral-button" class="button-white">Search</button>
+                <button id="log-callcenter" is="coral-button" class="button-white">Log a call</button>
+            </div>
+            <div class="sidebar-content flex" style="">
+                <!--<img src="img/user.png" class="user-photo" alt="John Doe" />-->
+                <div class="user-content">
+                    <!--<h2 id="fullName">____ ____</h2>-->
+                    <!--<ul class="user-list">
+                    <li><span id="phone">___-___-____</span></li>
+                    <li class="subtitle">Address</li>
+                    <li><span id="address"></span></li>
+                </ul>-->
+
+                    <ul class="user-list details">
+                        <li class="subtitle">Mobile</li>
+                        <li class="info"><span id="mobile-nm">___-___-____</span></li>
+                        <li class="subtitle">Address</li>
+                        <li class="info"><span id="address"></span></li>
+                        <li class="subtitle">Gender</li>
+                        <li class="info"><span id="gender">Male</span></li>
+                        <!--
+                        <li class="subtitle">BIRTHDAY</li>
+                        <li class="info"><span id="birthdate">01/01/2019</span></li>
+                        -->
+                        <li class="subtitle">Email</li>
+                        <li class="info"><span id="email">user@domain.com</span></li>
+
+                        <li class="subtitle" id="optins--label">Optins</li>
+                        <li class="info" id="optins">
+                            <p>
+                                <span id=""><i class="fas fa-envelope fa-24"></i></span>
+                                <span class="optin-box" id="opt-in-email"><i class=""></i></span>
+
+                            </p>
+                            <p>
+                                <span id=""><i class="fas fa-phone fa-24"></i></span>
+                                <span class="optin-box" id="opt-in-phone"><i class=""></i></span>
+
+                            </p>
+                            <p>
+                                <span id=""><i class="fas fa-sms fa-24"></i></span>
+                                <span class="optin-box" id="opt-in-sms"><i class=""></i></span>
+
+                            </p>
+                            <p>
+                                <span id=""><i class="fas fa-envelope-open-text fa-24"></i></span>
+                                <span class="optin-box" id="opt-in-directmail"><i class=""></i></span>
+
+                            </p>
+                        </li>
+
+                        <li class="subtitle" id="retail--label" style="display:none">Retail Preference</li>
+                        <li class="info" id="profileAttributes" style="display:none">
+                        <li class="subtitle" id="shoe-size-label" style="display:none">Shoe size</li>
+                        <li class="info"><span id="shoe-size" style="display:none"></span></li>
+                        <li class="subtitle" id="shirt-size-label" style="display:none">Shirt size</li>
+                        <li class="info"><span id="shirt-size" style="display:none"></span></li>
+                        <li class="subtitle" id="preferred-color-label" style="display:none">Preferred color</li>
+                        <li class="info"><span id="preferred-color" style="display:none"></span></li>
+                        </li>
+
+
+                        <li class="subtitle" id="fmcg--label" style="display:none">Food Tolerance</li>
+                        <li class="info" id="fmcgAttributes" style="display:none">
+                            <p>
+                                <span id="">Dairy</span>
+                                <span class="optin-box" id="allergy-dairy"><i class=""></i></span>
+
+                            </p>
+                            <p>
+                                <span id="">Gluten</span>
+                                <span class="optin-box" id="allergy-gluten"><i class=""></i></span>
+
+                            </p>
+                            <p>
+                                <span id="">Nuts</span>
+                                <span class="optin-box" id="allergy-nuts"><i class=""></i></span>
+
+                            </p>
+                            <p>
+                                <span id="">Shellfish</span>
+                                <span class="optin-box" id="allergy-shellfish"><i class=""></i></span>
+
+                            </p>
+                            <p>
+                                <span id="">Soy</span>
+                                <span class="optin-box" id="allergy-soy"><i class=""></i></span>
+
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cc-footer">
+                <span id="footerCredits">&copy;Adobe Experience Platform 2019</span>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Welcome Modal -->
+    <div id="mobile-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content" style="text-align: center;">
+            <h2 id="init-modal-header">Welcome to AEP Call Center</h2>
+            <div class="form-section" style="display:initial;padding-top:0px">
+                <label>Find Profile</label><br />
+                <div style="justify-content: space-evenly;">
+                    <input id="modal-idValue" is="coral-textfield" class="coral3-Textfield" type="tel"
+                        name="placeholder" placeholder="ID Value" aria-invalid="false"
+                        onClick="javascript:(this.value=='Not Available')?this.value='':this.value" style="width: 40%;">
+
+                    <select id="modal-namespace" name="modal-namespace" class="coral3-SelectList coral3-Textfield"
+                        style="color:#000;font-size: small;width:7rem; display:inline">
+                        <option class="coral3-SelectList-item" value="" disabled>ID Namespace &#8597;
+                        </option>
+                        <option class="coral3-SelectList-item" value="mobilenr" selected>MOBILE &#8597;</option>
+                        <option class="coral3-SelectList-item" value="email">EMAIL &#8597;</option>
+                        <option class="coral3-SelectList-item" value="ecid">ECID &#8597;</option>
+                        <option class="coral3-SelectList-item" value="crmid">CRMID &#8597;</option>
+                        <option class="coral3-SelectList-item" value="gigya">GIGYA &#8597;</option>
+                    </select>
+                </div>
+
+
+                <button id="modal-submit" is="coral-button" class="button-black"
+                    style="margin-left:auto;margin-right:auto;width: 40%;">
+                    Search
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- ./Welcome Modal -->
+
+    <!-- Modal-LoadingGIF -->
+    <div class="modal fade" id="busy-modal" tabindex="-1" role="dialog" aria-labelledby="currUserCenterTitle"
+        aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content" style="background: transparent;text-align: center;">
+                <div class="modal-body"><img
+                        src="./assets/cc-assets/img/wait_32.gif"
+                        alt="Loading data" /></div>
+            </div>
+        </div>
+    </div>
+    <!-- /.Modal-LoadingGIF -->
+
+    <!-- Modal-Call log -->
+    <div id="calllog-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content" style="min-height: 360px;">
+            <div style="text-align: center;">
+                <h2 style="text-decoration: underline;font-weight: 400;">Log call details</h2>
+            </div>
+            <div style="padding-left:0em;margin-top: 2em;" align="center">
+                <div id="call-log-container-1" align="center">
+                    <div style="margin-bottom: 0.25em;">
+                        <span style="font-size: 18px;font-weight: 600;">Call topic</span>
+                    </div>
+                    <div>
+                        <select id="callTopic" name="callTopic" style="width: 20em;height: 2em;">
+                            <option value="wifi">Wifi Issues</option>
+                            <option value="promo" selected>Promotion</option>
+                            <option value="invoice">Invoice Questions</option>
+                            <option value="complaint">Complaint</option>
+                            <option value="contract">Contract Discussion</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="call-log-container-2" style="display: none;" align="center">
+                    <div style="margin-top: 1em;">
+                        <span style="font-size: 18px;font-weight: 600;">Customer response</span>
+                    </div>
+                    <div>
+                        <select id="callFeeling" name="callFeeling" style="width: 20em;height: 2em;">
+                            <option value="positive" selected>Positive</option>
+                            <option value="neutral">Neutral</option>
+                            <option value="negative">Negative</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="call-log-container-3" style="display: none;" align="center">
+                    <div style="margin-top: 1em;">
+                        <span style="font-size: 18px;font-weight: 600;">Contract cancelled ?</span>
+                    </div>
+                    <div>
+                        <select id="contractCancelled" name="contractCancelled" style="width: 20em;height: 2em;">
+                            <option value="yes">Yes</option>
+                            <option value="no" selected>No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2em;padding-right: 0em;" align="center">
+                    <button id="cancel-callcenter" is="coral-button" class="button-black"
+                        style="margin-left:auto;margin-right:50px;padding-left: 1.5em;padding-right: 1.5em;"></i>Cancel</button>
+                    <button id="submit-callcenter" is="coral-button" class="button-black"
+                        style="margin-left:auto;margin-right:auto;padding-left: 1.5em;padding-right: 1.5em;">Save</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- /.Modal-Call log -->
+
+    <script>
+        var digitalData = {
+            page: {
+                pageName: window.document.title,
+                home: false,
+                productdtl: false,
+                custompage: false,
+                adminpage: false,
+                dashboardpage: true,
+                loadxray: false
+            },
+            category: {
+                primaryCategory: "Website",
+                pageType: "Dashboard",
+                siteSection: "Dashboard"
+            }
+        };
+    </script>
+    <script src="./js/loadFromLocalStorage.js"></script>
+    <script src="js/aep-lib.js"></script>
+    <script type="text/javascript">
+        var brand;
+        var customer;
+        var activities;
+
+        $(document).ready(function () {
+            console.log('document ready')
+            loadFromLocalStorage();
+            brand = new Brand();
+            brand.display();
+            if (localStorage.getItem('search')) {
+                console.log('init from localStorage')
+                $('#modal-namespace').val(JSON.parse(localStorage.getItem('search')).id);
+                $('#modal-idValue').val(JSON.parse(localStorage.getItem('search')).value);
+            } else {
+                console.log('init with default value: ' + localStorage.getItem('mobilenr'))
+                $('#modal-idValue').val(localStorage.getItem('mobilenr'));
+                $('#modal-namespace').val('mobilenr');                
+            }
+
+            $('#mobile-modal').css('display', 'block');
+        });
+
+        $('#submit').click(function () {
+            var ns = $('#namespace').find('option:selected').attr('value');
+            if (ns == '') {
+                showAlert({
+                    title: 'Invalid entry',
+                    text: 'Select a valid namespace',
+                    icon: 'warning',
+                });
+                console.error('Invalid namespace selected');
+            } else {
+                customer = new Customer();
+                activities = new CustomerActivities();
+                var search = {
+                    id: ns,
+                    value: $('#idValue').val()
+                };
+                localStorage.setItem('search', JSON.stringify(search));
+                $('#namespace').val(search.id);       
+                $('#idValue').val(search.value);   
+                initCallcentreDisplay(search);
+            }
+
+        });
+
+        $('#modal-submit').click(function () {
+            var ns = $('#modal-namespace').find('option:selected').attr('value');
+            if (ns == '') {
+                showAlert({
+                    title: 'Invalid entry',
+                    text: 'Select a valid namespace',
+                    icon: 'warning',
+                });
+                console.error('Invalid namespace selected');
+            } else {
+                customer = new Customer();
+                activities = new CustomerActivities();
+
+                $('#mobile-modal').css('display', 'none;');
+                var search = {
+                    id: ns,
+                    value: $('#modal-idValue').val()
+                };
+                localStorage.setItem('search', JSON.stringify(search));
+                $('#namespace').val(search.id);           
+                $('#idValue').val(search.value);
+                initCallcentreDisplay(search);
+            }
+        });
+
+        $('#activity-filter').change(function () {
+            activities.showDetailedActivities($(this).children("option:selected").val());
+        });
+
+        $('#log-callcenter').click(function () {
+            $('#calllog-modal').css('display', 'block');
+        });
+
+        $('#callTopic').change(function () {
+            $('#call-log-container-2').css('display', 'block');
+
+            if ($(this).children("option:selected").val() === 'contract')
+                $('#call-log-container-3').css('display', 'block');
+            else
+                $('#call-log-container-3').css('display', 'none');
+        });
+
+        $('#submit-callcenter').click(function () {
+            logCustomerCall();
+            $('#calllog-modal').css('display', 'none');
+        });
+
+        $('#cancel-callcenter').click(function () {
+            $('#calllog-modal').css('display', 'none');
+        });
+
+        function logCustomerCall() {
+            var min = Math.ceil(1000000);
+            var max = Math.floor(9000000);
+            var random = Math.floor(Math.random() * (max - min)) + min;
+
+            var callTopic = $('#callTopic').children("option:selected").val();
+            var callFeeling = $('#callFeeling').children("option:selected").val();
+            var contractStatus = '';
+
+            if ($('#callTopic').children("option:selected").val() === 'contract')
+                contractStatus = $('#contractCancelled').children("option:selected").val();
+
+            localStorage.setItem('callTopic', callTopic);
+            localStorage.setItem('callFeeling', callFeeling);
+            localStorage.setItem('contractcancelled', contractStatus);
+
+
+            localStorage.setItem('callFromNumber', customer.mobileNumber);
+            localStorage.setItem('callInteraction', 'Support Contact - ' + random);
+
+            /* add profile data */
+
+
+            if (contractStatus == "yes") {
+                localStorage.setItem('churnscore', '1.00');
+            } else if (callFeeling == "positive") {
+                localStorage.setItem('churnscore', '0.15');
+            } else if (callFeeling == "neutral") {
+                localStorage.setItem('churnscore', '0.37');
+            } else {
+                localStorage.setItem('churnscore', '0.78');
+            }
+
+            console.log(">>>>> Call Started");
+            _satellite.track('logCall');
+        }
+
+    </script>
+</body>
+
+</html>
