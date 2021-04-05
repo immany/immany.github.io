@@ -1,0 +1,110 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 2, 2018, 5:33:50 PM
+    Author     : vangeluw
+*/
+
+@font-face {
+  font-family: 'AdobeClean-Light';
+  src: url('./font/AdobeClean-Light.otf');
+}
+@font-face {
+  font-family: 'AdobeClean';
+  src: url('./font/AdobeClean-Regular.otf');
+}
+body {
+  height: 100vh;
+  margin: 0
+}
+div.adminheadertext {
+  font-size: 28px;
+  color:#707070;
+  font-family:AdobeClean-Light;
+}
+
+div.adminleftmenutext {
+  width:15%;
+  background-color: #f0f0f0;
+  font-size:14px;
+  font-family:AdobeClean;
+  border-right:1px solid #D5D0D0; 
+  max-width: 178px;
+  margin-top:5px;
+}
+
+.wrapper .header div.logobar{
+  color:#b4b4b4;
+  background-color: #000000; 
+  width:100%;
+  padding-left:15px;
+  padding-top:10px;
+  padding-bottom:10px;
+  font-size:14px;
+}
+
+#logobarright {
+  float:right;
+  padding-right:50px;
+  padding-top:5px;
+  font-size:14px;
+}
+
+#gotodemosite {
+  float:right;
+  padding-right:50px;
+  font-size:14px;
+}
+
+.wrapper .header{
+  z-index:100;
+  position: sticky;
+  top:0;
+}
+
+.wrapper{
+  height: 100vh;
+}
+.wrapper .header div.logobar a{
+  font-size:14px;
+}
+
+#ldaps li a{
+  margin-left:3px;
+  color:#474948;
+  text-decoration:none;
+}
+
+#modules li a{
+  margin-left:3px;
+  color:#474948;
+  text-decoration:none;
+}
+
+#brands li a{
+  margin-left:3px;
+  color:#474948;
+  text-decoration:none;
+}
+
+table {
+  font-family: AdobeClean, sans-serif;
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+table.admin td{
+  width: 150px;  
+}

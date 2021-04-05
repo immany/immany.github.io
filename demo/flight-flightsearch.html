@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class="no-js">
+	<head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="La Boutique HTML v10.0" />
+
+<title id="titlename">Flight Search</title>
+
+<link rel="stylesheet" href="./css/bootstrap.min.css" />
+<link rel="stylesheet" href="./css/font-awesome.min.css" />
+<link rel="stylesheet" href="./css/flexslider.css" />
+<link rel="stylesheet" href="./js/tfingi-megamenu/tfingi-megamenu-frontend.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+<link rel="stylesheet" href="./css/xray.css"/>
+<link rel="stylesheet" href="./css/color-schemes/alizarin.css" id="color_scheme" />
+<script src="./js/scjl.js"></script>
+<script src="./js/clipboard.js"></script>
+
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=7; IE=8" />-->
+<link rel="icon" id="faviconlink" href="favicon.ico" type="image/x-icon" />
+
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Shadows+Into+Light" rel="stylesheet">
+    
+<!-- Start of Adobe Experience Platform Launch Tag -->   
+<script src="./js/launch.js"></script> 
+<!-- End of Adobe Experience Platform Launch Tag --> 
+   
+<script src="./js/jquery-1.11.3.min.js"></script>
+    
+<!---The Data Layer--->
+    <script type="text/javascript">
+        var digitalData = {
+            page: {
+                pageName: window.document.title,
+                home: false,
+                productdtl: false,
+                custompage: true,
+                loadxray: true
+            },
+            category: {
+                primaryCategory:"Website",
+                pageType:"Flight Search",
+                siteSection:"General"
+            },
+            customer: {
+                customerId:"",
+                accessCustomerName:"",
+                uuid:"",
+                mcid:"",
+                logged_in:"",
+                image_url:"",
+                firstName:"",
+                lastName:"",
+                gender:"",
+                birthDay:"",
+                birthMonth:"",
+                birthYear:"",
+                postalCode:"",
+                country:"",
+                countryCode:"",
+                city:"",
+                street:"",
+                email:"",
+                mobileNr:"",
+                shoeSize:"",
+                preferredColor:"",
+                shirtSize:"",
+                profilePicture:"",
+                children:"",
+                maritalStatus:"",
+                password:"",
+                propBuy:"",
+                brandEng:"",
+                tpd:"",
+                adblock:""
+            },  
+            product: {
+                imageUrl: "",
+                price: "",
+                name: ""
+            }
+        };
+    </script>
+
+    </head>
+	<body onLoad="getFlightSearchSettings()">
+        <script src="./js/tags_body.js"></script>
+        
+	
+		<div class="wrapper">
+		
+			<!-- Header -->
+<div class="header">
+    
+
+    <!-- Logo & Search bar -->
+    <div id="logobar" class="bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 col-md-6">
+                	
+                	<!-- Logo -->
+                    <div class="logo">
+                        <a href="index.html" title="&larr; Back home">
+                            <img id="brandlogo" alt="" />
+                        </a>
+                    </div>
+                    <!-- End class="logo"-->
+                
+                </div>
+                <div class="col-sm-5 col-sm-offset-1 col-md-3">
+                	
+                	
+                	
+                </div>
+                    
+                <!-- Mini cart -->
+                <div id="carticon" class="mini-cart">
+                    <a href="cart.html" title="Go to cart &rarr;">
+                        <span id="carticonqty" style="display:none;"></span>
+                    </a>									
+                </div>
+                <!-- End class="mini-cart" -->
+
+            </div>
+        </div>
+    </div>
+    <!-- End class="bottom" -->
+    
+</div>
+<!-- End class="header" -->
+			<!-- Navigation -->
+<nav class="navigation">
+    <div class="container">
+     
+        <div class="row">
+            <div class="col-md-12">
+                
+<a href="#" class="main-menu-button">Navigation</a>
+<!-- Begin Menu Container -->
+<div class="megamenu_container">
+    <div class="menu-main-navigation-container">
+        <ul id="menu-main-navigation" class="main-menu">
+            <li id="page0"></li>
+            <li id="page1"></li>
+            <li id="page2"></li>
+            <li id="page3"></li>
+            <li id="page4"></li>
+            <li id="page5"></li>
+            <li id="page6"></li>
+            <li id="page7"></li>
+            <li id="page8"></li>
+            <li class="menu-item-has-children">
+                <a href="#">...</a>
+                <ul class="sub-menu">
+                    <li class="" id="pageDMP"></li>
+                    <li class="" id="pageCallCenter"></li>
+                    <li class="" id="pagePersonalShopper"></li>
+                    <li class="" id="pagePOS"></li>
+                    <li class="" id="pageInStoreDisplay"></li>
+                    <li class="" id="page9"></li>
+                    <li class="" id="page10"></li>
+                </ul>
+            </li>
+        </ul>
+    </div>    
+</div>    
+
+
+
+            </div>
+
+        </div>        
+    
+    </div>
+</nav>
+<!-- End class="navigation" -->
+
+			
+			<!-- Content section -->    
+            <section class="main" style="background-image: url(./images/airplane.jpg);background-size: cover; -ms-background-size: cover; -o-background-size: cover; -moz-background-size: cover; -webkit-background-size: cover;">
+            
+<!-- Login / Register -->
+<section class="login_register">
+
+<script>
+    function randomStr(len, arr) { 
+            var ans = ''; 
+            for (var i = len; i > 0; i--) { 
+                ans +=  
+                  arr[Math.floor(Math.random() * arr.length)]; 
+            } 
+            return ans; 
+        } 
+    function validateFormOnSubmit() {
+        localStorage.setItem('flightOrigin', document.querySelector("[name='origin']").value);
+        localStorage.setItem('flightDestination', document.querySelector("[name='dest']").value);
+        localStorage.setItem('flightDepartureDate', document.querySelector("[name='dep']").value);
+        localStorage.setItem('flightReturnDate', document.querySelector("[name='ret']").value);
+        localStorage.setItem('flightPaxAdu', document.querySelector("[name='adt']").value);
+        localStorage.setItem('flightPaxChd', document.querySelector("[name='chd']").value);
+        localStorage.setItem('flightPaxInf', document.querySelector("[name='inf']").value);
+        localStorage.setItem('flightCabin', $('input[name=cabin]:checked', '#search_form').val());
+
+        min = Math.ceil(300);
+        max = Math.floor(900);
+        var price = Math.floor(Math.random() * (max - min)) + min;
+        var currency = localStorage.getItem('brandcurrency')
+        
+        var pnr = randomStr(6, '123456789ABCDEFGHIJKLMNOPQRTSUVWXYZ'); 
+        localStorage.setItem('flightPNR', pnr);
+        localStorage.setItem('flightPrice', currency + " " + price);
+    }
+</script>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <!-- Login -->
+      <div class="login">
+        <div class="box">
+          <div class="hgroup title">
+            <h3>Where do you want to go?</h3>
+            <h5></h5>
+          </div>
+
+          <div class="booking-form" style="display:block; padding:20px 0 0;">
+            <form onsubmit="return false;" id="search_form">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <span class="form-label">Fly From</span>
+                    <select class="form-control" id="origin" name="origin"></select>
+                    <span class="select-arrow"></span>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <span class="form-label">Fly To</span>
+                    <select class="form-control" id="dest" name="dest"></select>
+                    <span class="select-arrow"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <span class="form-label">Departure Date</span>
+                    <input class="form-control" type="date" required="" name="dep">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <span class="form-label">Return Date</span>
+                    <input class="form-control" type="date" required="" name="ret">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <span class="form-label">Adults</span>
+                    <select class="form-control" name="adt">
+                      <option>0</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                    <span class="select-arrow"></span>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <span class="form-label">Children</span>
+                    <select class="form-control" name="chd">
+                      <option>0</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                    <span class="select-arrow"></span>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <span class="form-label">Infants</span>
+                    <select class="form-control" name="inf">
+                      <option>0</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                    <span class="select-arrow"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="cabin" id="cabin1" value="Economy" checked>
+                <label class="form-check-label" for="economy">Economy</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="cabin" id="cabin2" value="Business">
+                <label class="form-check-label" for="business">Business</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="cabin" id="cabin3" value="First">
+                <label class="form-check-label" for="business">First</label>
+              </div>
+
+              <div class="buttons">
+                <button class="btn btn-primary btn-sm btn-block-xs" onClick="searchFlights();">Search Flights</button>
+              </div>
+            </form>
+            
+          </div> 
+          </div> 
+      </div>
+    </div>
+    <div class="col-sm-6" id="bookingForm" style="display:none;">
+      <!-- Login -->
+      <div class="login">
+        <div class="box">
+          <div class="hgroup title">
+            <h3>Book your flight</h3>
+          </div>
+          <div class="hgroup title">
+            Your return flight: <br/>
+                <br/> <span id="from"></span> to <span id="to"></span> 
+                <br/> Passengers: <span id="adults"></span> adults, <span id="children"></span> children and <span id="infants"></span> infants
+                <br/> Outbound Flight: <span id="depDate"></span>
+                <br/> Inbound Flight: <span id="returnDate"></span>
+                <br/> Class: <span id="class"></span>
+                <br/> PNR: <span id="pnr"></span>
+                <br/> 
+                <br/> Price: <span id="price"></span>
+          </div>
+              
+
+              <div class="buttons">
+                <button class="btn btn-primary btn-sm btn-block-xs" onClick="bookFlights();">Book Flight</button>
+                <label id="flightbookingstatus" class="control-label" for=""></label>
+              </div>
+            
+        </div>   
+    </div>
+</div>
+  <!-- End Register modal window --> 
+    
+  </section>                
+<!-- End Login / Register -->
+            
+</section>
+<!-- End class="main" -->			
+			
+<!-- Footer -->
+<div id="footerbar" class="footer">
+    <div class="container">
+        <div class="row">   
+                        
+            <div class="col-sm-2">
+                
+                <!-- My account -->
+                <div class="account">
+                    <h6 id="accountsection">My account</h6>
+
+                    <ul id="loginsection" class="links">                                
+                        <li>
+                            <a href="login-register.html" title="Login / Register">Login / Register</a>                                 
+                        </li>
+                    </ul>
+                </div>
+                <!-- End class="account"-->
+                
+            </div>
+
+            <div class="col-sm-2">
+                
+                
+            </div>
+
+            <div class="col-sm-4">
+                
+            </div>
+
+            <div class="col-sm-4">              
+
+                <!-- Newsletter subscription -->
+                <div class="newsletter">
+                    <h6 id="newslettersection">Newsletter subscription</h6>
+
+                    <form onsubmit="return false;" enctype="multipart/form-data" action="#" method="post">                       
+                        
+                        <div class="input-group">
+                            <input type="text" name="email" class="form-control" />
+                            <span class="input-group-addon btn" type="submit" id="newsletter_submit" data-toggle="modal" data-target="#newsletter_subscribe">Go!</span>
+                        </div>                       
+
+                    </form>                             
+
+                    <p>Sign up to receive our latest news and updates direct to your inbox</p>
+                </div>
+                <!-- End class="newsletter" -->
+                
+
+                <hr />
+                
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End id="footer" -->
+
+            <!-- Credits bar -->
+<div class="credits">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <p id="footerCredits">
+                </p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- End class="credits" -->
+            <!-- Newsletter modal window -->
+<div id="newsletter_subscribe" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+                <div class="hgroup title">
+                    <h3 id="modal-label">You are now subscribed to our newsletter</h3>
+                    <h5>All the latest deals and offers will be making their way to your inbox shortly!</h5>
+                </div>
+            </div>
+        
+            <div class="modal-footer">  
+                <button data-dismiss="modal" aria-hidden="true" class="btn btn-sm btn-block-xs">
+                    Close &nbsp; <i class="fa fa-check"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- End id="newsletter_subscribe" -->
+		
+		</div>
+		
+		<!-- BEGIN JAVASCRIPTS -->
+        <script>
+            function getFlightSearchSettings() {
+
+                //Dynamic Departure cities
+                var flightSearchOriginDropdown = document.getElementById("origin");
+
+                var flightSearchOriginObject = localStorage.getItem('flightSearchOrigin'); //to be updated
+                var flightSearchOriginArray = flightSearchOriginObject.split(',');
+                console.log(flightSearchOriginArray);
+
+                var j;
+                for (j = 0; j < flightSearchOriginArray.length; j++) { 
+                  try{
+                        var origin = flightSearchOriginArray[j];
+                        console.log(origin);
+                        var el = document.createElement("option");
+                        el.textContent = origin;
+                        el.value = origin;
+                        flightSearchOriginDropdown.appendChild(el);
+                    }catch(err) {
+                        //console.log(err.message);
+                    }
+                }
+
+                //Dynamic origin cities
+                var flightSearchDestDropdown = document.getElementById("dest");
+
+                var flightSearchDestObject = localStorage.getItem('flightSearchDest'); //to be updated
+                var flightSearchDestArray = flightSearchDestObject.split(',');
+                console.log(flightSearchDestArray);
+
+                var j;
+                for (j = 0; j < flightSearchDestArray.length; j++) { 
+                  try{
+                        var dest = flightSearchDestArray[j];
+                        console.log(dest);
+                        var el = document.createElement("option");
+                        el.textContent = dest;
+                        el.value = dest;
+                        flightSearchDestDropdown.appendChild(el);
+                    }catch(err) {
+                        //console.log(err.message);
+                    }
+                }
+
+            }
+
+        </script>
+<script src="./js/loadFromLocalStorage.js"></script>
+<script src="./js/jquery-1.11.3.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/addToCart.js"></script>
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+
+<script src="./js/jquery-migrate-1.2.1.min.js"></script>
+<script src="./js/isotope.pkgd.min.js"></script>
+<script src="./js/imagesloaded.pkgd.min.js"></script>
+<script src="./js/jquery.flexslider.js"></script>
+<script src="./js/jquery-ui-1.10.2.custom.js"></script>
+<script src="./js/jquery.easing.min.js"></script>
+<script src="./js/jquery.elevatezoom.js"></script>
+<script src="./js/jquery.sharrre-1.3.5.js"></script>
+<script src="./js/jquery.cookie.js"></script>
+<script src="./js/la_boutique.js"></script>
+<script src="./js/tfingi-megamenu/tfingi-megamenu-frontend.js"></script>
+<script>
+    function searchFlights() {
+        validateFormOnSubmit();
+        $("#from").text(localStorage.getItem('flightOrigin'));
+        $("#to").text(localStorage.getItem('flightDestination'));
+        $("#adults").text(localStorage.getItem('flightPaxAdu'));
+        $("#children").text(localStorage.getItem('flightPaxChd'));
+        $("#infants").text(localStorage.getItem('flightPaxInf'));
+        $("#depDate").text(localStorage.getItem('flightDepartureDate'));
+        $("#returnDate").text(localStorage.getItem('flightReturnDate'));
+        $("#class").text(localStorage.getItem('flightCabin'));
+        $("#price").text(localStorage.getItem('flightPrice'));
+        $("#pnr").text(localStorage.getItem('flightPNR'));
+        $('#bookingForm').show();
+        _satellite.track('flightSearch');
+        // ************** uncomment if you want to use the product pages for flight pages, so that when you search you will be taken to one of the flight pages.
+        //var searchDest = document.querySelector("[name='dest']").value;
+        //document.location = "./"+searchDest+'.html;
+        //return false; 
+    }
+
+    function bookFlights() {
+        validateFormOnSubmit();
+        _satellite.track('flightBooked');
+        $("#flightbookingstatus").text("SUCCESS! Your flight has been booked. You will be redirected to the homepage in 3 seconds.");
+        setTimeout(function(){document.location.href = "./index.html";}, 3000);
+    }
+</script>
+
+
+<!-- END JAVASCRIPTS -->
+	
+	</body>
+</html>
