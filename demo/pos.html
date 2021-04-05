@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class="no-js">
+	<head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="La Boutique HTML v10.0" />
+
+<title id="custompagetitle">POS</title>
+
+<link rel="stylesheet" href="./css/bootstrap.min.css" />
+<link rel="stylesheet" href="./css/font-awesome.min.css" />
+<link rel="stylesheet" href="./css/flexslider.css" />
+<link rel="stylesheet" href="./js/tfingi-megamenu/tfingi-megamenu-frontend.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+<link rel="stylesheet" href="./css/xray.css"/>
+<link rel="stylesheet" href="./css/color-schemes/alizarin.css" id="color_scheme" />
+<script src="./js/scjl.js"></script>
+<script src="./js/clipboard.js"></script>
+
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=7; IE=8" />-->
+<link rel="icon" id="faviconlink" href="favicon.ico" type="image/x-icon" />
+
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Shadows+Into+Light" rel="stylesheet">
+    
+<!-- Start of Adobe Experience Platform Launch Tag -->   
+<script src="./js/launch.js"></script> 
+<!-- End of Adobe Experience Platform Launch Tag --> 
+   
+<script src="./js/jquery-1.11.3.min.js"></script>
+    
+<!---The Data Layer--->
+    <script type="text/javascript">
+        var digitalData = {
+            page: {
+                pageName: window.document.title,
+                home: false,
+                productdtl: false,
+                cart: false,
+                custompage: false,
+                dashboardpage: true,
+                pos: true,
+                loadxray: false
+            },
+            category: {
+                primaryCategory:"Website",
+                pageType:"Cart",
+                siteSection:"Cart"
+            },
+            customer: {
+                customerId:"",
+                accessCustomerName:"",
+                uuid:"",
+                mcid:"",
+                logged_in:"",
+                image_url:"",
+                firstName:"",
+                lastName:"",
+                gender:"",
+                birthDay:"",
+                birthMonth:"",
+                birthYear:"",
+                postalCode:"",
+                country:"",
+                countryCode:"",
+                city:"",
+                street:"",
+                email:"",
+                mobileNr:"",
+                shoeSize:"",
+                preferredColor:"",
+                shirtSize:"",
+                profilePicture:"",
+                children:"",
+                maritalStatus:"",
+                password:"",
+                propBuy:"",
+                brandEng:"",
+                tpd:"",
+                adblock:""
+            },  
+            product: {
+                imageUrl: "",
+                price: "",
+                name: ""
+            }
+        };
+    </script>
+
+    </head>
+	<body onLoad="getAEPProfileFromPlatformEmail()">
+        <script src="./js/tags_body.js"></script>
+	
+		<div class="wrapper">
+		
+			<!-- Header -->
+<div class="header">
+    
+
+    <!-- Logo & Search bar -->
+    <div id="logobar" class="bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 col-md-6">
+                	
+                	<!-- Logo -->
+                    <div class="logo">
+                        <a href="index.html" title="&larr; Back home">
+                            <img id="brandlogo" alt="" />
+                        </a>
+                    </div>
+                    <!-- End class="logo"-->
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End class="bottom" -->
+    
+</div>
+<!-- End class="header" -->
+			
+<!-- Cart container -->
+<section class="cart">
+
+    <br/><br/>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2">
+                
+                <!-- Cart details -->
+                <div class="cart-details">
+                    <div class="box">
+                        <div class="hgroup title">
+                            <h3>Products</h3>
+                        </div>
+                        <div align="center">
+                            <ul class="product-list" align="center" style="padding-top:10px;padding-left:15px; margin-bottom:10px;">
+                                <li id="product1" onClick="scanProduct(1);" class="btn btn-sm btn-primary" style="text-align:center; width:125px; height:75px;margin-bottom:10px;"></li>
+                                <li id="product2" onClick="scanProduct(2);" class="btn btn-sm btn-primary" style="text-align:center; width:125px; height:75px;margin-bottom:10px;"></li>
+                                <li id="product3" onClick="scanProduct(3);" class="btn btn-sm btn-primary" style="text-align:center; width:125px; height:75px;margin-bottom:10px;"></li>
+                                <li id="product4" onClick="scanProduct(4);" class="btn btn-sm btn-primary" style="text-align:center; width:125px; height:75px;margin-bottom:10px;"></li>
+                                <li id="product5" onClick="scanProduct(5);" class="btn btn-sm btn-primary" style="text-align:center; width:125px; height:75px;margin-bottom:10px;"></li>
+                                <li id="product6" onClick="scanProduct(6);" class="btn btn-sm btn-primary" style="text-align:center; width:125px; height:75px;margin-bottom:10px;"></li>
+                                <li id="product7" onClick="scanProduct(7);" class="btn btn-sm btn-primary" style="text-align:center; width:125px; height:75px;margin-bottom:10px;"></li>
+                                <li id="product8" onClick="scanProduct(8);" class="btn btn-sm btn-primary" style="text-align:center; width:125px; height:75px;margin-bottom:10px;"></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- End class="cart-details" -->
+            </div>
+
+            <div class="col-sm-6">
+                
+                <!-- Cart -->
+                <div class="box">
+                    <form enctype="multipart/form-data" action="#">
+                        
+                        <div class="box-header">
+                            <h3>POS</h3>
+                        </div>
+
+                        <div class="box-footer cart-footer">
+                            <div class="btn btn-sm pull-right">
+                                Total: <span id="totalPOS">0.00</span>
+                            </div>
+                            <div class="pull-left"> 
+                                <input type="text" id="loyaltycard" class="" name="loyaltycard" size="20" maxlength="100" value="" style="height:34px;"> &nbsp;&nbsp;
+                            </div>
+                            <div class="btn btn-sm pull-left btn-primary" onclick="getAEPProfileFromPlatformLoyalty()">
+                                Scan Loyalty Card
+                            </div>
+                        </div>
+                        <div class="box-content">
+                            <div class="cart-items">
+                                <table class="styled-table">
+                                    <thead>
+                                        <tr>
+                                            <th class="col_product text-left">Product</th>
+                                            <th class="col_qty text-right">Qty</th>
+                                            <th class="col_total text-right">Unit Price</th>
+                                            <th class="col_total text-right">Total</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody id="cartPOSTable">                                 
+                                        
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <br/><br/><br/><br/><br/>
+                        <div class="box-footer cart-footer">
+                            <div class="pull-left">
+                                &nbsp;&nbsp;&nbsp;
+                                <div class="btn btn-sm pull-left" style="width:150px;">
+                                    Total: <span id="grandTotal">0.00</span>
+                                </div>
+                                <br/><br/>
+                                <div class="btn btn-sm pull-left btn-primary" onclick="clearCartPOS()" style="width:150px;">
+                                    Clear Cart
+                                </div>
+                        </div>
+                            <div class="pull-right">
+                                <div id="paymentTypeCash" class="btn btn-sm btn-primary" onclick="purchaseOnPos('Cash')">
+                                    Cash
+                                </div>
+
+                                <div id="paymentTypeCC" class="btn btn-sm btn-primary" onclick="purchaseOnPos('Credit Card')">
+                                    Credit Card
+                                </div>
+                            </div>
+                        </div>
+                    </form>         
+                </div>
+                <!-- End Cart -->
+
+                
+
+                
+                
+            </div>
+
+            <div class="col-sm-4">
+                
+                <!-- Cart details -->
+                <div class="cart-details">
+                    <div class="box">
+                        <div class="hgroup title">
+                            <h3>Customer Details</h3>
+                        </div>
+
+                        <ul class="price-list">
+                            <li><span id="platformPicture"><img src='img/default_avatar.png' alt='' style='width:50px;'></span></li>
+                            <li>Name: <span id="platformFirstLastName"></span></li>
+                            <li>Loyalty ID: <span id="platformLoyaltyCardID"></span></li>
+                            <li>Loyalty Status: <span id="platformLoyaltyLevel"></span></li>
+                            <li>Loyalty Points: <span id="platformLoyaltyPoints"></span></li>
+                            <li>Allergies: <span id="allergyAlarm" style="display:none;"></span><br/><span id="platformAllergies"></span></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- End class="cart-details" -->
+            </div>
+
+        </div>
+    </div>  
+</section>         
+<!-- End Cart container -->
+		     <!-- Credits bar -->
+<div class="credits" style="display:none;">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <p id="footerCredits">
+                </p>
+            </div>
+            
+        </div>
+    </div>
+</div>	
+			
+			
+			
+
+
+		
+		<!-- BEGIN JAVASCRIPTS -->
+
+<script src="./js/addToPOS.js"></script>
+<script src="./js/loadFromLocalStorage.js"></script>
+<script src="./js/jquery-1.11.3.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+
+<script src="./js/jquery-migrate-1.2.1.min.js"></script>
+<script src="./js/isotope.pkgd.min.js"></script>
+<script src="./js/imagesloaded.pkgd.min.js"></script>
+<script src="./js/jquery.flexslider.js"></script>
+<script src="./js/jquery-ui-1.10.2.custom.js"></script>
+<script src="./js/jquery.easing.min.js"></script>
+<script src="./js/jquery.elevatezoom.js"></script>
+<script src="./js/jquery.sharrre-1.3.5.js"></script>
+<script src="./js/jquery.cookie.js"></script>
+<script src="./js/la_boutique.js"></script>
+<script src="./js/tfingi-megamenu/tfingi-megamenu-frontend.js"></script>
+
+<script>
+function clearCartPOS() {
+    localStorage.removeItem("cartPOS");
+    localStorage.removeItem("cartPOSP");
+    cartPOSTable.innerHTML = "";
+    $("#subTotal").text("0");
+    $("#totalPOS").text("0");
+    $("#grandTotal").text("0");
+    return false;
+}
+
+function scanProduct(id) {
+    var scannedProduct = id;
+    console.log("Scanned Product: " + scannedProduct);
+    addToPOS(scannedProduct);
+
+    if(localStorage.getItem("cartPOS") !== null || localStorage.getItem("cartPOS") !== "undefined"){
+        $("#purchaseButton").attr("disabled", false);
+        cartPOS = JSON.parse(localStorage.getItem("cartPOS"));
+        var count = 0;
+        var cartString = "";
+        var totalPOSAmount = 0;
+        var subTotal = 0;
+        for (var i in cartPOS) {
+            count += cartPOS[i].productQty; 
+
+            str = "<tr>" 
+                + "<td data-title='Product' class='col_product text-left'>"
+                + "<div class='image visible-lg'>"
+                + "<a href='" + cartPOS[i].productUrl + "'>"
+                + "<img style='max-height:60px;max-width:60px;' src='" + cartPOS[i].productImageUrl + "'>"
+                + "</a></div><h5><a href='" + cartPOS[i].productUrl + "'>" + cartPOS[i].productName + "</a></h5></td>"
+                + "<td data-title='Qty' class='col_qty text-right'>"
+                + "<span class='single-price'>" + cartPOS[i].productQty + "</span>"
+                + "<td data-title='Single' class='col_single text-right'>"
+                + "<span class='single-price'>" + cartPOS[i].productPrice + "</span></td>"
+                + "<td data-title='Total' class='col_total text-right'>"
+                + "<span class='total-price'>" + (cartPOS[i].productQty * cartPOS[i].productPrice) + "</span></td>";
+
+            cartString += str;
+
+            subTotal += (cartPOS[i].productQty * cartPOS[i].productPrice);
+        }
+        
+        totalPOSAmount += subTotal;
+        
+        if(count > 0){
+            $("#purchaseButton").attr("disabled", false);
+            cartPOSTable.innerHTML = cartString;
+
+            var total = totalPOSAmount.toFixed(2);
+            $("#subTotal").text(subTotal);
+            $("#totalPOS").text(totalPOSAmount);
+            $("#grandTotal").text(totalPOSAmount);
+        }
+
+        if(localStorage.getItem("loyaltyCardScanned") === "Y"){
+            console.log("Loyalty Card present");
+
+            if((localStorage.getItem("product" + scannedProduct + "ContainsNuts") === "true") && localStorage.getItem("customerAllergyNuts") === "Y"){
+                console.log("Allergy Alarm: Nuts");
+                Alarm("nuts");
+
+                document.getElementById("nutsAlarm").innerHTML = "<img width='10px' src='./img/alert_icon.png'/>";
+            }
+
+            if((localStorage.getItem("product" + scannedProduct + "ContainsDairy") === "true") && localStorage.getItem("customerAllergyDairy") === "Y"){
+                console.log("Allergy Alarm: Dairy");
+                Alarm("dairy");
+
+                document.getElementById("dairyAlarm").innerHTML = "<img width='10px' src='./img/alert_icon.png'/>";
+            }
+
+            if((localStorage.getItem("product" + scannedProduct + "ContainsGluten") === "true") && localStorage.getItem("customerAllergyGluten") === "Y"){
+                console.log("Allergy Alarm: Gluten");
+                Alarm("gluten");
+
+                document.getElementById("glutenAlarm").innerHTML = "<img width='10px' src='./img/alert_icon.png'/>";
+            }
+
+            if((localStorage.getItem("product" + scannedProduct + "ContainsShellfish") === "true") && localStorage.getItem("customerAllergyShellfish") === "Y"){
+                console.log("Allergy Alarm: Shellfish");
+                Alarm("shellfish");
+
+                document.getElementById("shellfishAlarm").innerHTML = "<img width='10px' src='./img/alert_icon.png'/>";
+            }
+
+            if((localStorage.getItem("product" + scannedProduct + "ContainsSoy") === "true") && localStorage.getItem("customerAllergySoy") === "Y"){
+                console.log("Allergy Alarm: Soy");
+                Alarm("soy");
+
+                document.getElementById("soyAlarm").innerHTML = "<img width='10px' src='./img/alert_icon.png'/>";
+            }
+
+        }
+
+        function Alarm(allergy){
+            console.log("Major Allergy Alarm: " + allergy);
+            $("#allergyAlarm").attr("style", "display:block;");
+
+            document.getElementById("allergyAlarm").innerHTML = "<img width='50px' src='./img/alert_icon.png'/><br/>Product contains ingredients to which customer is allergic!";
+        }
+
+    }
+}
+
+function purchaseOnPos(payment) {
+    localStorage.setItem('paymentType', payment);
+    localStorage.setItem('totalAmount', document.getElementById("totalPOS").innerText);
+    min = Math.ceil(100000000);
+    max = Math.floor(900000000);
+    var orderId = Math.floor(Math.random() * (max - min)) + min;
+    localStorage.setItem('orderId', orderId);
+    _satellite.track('purchasepos');
+    clearCartPOS();
+    return false;
+}
+</script>
+
+<script>
+        /// CLIENT UI CODE ///
+        var pullResults = {};
+        var mobilenr = "";
+        var platformFirstLastNameText = document.getElementById("platformFirstLastName");
+        var platformAllergiesText = document.getElementById("platformAllergies");
+        var platformLoyaltyLevelText = document.getElementById("platformLoyaltyLevel");
+        var platformLoyaltyPointsText = document.getElementById("platformLoyaltyPoints");
+        var platformLoyaltyCardIDText = document.getElementById("platformLoyaltyCardID");
+        
+        var platformPictureText = document.getElementById("platformPicture");
+
+        function getAEPProfileFromPlatformLoyalty(){
+            loyaltyCardID = document.getElementById("loyaltycard").value;
+  
+            $.ajax(
+                    {
+                        url: "https://adobeioruntime.net/api/v1/web/vangeluw/aep/getAEPProfileInfo.json", 
+                        type: "GET",
+                        dataType : "json",
+                        contentType: "application/json",
+                        data: {"eventId": encodeURI(loyaltyCardID), "eventNS":"loyaltyId"},
+                        success: function(response) {
+                          var profileData = response.profileData;
+                          displayProfilePullLoyalty(profileData, loyaltyCardID);
+                        },
+                        error: function(code, status, error) {
+                            //console.log("Error : " + error);
+                        }
+                    }
+                );
+        }
+
+        function getAEPProfileFromPlatformEmail(){
+            emailId = localStorage.getItem("email");
+  
+            $.ajax(
+                    {
+                        url: "https://adobeioruntime.net/api/v1/web/vangeluw/aep/getAEPProfileInfo.json", 
+                        type: "GET",
+                        dataType : "json",
+                        contentType: "application/json",
+                        data: {"eventId": encodeURI(emailId), "eventNS":"email"},
+                        success: function(response) {
+                          var profileData = response.profileData;
+                          displayProfilePullLoyalty(profileData, emailId);
+                        },
+                        error: function(code, status, error) {
+                            //console.log("Error : " + error);
+                        }
+                    }
+                );
+        }
+
+        function displayProfilePullLoyalty(platformResponse, loyaltyCardID) {
+            var key = Object.keys(platformResponse)[0];
+            console.log("Profile Key: " + key);
+
+            if(key == "message" || key == "error_code" || key == "statusCode" || key == "message"){
+                platformFirstLastNameText.innerHTML = "...";
+                platformLoyaltyLevelText.innerHTML = "...";
+                platformAllergiesText.innerHTML = "...";
+                platformLoyaltyPointsText = "...";
+                platformLoyaltyCardIDText = "...";
+                platformPictureText.innerHTML = "<img src='img/default_avatar.png' alt='' style='width:50px'>";
+            }else{
+                platformFirstLastNameText.innerHTML = String(platformResponse[key].entity.person.name.firstName) + " " + String(platformResponse[key].entity.person.name.lastName);
+                platformLoyaltyCardIDText.innerHTML = "<br/>" + loyaltyCardID;
+                platformLoyaltyLevelText.innerHTML = String(platformResponse[key].entity._experienceplatform.loyalty.loyaltyStatus);
+                platformLoyaltyPointsText.innerHTML = String(platformResponse[key].entity._experienceplatform.loyalty.loyaltyPoints);
+                platformAllergiesText.innerHTML = "Dairy: <strong>" 
+                    + String(platformResponse[key].entity._experienceplatform.allergies.dairy) + "</strong>" + "<span id='dairyAlarm'></span>"
+                    + " <br/>" + "Gluten: <strong>" + String(platformResponse[key].entity._experienceplatform.allergies.gluten) + "</strong>" + "<span id='glutenAlarm'></span>"
+                    + " <br/>" + "Nuts: <strong>" + String(platformResponse[key].entity._experienceplatform.allergies.nuts) + "</strong>" + "<span id='nutsAlarm'></span>"
+                    + " <br/>" + "Shellfish: <strong>" + String(platformResponse[key].entity._experienceplatform.allergies.shellfish) + "</strong>" + "<span id='shellfishAlarm'></span>"
+                    + " <br/>" + "Soy: <strong>" + String(platformResponse[key].entity._experienceplatform.allergies.soy) + "</strong>" + "<span id='soyAlarm'></span>";
+                platformPictureText.innerHTML = "<img src='" + String(platformResponse[key].entity.profilePictureLink) + "' alt='' style='width:50px'>"; 
+
+                localStorage.setItem("loyaltyCardScanned", "Y");
+                localStorage.setItem("customerAllergyDairy", String(platformResponse[key].entity._experienceplatform.allergies.dairy));
+                localStorage.setItem("customerAllergySoy", String(platformResponse[key].entity._experienceplatform.allergies.soy));
+                localStorage.setItem("customerAllergyGluten", String(platformResponse[key].entity._experienceplatform.allergies.gluten));
+                localStorage.setItem("customerAllergyShellfish", String(platformResponse[key].entity._experienceplatform.allergies.shellfish));
+                localStorage.setItem("customerAllergyNuts", String(platformResponse[key].entity._experienceplatform.allergies.nuts));
+            }
+        };
+    </script>
+<!-- END JAVASCRIPTS -->
+
+	</body>
+</html>
