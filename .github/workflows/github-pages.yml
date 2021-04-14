@@ -2,9 +2,11 @@ name: Build and deploy Jekyll site to GitHub Pages
 
 on:
   push:
-    branches: [ master ]
+    branches: 
+      - master
   pull_request:
-    branches: [ master ]
+    branches: 
+      - master
 
 jobs:
   github-pages:
@@ -12,8 +14,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: helaili/jekyll-action@v2
+    # checkout code
+    - name: Checkout repo
+      uses: actions/checkout@v2
+      
+    # Use GitHub Actions' cache to shorten build times and decrease load on servers
+    - name: Get cached gems
+      uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+
+    - name: Build and deploy
+      uses: helaili/jekyll-action@v2
       with:
         token: ${{ secrets.MY_ACCESS_TOKEN }}
 
