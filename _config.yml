@@ -26,6 +26,7 @@ baseurl: "/xl" # the subpath of your site, e.g. /blog
 url: "https://cxdemo.experienceleague.tk" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: immany7877
 github_username:  immany
+show_downloads: "true"
 
 # Build settings
 #theme: minima
