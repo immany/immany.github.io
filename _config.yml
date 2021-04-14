@@ -28,12 +28,9 @@ twitter_username: immany7877
 github_username:  immany
 
 # Build settings
-<<<<<<< HEAD
 #theme: minima
-remote_theme: "mmistakes/minimal-mistakes@4.22.0"
-=======
+#remote_theme: "mmistakes/minimal-mistakes@4.22.0"
 theme: jekyll-theme-architect
->>>>>>> 3cfcec561e6c7fa8b50d10f205953ef8163338d5
 plugins:
   - jekyll-feed
   - jekyll-include-cache
