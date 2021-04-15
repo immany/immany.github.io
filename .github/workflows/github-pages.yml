@@ -27,9 +27,9 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-gems-
     - name: Build and deploy
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
+      uses: helaili/jekyll-action@v2
+      with:
+        target_branch: master
+        token: ${{ secrets.MY_ACCESS_TOKEN }}
 
 
