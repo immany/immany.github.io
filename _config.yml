@@ -31,7 +31,7 @@ show_downloads: "true"
 # Build settings
 #theme: minima
 #remote_theme: "mmistakes/minimal-mistakes@4.22.0"
-theme: jekyll-theme-architect
+theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
 
