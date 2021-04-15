@@ -35,7 +35,6 @@ repository: immany/immany.github.io
 theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
-  - jekyll-github-metadata
 
 # Exclude from processing.
 # The following items will not be processed, by default.
