@@ -1,0 +1,17 @@
+## RECSRecommendations Upload File,,,,,,,,,,
+## RECS''## RECS'' indicates a Recommendations pre-process header. Please do not remove these lines.,,,,,,,,,,
+## RECS,,,,,,,,,,
+## RECSUse this file to upload product display information to Recommendations. Each product has its own row. Each line must contain 19 values and if not all are filled a space should be left.,,,,,,,,,,
+## RECSThe last 100 columns (entity.custom1 - entity.custom100) are custom. The name 'customN' can be replaced with a custom name such as 'onSale' or 'brand'.,,,,,,,,,,
+## RECSIf the products already exist in Recommendations then changes uploaded here will override the data in Recommendations. Any new attributes entered here will be added to the product''s entry in Recommendations.,,,,,,,,,,
+## RECSentity.id,entity.name,entity.categoryId,entity.message,entity.thumbnailUrl,entity.value,entity.pageUrl,entity.inventory,entity.margin,entity.brand,entity.genre
+A0001,Japan daily news,Japan,,,,,1,,,daily news
+A0002,,,,,,,1,,,
+A0003,,,,,,,1,,,
+A0004,,,,,,,1,,,
+A0005,,,,,,,1,,,
+A0006,,,,,,,1,,,
+A0007,,,,,,,1,,,
+A0008,,,,,,,0,,,
+A0009,,,,,,,0,,,
+A0010,,,,,,,1,,,
