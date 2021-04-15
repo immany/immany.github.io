@@ -29,6 +29,6 @@ jobs:
     - name: Build and deploy
       uses: helaili/jekyll-action@v2
       with:
-        target_branch: gh-pages
+        target_branch: master
         token: ${{ secrets.MY_ACCESS_TOKEN }}
 

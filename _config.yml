@@ -23,7 +23,7 @@ logo: /assets/img/logo.png
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Experience Makers are made here.
-baseurl: "/xl" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://cxdemo.experienceleague.tk" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: immany7877
 github_username:  immany
