@@ -24,8 +24,8 @@ changes to how your visitor data is collected.  Changes should only be
 made when instructed to do so by your account manager.*/
 s.debugTracking=true;
 s.visitorNamespace="adobemcc024";
-//s.trackingServer="adobemcc024.data.adobedc.net";
-s.trackingServer="adobemcc024.sc.omtrdc.net";
+s.trackingServer="adobemcc024.data.adobedc.net";
+//s.trackingServer="adobemcc024.sc.omtrdc.net";
 
 s.usePlugins=true;
 function s_doPlugins(s) {
