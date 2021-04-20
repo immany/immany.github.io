@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Privacy Home</title>
+        <meta name="description" content="" />
+        <!--Development library -->
+<script src="//assets.adobedtm.com/b759b276f0a9afd7654e6d86801eb4a58225dd81/satelliteLib-d9f1477dc929e91ad59914480f1965ecf2959697-staging.js"></script>    
+    <script>
+        var adobePrivacy = new AdobePrivacy({
+         imsOrgID: "B5A2AA4556FCF6EC7F000101@AdobeOrg",
+         key: "mnydev",
+          reportSuite: "mcc024weretail01",
+         trackingServer: "adobemcc024.sc.omtrdc.net",
+         clientCode: "adobeinternalmcc024"
+        });
+        
+        
+        adobePrivacy.retrieveIdentities(function (results){
+          var retrieveIDsStr =  JSON.stringify(results.validIDs);
+          document.cookie = 'RETRIEVED_IDS=' + encodeURIComponent(retrieveIDsStr);
+          console.log("retrieveIDsStr is:", retrieveIDsStr); 
+          alert('retrieveIdentities end'); 
+          });
+</script>
+    </head>
+    <body>
+        <h3>Launch is an MVP</h3>
+    
+        <img src="../img/blackdress.jpg" alt="blackdress" />
+        <button id= "retrieveID" type="button" onclick="adobePrivacy.retrieveIdentities(handleRetrievedIDs);">Retrieve Your Data</button>
+	    <button id= "removeID" type="button" >Remove Cookies</button><br /><br />
+	
+        <div id = "yourData">
+		<pre class="output">
+    	</pre>
+    </div>
+    <script type="text/javascript">_satellite.pageBottom();</script>
+   </body>
+</html>
