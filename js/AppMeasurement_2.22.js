@@ -3,7 +3,7 @@ var s=s_gi(s_account);
 /************************** CONFIG SECTION **************************/
 /* You may add or alter any code config here. */
 s.charSet="UTF-8";
-s.cookieDomainPeriods="3";
+s.cookieDomainPeriods="2";
 /* Conversion Config */
 s.currencyCode="JPY";
 /* Link Tracking Config */
@@ -24,7 +24,8 @@ changes to how your visitor data is collected.  Changes should only be
 made when instructed to do so by your account manager.*/
 s.debugTracking=true;
 s.visitorNamespace="adobemcc024";
-s.trackingServer="adobemcc024.data.adobedc.net";
+//s.trackingServer="adobemcc024.data.adobedc.net";
+s.trackingServer="adobemcc024.sc.omtrdc.net";
 
 s.usePlugins=true;
 function s_doPlugins(s) {
