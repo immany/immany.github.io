@@ -17,6 +17,7 @@ Now you can show your GitHub pages site by <username>.github.io. Due to firstpar
 Step3: <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site" target="_blank"> Setup a custom domain </a>
 
 (Optional) Gain a free domain
+
 Step4: Gain a free domain from <a href="https://www.freenom.com/" target="_target"> here </a>
 
 Strp5: Add a CNAME record for your GitHub pages site.
