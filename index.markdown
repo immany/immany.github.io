@@ -4,3 +4,8 @@
 
 layout: home
 ---
+This page is powered by Github pages.
+
+Step to setup a GitHub pages with with custom domain:
+
+Step1: Sign up GitHub
