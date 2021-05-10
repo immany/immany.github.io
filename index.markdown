@@ -4,7 +4,7 @@
 
 layout: home
 ---
-This page is powered by Github pages.
+<h2>This page is powered by Github pages.</h2>
 
 Step to setup a GitHub pages with with custom domain:
 
