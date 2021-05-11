@@ -1,39 +1,77 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Privacy Home</title>
+        <style>
+            body {
+                background: #FFFFFF;
+            }
+
+            pre { outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+                .string { color: green; }
+                .number { color: darkorange; }
+                .boolean { color: blue; }
+                .null { color: magenta; }
+                .key { color: red; }
+        </style>
+        <title>Privacy Test</title>
         <meta name="description" content="" />
         <!--Development library -->
-<script src="//assets.adobedtm.com/b759b276f0a9afd7654e6d86801eb4a58225dd81/satelliteLib-d9f1477dc929e91ad59914480f1965ecf2959697-staging.js"></script>    
-    <script>
-        var adobePrivacy = new AdobePrivacy({
-         imsOrgID: "B5A2AA4556FCF6EC7F000101@AdobeOrg",
-         key: "mnydev",
-          reportSuite: "mcc024weretail01",
-         trackingServer: "adobemcc024.sc.omtrdc.net",
-         clientCode: "adobeinternalmcc024"
-        });
-        
-        
-        adobePrivacy.retrieveIdentities(function (results){
-          var retrieveIDsStr =  JSON.stringify(results.validIDs);
-          document.cookie = 'RETRIEVED_IDS=' + encodeURIComponent(retrieveIDsStr);
-          console.log("retrieveIDsStr is:", retrieveIDsStr); 
-          alert('retrieveIdentities end'); 
-          });
-</script>
+<script src="//assets.adobedtm.com/launch-EN0e9e268b5d3c4449bedf05a107ca18f1-development.min.js" async></script>
+        <!--Staging library -->
+        <!--<script src="//assets.adobedtm.com/launch-EN00e04a5adef14b7caed106d6937704a6.min.js"></script>-->
+        <!--Production library -->
+        <!--<script src="//assets.adobedtm.com/launch-EN5e891c3e23da436c831f23c3b578be20.min.js"></script>-->
+        <script>
+        var pageInfo = pageInfo || {};
+        pageInfo = {
+            page: {
+                pageName:"Privacy Test",
+                siteSection:"",
+                siteSubsection:"",
+                server:""
+            },
+            customer: {
+                loginStatus:"1",
+                customerID:"a001"
+            }
+        };
+        </script>	
+         <script>
+        function output(inp) {
+            var pre = document.querySelector(".output");
+            pre.innerHTML = inp;
+        }
+
+        function syntaxHighlight(json) {
+            json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+                var cls = 'number';
+                if (/^"/.test(match)) {
+                    if (/:$/.test(match)) {
+                        cls = 'key';
+                    } else {
+                        cls = 'string';
+                    }
+                } else if (/true|false/.test(match)) {
+                    cls = 'boolean';
+                } else if (/null/.test(match)) {
+                    cls = 'null';
+                }
+                return '<span class="' + cls + '">' + match + '</span>';
+            });
+        }
+  </script>
+
     </head>
     <body>
-        <h3>Launch is an MVP</h3>
-    
-        <img src="../img/blackdress.jpg" alt="blackdress" />
-        <button id= "retrieveID" type="button" onclick="adobePrivacy.retrieveIdentities(handleRetrievedIDs);">Retrieve Your Data</button>
+        <h3>Adobe Privacy JS test</h3>
+       
+        <button id= "retrieveID" type="button" >Retrieve Your Data</button>
 	    <button id= "removeID" type="button" >Remove Cookies</button><br /><br />
-	
-        <div id = "yourData">
+	   <div id = "yourData">
 		<pre class="output">
     	</pre>
     </div>
-    <script type="text/javascript">_satellite.pageBottom();</script>
+
    </body>
 </html>
