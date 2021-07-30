@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Launch Home</title>
+        <title>Product Details</title>
         <meta name="description" content="" />
          <script language="JavaScript" type="text/javascript">
         function targetPageParams() {
  		  return {
       		"entity": {
-         		"id": "100201",
-                "name":"How to feed'on a child",
-                "categoryId": "20181118",
-         		"value": 1520,
+         		"id": "100202",
+                "name":"Apple Watch",
+                "categoryId": "watch",
+         		"value": 15200,
          		"inventory": 1
     			  },
               "user":{
-                "categoryId": "women:activewear,wo1,wo2"
+                "categoryId": "watch"
              },
               "profile":{
                   "lastLoginv1" : "true"
@@ -29,7 +29,7 @@
         var pageInfo = pageInfo || {};
         pageInfo = {
             page: {
-                pageName:"Launch Page",
+                pageName:"Product Details Page",
                 siteSection:"",
                 siteSubsection:"",
                 server:""
@@ -44,17 +44,8 @@
     </head>
     <body>
         <div id="all">
-        <h3>Launch test page with Target v1</h3>
-        <!--<script type="text/javascript">
-            var imglist = new Array(
-                                            "../img/blackdress.jpg",
-                                            "../img/skijacket.jpg",
-                                            "../img/mujihero.jpg");
-   var selectnum = Math.floor(Math.random() * imglist.length);
-   var output = "<img src=" + imglist[selectnum] + ">";
-   document.write(output);
-</script>-->
-        <img id="mypic" src="../assets/img/eagle.png" width="1024" height="768">
+        <h3>Product Details - Watch</h3>
+        <img id="mypic" src="../assets/img/whitebird.png" width="1024" height="768">
         <input type="button" value="<<" onclick="go_back()">
         <input type="button" value=">>" onclick="go_forward()">
             <script>
@@ -87,20 +78,13 @@
             <p>a-click_catalog</p>
         </div>
             <a href="#" class="btn-link" onclick="window.alert('Hello world! #'); return false;"> Hello #</a>
-
-            <a href="detail.html"> Goto Details</a>
+        
+            
         <div class="target-home-mbox">recommendations</div>
 
         
         <div class="orderConfirmMbox">orderConfirm</div>
    </div>
-        <script>
-            console.log ("before pageBottom");
-        </script>
         <script type="text/javascript">_satellite.pageBottom();</script>
-        <script>
-            console.log ("after pageBottom");
-        </script>
-        
    </body>
 </html>
