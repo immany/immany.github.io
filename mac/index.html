@@ -23,26 +23,6 @@
    			};
 		};
     
-    var simpleDataProvider = {
-        name: "myThirdPartyDP",
-        version: "1.0.0",
-        provider: function(callback) {
-            callback(null, {
-                weather: Rainy,
-                profile:{
-                  memberStatus: Gold,
-                  country:{
-                    city:Tokyo
-                  }
-                }
-            });
-        }
-    };
-window.targetGlobalSettings = {
-        dataProviders: [
-            simpleDataProvider
-        ]
-    };
 </script>
         <!--Development library 2-->
         <script src="//assets.adobedtm.com/launch-EN0e9e268b5d3c4449bedf05a107ca18f1-development.min.js"></script>
