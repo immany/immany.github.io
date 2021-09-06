@@ -32,12 +32,21 @@ function s_doPlugins(s) {
   //s.campaign = s.Util.getQueryParam("");
   console.log("Helo doPlugin");
   s.prop1="SetByPlugin";
+  /*s.AudienceManagement.setup({
+    "partner":"mcc024",
+    "containerNSID":0,
+    "uuidCookie": {
+         "name":"aam_uuid",
+         "days":30
+    },
+    "visitorService": {
+         "namespace": "B5A2AA4556FCF6EC7F000101@AdobeOrg"
+    }
+});*/
 };
 s.doPlugins=s_doPlugins;
 
 //s.loadModule("AudienceManagement");
-
-
 
 /*
  Start ActivityMap Module
