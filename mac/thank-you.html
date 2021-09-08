@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Thank you</title>
+        <meta name="description" content="" />
+ 
+         <script language="JavaScript" type="text/javascript">
+        function targetPageParams() {
+ 		  return {
+      		"entity": {
+         		"id": "100201",
+                "name":"How to feed'on a child",
+                "categoryId": "20181118",
+         		"value": 1520,
+         		"inventory": 1
+    			  },
+              "user":{
+                "status": "business"
+             },
+              "profile":{
+                  "lastLogin" : "true"
+              }
+   			};
+		};
+    </script>
+  <script>
+  ;(function(win, doc, style, timeout) {
+    var STYLE_ID = 'at-body-style';
+    function getParent() {
+      return doc.getElementsByTagName('head')[0];
+    }
+    function addStyle(parent, id, def) {
+      if (!parent) {
+        return;
+      }
+      var style = doc.createElement('style');
+      style.id = id;
+      style.innerHTML = def;
+      parent.appendChild(style);
+    }
+    function removeStyle(parent, id) {
+      if (!parent) {
+        return;
+      }
+      var style = doc.getElementById(id);
+      if (!style) {
+        return;
+      }
+      parent.removeChild(style);
+    }
+    addStyle(getParent(), STYLE_ID, style);
+    setTimeout(function() {
+      removeStyle(getParent(), STYLE_ID);
+    }, timeout);
+  }(window, document, "body {opacity: 0 !important}", 3000));
+
+        </script>
+       <script src="//assets.adobedtm.com/launch-EN896cc70a5ae04727abb15c6f43d53f9d-development.min.js" async></script>
+
+    </head>
+    <body>
+        <h3>Thank you for your order!</h3>
+        <img src="../assets/img/bluebird.png" alt="bluebird" />
+        <br>
+        <h2> Hello AT 2.0 </h2>
+        <!--<img id="awss3" src="https://mny-acc-inbound.s3-ap-northeast-1.amazonaws.com/adobesummit.png" />
+        <img id="awss1" src="https://mny-acc-inbound.s3-ap-northeast-1.amazonaws.com/Adobeawards.png" />-->
+        <div id="downloadCSV">
+            <a href="../assets/feed/feed010.csv">downFeed</a>
+        </div>
+	<div id="gotoAdobe">
+            <a href="https://www.adobe.com">gotoAdobe</a>
+        </div>
+        <div class="orderConfirmMbox">orderConfirm</div>
+    </body>
+</html>
