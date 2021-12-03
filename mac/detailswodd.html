@@ -1,8 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>home page with At 2.x ODD</title>
+        <title>product details page with At 2.x ODD</title>
         <meta name="description" content="" />
+ 
+         <script language="JavaScript" type="text/javascript">
+        function targetPageParams() {
+ 		  return {
+      		"entity": {
+         		"id": "PHONE211201001",
+            "name":"Phone 2021001",
+            "categoryId": "Cell Phone",
+         		"value": 1520,
+         		"inventory": 1
+    			  },
+              "user":{
+                "status": "business"
+             },
+              "profile":{
+                  "lastLogin" : "true"
+              }
+   			};
+		};
+    </script>
   <script>
   ;(function(win, doc, style, timeout) {
     var STYLE_ID = 'at-body-style';
@@ -39,7 +59,7 @@
 
     </head>
     <body>
-        <h3>Home Page</h3>
+        <h3>Product Details</h3>
         <br>
         <h2> Hello AT 2.0 with On-Device-Decsisioning </h2>
         <!--<img id="awss3" src="https://mny-acc-inbound.s3-ap-northeast-1.amazonaws.com/adobesummit.png" />
@@ -47,8 +67,8 @@
         <div id="downloadCSV">
             <a href="../assets/feed/feed010.csv">downFeed</a>
         </div>
-	<div id="gotoDetail">
-            <a href="detailswodd.html">Check out</a>
+	<div id="gotoIndex">
+            <a href="indexwodd.html">Back to Home</a>
         </div>
         <div class="orderConfirmMbox">orderConfirm</div>
     </body>
