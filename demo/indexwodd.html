@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>home page with At 2.x ODD</title>
+        <meta name="description" content="" />
+  <script>
+  ;(function(win, doc, style, timeout) {
+    var STYLE_ID = 'at-body-style';
+    function getParent() {
+      return doc.getElementsByTagName('head')[0];
+    }
+    function addStyle(parent, id, def) {
+      if (!parent) {
+        return;
+      }
+      var style = doc.createElement('style');
+      style.id = id;
+      style.innerHTML = def;
+      parent.appendChild(style);
+    }
+    function removeStyle(parent, id) {
+      if (!parent) {
+        return;
+      }
+      var style = doc.getElementById(id);
+      if (!style) {
+        return;
+      }
+      parent.removeChild(style);
+    }
+    addStyle(getParent(), STYLE_ID, style);
+    setTimeout(function() {
+      removeStyle(getParent(), STYLE_ID);
+    }, timeout);
+  }(window, document, "body {opacity: 0 !important}", 3000));
+
+        </script>
+       <script src="https://assets.adobedtm.com/6476151305ce/1d6b50ecc6f2/launch-EN310d235f438c44f9abfa977c20117feb-development.min.js" async></script>
+    </head>
+    <body>
+        <h3>Home Page</h3>
+        <br>
+        <h2 id="oddtitle"> Hello AT with On-Device-Decisioning </h2>
+        <!--<img id="awss3" src="https://mny-acc-inbound.s3-ap-northeast-1.amazonaws.com/adobesummit.png" />
+        <img id="awss1" src="https://mny-acc-inbound.s3-ap-northeast-1.amazonaws.com/Adobeawards.png" />-->
+	      <div id="gotoDetail">
+            <a href="../mac/detailswodd.html">Check out</a>
+        </div>
+        <div class="orderConfirmMbox">orderConfirm</div>
+    </body>
+</html>
