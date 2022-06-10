@@ -31,7 +31,193 @@
          	    s.tl(true,"o",linkName);
          }
         </script>
-        
+        <script>
+            let fontLoader = function (param) {
+                var headID = document.getElementsByTagName('head')[0];
+                var link = document.createElement('link');
+                link.type = 'text/css';
+                link.rel = 'stylesheet';
+                link.href = 'https://fonts.googleapis.com/css?family=' + param.family + '&display=' + param.display;
+                headID.appendChild(link);
+            };
+            fontLoader({
+                family: 'Noto+Sans+JP:wght@300;400;700',
+                display: 'swap'
+            });
+            
+            let mystyles = `
+            :root {
+              --dark-grey: #2e2e2e;
+              --primary-white: #f7f7f7;
+              --deep-bordeaux: #78050a;
+              --40-grey: #b2b2b2;
+              --digital-beige: #f5f3eb;
+              --small: 'only screen and (min-width: 576px)  and (max-width: 767px)';
+              --xsmall: 'only screen and (max-width: 575px)';
+            }
+            * {
+              box-sizing: border-box;
+            }
+            body {
+              /* background-color: #c3cfe27e; */
+              /*   height: 2000px; */
+              /*   font-family: 'Noto Sans JP', sans-serif; */
+            }
+            .modal_banner {
+              position: fixed;
+              width: 605px;
+              height: 84px;
+              bottom: 20px;
+              right: 20px;
+              display: flex;
+              align-items: center;
+              text-align: center;
+              justify-content: center;
+              /* New palette/Primary/Digital/Deep Bordeaux */
+              background: #78050A;
+              /* Forms/Button shadow */
+              box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.084);
+              border-radius: 4px;
+              z-index: 1000;
+            }
+            .modal_banner p {   
+              font-style: normal;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 150%;
+              max-width: 500px; letter-spacing: 0.04em;
+              /* word-break: keep-all; */
+              letter-spacing: 0.04em;
+              /* New palette/Primary/White */
+              color: #FFFFFF;
+              margin: 0;
+            }
+            #closeButton {
+              position: absolute;
+              right: 10px;
+              height: 84px;
+              top: 1px;
+              width: 50px;
+              background: none;
+              color: inherit;
+              border: none;
+              font: inherit;
+              cursor: pointer;
+              outline: inherit;
+            }
+            .angles-right {
+              display: inline-block;  position: absolute;
+              vertical-align: middle; 
+              padding-top: 3px;
+            }
+            .break-line {
+              display: none;
+            }
+            @media only screen and (max-width: 768px) {
+              .modal_banner {
+                right: 0;
+                left: 0;
+                margin-left: auto;
+                margin-right: auto;
+                width: 95%
+              }
+              .modal_banner p {
+              width: 85%;
+              }
+              .break-line {
+                display: block;
+              }
+              #closeButton {
+                right: 10px;
+              }
+            }
+            `;
+            let styleSheet = document.createElement("style")
+            styleSheet.innerText = mystyles;
+            document.getElementsByTagName('head')[0].appendChild(styleSheet);
+            
+            
+            let mystr =  '<div class="modal_banner" id="modal_banner">\n' +
+            '      <a href="https://www.sc.mufg.jp/products/trust/pictet_special/index.html?utm_source=pictet_maestro&utm_medium=referral&utm_campaign=floating_banner#lineup">\n' +
+            '      <p>\n' +
+            '        三菱ＵＦＪモルガン・スタンレー証券のWebサイトへ戻る　\n' +
+            '        <span class="angles-right">\n' +
+            '          <svg\n' +
+            '            xmlns="http://www.w3.org/2000/svg"\n' +
+            '            width="18px"\n' +
+            '            height="24px"\n' +
+            '            viewBox="0 0 448 512"\n' +
+            '          >\n' +
+            '            <path\n' +
+            '              fill="white"\n' +
+            '              d="M246.6 233.4l-160-160c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L178.8 256l-137.4 137.4c-12.5 12.5-12.5 32.75 0 45.25C47.63 444.9 55.81 448 64 448s16.38-3.125 22.62-9.375l160-160C259.1 266.1 259.1 245.9 246.6 233.4zM438.6 233.4l-160-160c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L370.8 256l-137.4 137.4c-12.5 12.5-12.5 32.75 0 45.25C239.6 444.9 247.8 448 256 448s16.38-3.125 22.62-9.375l160-160C451.1 266.1 451.1 245.9 438.6 233.4z"\n' +
+            '            />\n' +
+            '          </svg>\n' +
+            '        </span>\n' +
+            '      </p>\n' +
+            '      </a>\n' +
+            '      <button id="closeButton" onclick="closeBanner()">\n' +
+            '        <svg\n' +
+            '          xmlns="http://www.w3.org/2000/svg"\n' +
+            '          width="18px"\n' +
+            '          height="24px"\n' +
+            '          viewBox="0 0 50 50"\n' +
+            '          overflow="visible"\n' +
+            '          stroke="white"\n' +
+            '          stroke-width="7"\n' +
+            '          stroke-linecap="round"\n' +
+            '        >\n' +
+            '          <line x2="50" y2="50" />\n' +
+            '          <line x1="50" y2="50" />\n' +
+            '        </svg>\n' +
+            '      </button>\n' +
+            '    </div>\n';
+            let bodyId = document.querySelector('#container-b818260d97');
+            bodyId.insertAdjacentHTML('beforeend', mystr);
+            
+            // Get the modal
+            /*
+            let modal = document.getElementById('theModal');
+            // When the user clicks the button, open the modal
+            function openModal() {
+                modal.style.display = "block"
+            }
+            function closeModal() {
+                modal.style.display = "none"
+            }
+            // When the user clicks anywhere outside of the modal, close it
+            
+            window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none"
+            }
+            }
+            
+            openModal();
+            */
+            
+            // Get the banner button
+            const bannerBtn = document.getElementById('modal_banner')
+            // When the user clicks the close button 
+            function closeBanner() {
+                  bannerBtn.style.display = "none";
+            }
+            
+            /*
+            let ghead1 = document.getElementsByTagName("head")[0];
+            let gscript1 = document.createElement("script");
+            gscript1.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js";
+            gscript1.onload = function(){
+                  // Get the banner button
+                  var bannerBtn = document.getElementById('closeButton', window)
+                  // When the user clicks the close button 
+                  function closeBanner() {
+                    console.log("close banner");
+                  }
+            };
+            ghead1.appendChild(gscript1);
+            */
+            </script>
     </head>
     <body>
         <h3>Hello World!</h3>
