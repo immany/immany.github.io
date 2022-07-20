@@ -1,0 +1,8 @@
+## RECSRecommendations Upload File
+## RECS''## RECS'' indicates a Recommendations pre-process header. Please do not remove these lines.
+## RECS
+## RECSUse this file to upload product display information to Recommendations. Each product has its own row. Each line must contain 19 values and if not all are filled a space should be left.
+## RECSThe last 100 columns (entity.custom1 - entity.custom100) are custom. The name 'customN' can be replaced with a custom name such as 'onSale' or 'brand'.
+## RECSIf the products already exist in Recommendations then changes uploaded here will override the data in Recommendations. Any new attributes entered here will be added to the product''s entry in Recommendations.
+## RECSentity.id,entity.name,entity.categoryId,entity.message,entity.thumbnailUrl,entity.value,entity.pageUrl,entity.inventory,entity.margin,entity.fundCategory,entity.fundLiskLevel,entity.installNisa,entity.fundtypeNoload,entity.fundtypeIndex,entity.fundtypeMonthly,entity.biginnerflg,entity.fundtypeArea,"entity.type,"
+"fund_534023","LM･XXXXX(毎月分配型)",,,"//www.XXX.co.jp/investment/images/recommend/200810310A.jpg",,"//fund.XXXXXXXX.co.jp/webasp/aeon-bank/basic/snp/snp_5331108A.html","1",,"新興国債券","4","0","0","0","1","0","中南米","fund"
