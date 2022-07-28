@@ -1,26 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>home page by AEP Web SDK</title>
+        <title>Thank you</title>
         <meta name="description" content="" />
- 
-         <script language="JavaScript" type="text/javascript">
-        
-            var atParamater = atParamater || {};
-                atParamater = {                    __adobe: {
-                      target: {
-                        "profile.lastLogin": "true",
-                        "entity.id": "100210",
-                        "entity.genre": "Watch",
-                        "entity.name": "Apple Watch",
-                        "entity.value": 520,
-                        "entity.inventory": 1000,
-                        "at_property": "ec0e24bb-f8cd-7846-65aa-9986bae8f62d"
-                      }
-                    }
-                };
-
-    </script>
   <script>
   ;(function(win, doc, style, timeout) {
     var STYLE_ID = 'at-body-style';
@@ -53,14 +35,28 @@
   }(window, document, "body {opacity: 0 !important}", 3000));
 
         </script>
-       <script src="//assets.adobedtm.com/launch-EN4aa8e84762b8475ea1279daaa40ea203-development.min.js" async></script>
-
+      <script src="https://assets.adobedtm.com/e86375963f1b/e12431265151/launch-b479fe2e6ad3-development.min.js" async></script>
+      <script>
+        var pageInfo = pageInfo || {};
+        pageInfo = {
+            page: {
+                pageName:"Thank you for your order",
+                siteSection:"",
+                siteSubsection:"",
+                server:""
+            },
+            customer: {
+                loginStatus:"1",
+                customerID:"a001"
+            }
+        };
+        </script>	
     </head>
     <body>
-        <h3>Please check your order detail</h3>
+        <h3>Thank you for your order!</h3>
         <img src="../assets/img/bluebird.png" alt="bluebird" />
         <br>
-        <h2> Hello Alloy !</h2>
+        <h2> Welcome back again! </h2>
         <!--<img id="awss3" src="https://mny-acc-inbound.s3-ap-northeast-1.amazonaws.com/adobesummit.png" />
         <img id="awss1" src="https://mny-acc-inbound.s3-ap-northeast-1.amazonaws.com/Adobeawards.png" />-->
         <div id="downloadCSV">
@@ -70,5 +66,7 @@
             <a href="https://www.adobe.com">gotoAdobe</a>
         </div>
         <div class="orderConfirmMbox">orderConfirm</div>
+        <br>
+        <a href="indexaep.html"> Back to Home</a>
     </body>
 </html>
