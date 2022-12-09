@@ -2,7 +2,7 @@
   "relation": ["delegate_permission/common.handle_all_urls"],
   "target": {
     "namespace": "android_app",
-    "package_name": "sampleapp",
+    "package_name": "com.adobe.marketing.mobile.sampleapp",
     "sha256_cert_fingerprints":
     ["78:56:70:18:B9:90:B6:13:49:72:A9:9A:A9:9D:2B:EA:0D:97:F0:5A:92:EA:A8:68:F4:DE:0C:8C:86:CF:62:3D"]
   }
