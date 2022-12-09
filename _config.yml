@@ -32,9 +32,10 @@ repository: immany/immany.github.io
 theme: minima
 #remote_theme: "mmistakes/minimal-mistakes@4.22.0"
 #theme: jekyll-theme-minimal
+include: [".well-known"]
 plugins:
   - jekyll-feed
-include:[".well-known"]
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
