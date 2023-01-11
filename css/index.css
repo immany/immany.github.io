@@ -1,0 +1,72 @@
+body {
+    margin: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+button {
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+}
+
+fieldset {
+    width: auto;
+    display: inline-block;
+    padding: 10px;
+    border-color: white;
+}
+legend {
+    font-weight: bold;
+}
+label {
+    display: block;
+}
+.wizard, .multiple {
+    display: inline-block;
+    vertical-align: top;
+}
+.w {
+    display: none;
+}
+
+.screen1 {
+    display: block;
+}
+.loading {
+    visibility: hidden;
+}
+.choose-ui {
+    margin: 45px 0;
+}
+.choose-ui span {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.choose-ui h4 {
+    display: inline;
+}
+.consent-ui {
+    height: 220px;
+    background: #f6f6f6;
+    padding-top: 30px;
+    margin-bottom: 45px;
+    padding-left: 30px;
+}
+.consent-ui > div {
+    display: none;
+}
+.target-ui h3 {
+    color: #c52e2e;
+}
+.target-ui h1 {
+    color: #4cc425;
+}
+.visitor-ui .btnGetMid {
+    margin-left: 0;
+}
+.msg {
+    font-style: italic;
+    font-size: 90%;
+    font-weight: bold;
+    color: #665353;
+}
