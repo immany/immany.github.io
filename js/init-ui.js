@@ -73,8 +73,8 @@ function makeConsentAction(action) {
 //    }
 // });
 
-btnGive.addEventListener("click", makeConsentAction("approve"));
-btnDeny.addEventListener("click", makeConsentAction("deny"));
+//btnGive.addEventListener("click", makeConsentAction("approve"));
+//btnDeny.addEventListener("click", makeConsentAction("deny"));
 
 !!btnGetMid && btnGetMid.addEventListener("click", function () {
     if (!adobe.optIn.isApproved("ecid")) {
