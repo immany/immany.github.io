@@ -40,7 +40,13 @@
             }
         };
         </script>	
+    <script language="JavaScript" type="text/javascript">
+        function getForwardUrl(strUrl) {
+             var visitorIdInstance = _satellite.getVisitorId();
 
+            return visitorIdInstance.appendVisitorIDsTo(strUrl);
+        };
+    </script>
     </head>
     <body>
         <div id="all">
@@ -74,6 +80,8 @@
             </script>
         <!--<img src="../img/blackdress.jpg" alt="blackdress" />-->
         <br>
+        
+       
         <div a-click_catalog>
             <p>a-click_catalog</p>
         </div>
@@ -84,8 +92,8 @@
 
         
         <div class="orderConfirmMbox">orderConfirm</div>
-
-        <a href="detailscse.html"> Goto Product Details</a>
+        
+        <a href="getForwardUrl('https://cxdemo.dxleague.tk/mac/detailscse.html')"> Goto Product Details</a>
    </div>
         <script type="text/javascript">_satellite.pageBottom();</script>
    </body>
