@@ -41,10 +41,10 @@
         };
         </script>	
     <script language="JavaScript" type="text/javascript">
-        function getForwardUrl(strUrl) {
+        function getForwardUrl() {
              var visitorIdInstance = _satellite.getVisitorId();
-
-            return visitorIdInstance.appendVisitorIDsTo(strUrl);
+            var strUrl ="https://cxdemo.dxleague.tk/mac/detailscse.html";
+            document.getElementById("gotoDetails").href = visitorIdInstance.appendVisitorIDsTo(strUrl);
         };
     </script>
     </head>
@@ -93,7 +93,7 @@
         
         <div class="orderConfirmMbox">orderConfirm</div>
         
-        <a href=getForwardUrl('https://cxdemo.dxleague.tk/mac/detailscse.html')> Goto Product Details</a>
+        <a id="gotoDetails" href=""> Goto Product Details</a>
    </div>
         <script type="text/javascript">_satellite.pageBottom();</script>
    </body>
