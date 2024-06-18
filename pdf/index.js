@@ -22,11 +22,11 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
     /* Initialize the AdobeDC View object */
     var adobeDCView = new AdobeDC.View({
         /* Pass your registered client id */
-        clientId: "<YOUR_CLIENT_ID>",
+        clientId: "18a28273529847838cd64548da6a864d",
         /* Pass the div id in which PDF should be rendered */
         divId: "adobe-dc-view",
         /* Pass the Adobe Analytics report suite ID. */
-        reportSuiteId: "<YOUR_REPORT_SUITE_ID>"
+        reportSuiteId: "mcc024wemedia01"
     });
 
     /* Invoke the file preview API on Adobe DC View object */
