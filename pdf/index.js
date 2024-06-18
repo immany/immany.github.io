@@ -26,7 +26,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
         /* Pass the div id in which PDF should be rendered */
         divId: "adobe-dc-view",
         /* Pass the Adobe Analytics report suite ID. */
-        reportSuiteId: "mcc024wemedia01"
+        reportSuiteId: "ags1730news"
     });
 
     /* Invoke the file preview API on Adobe DC View object */
