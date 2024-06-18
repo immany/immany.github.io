@@ -22,7 +22,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
     /* Initialize the AdobeDC View object */
     var adobeDCView = new AdobeDC.View({
         /* Pass your registered client id */
-        clientId: "18a28273529847838cd64548da6a864d",
+        clientId: "84d17b3eb8564a30b8dd6020a66016dd",
         /* Pass the div id in which PDF should be rendered */
         divId: "adobe-dc-view",
         /* Pass the Adobe Analytics report suite ID. */
