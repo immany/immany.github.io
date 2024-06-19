@@ -1,5 +1,5 @@
 /*
-Copyright 2022 Adobe
+Copyright 2019 Adobe
 All Rights Reserved.
 
 NOTICE: Adobe permits you to use, modify, and distribute this file in
@@ -9,24 +9,14 @@ then your use, modification, or distribution of it requires the prior
 written permission of Adobe.
 */
 
-/* Pass the viewer customization options here. */
-const viewerConfig = {
-    showPrintPDF: true,
-    showDownloadPDF: true,
-    defaultViewMode: "", /* Allowed possible values are "FIT_PAGE", "FIT_WIDTH", "TWO_COLUMN", "TWO_COLUMN_FIT_PAGE" or "". */
-    embedMode: "FULL_WINDOW" /* Pass the embed mode here. */
-};
-
 /* Wait for Adobe Acrobat Services PDF Embed API to be ready */
 document.addEventListener("adobe_dc_view_sdk.ready", function () {
     /* Initialize the AdobeDC View object */
     var adobeDCView = new AdobeDC.View({
         /* Pass your registered client id */
-        clientId: "84d17b3eb8564a30b8dd6020a66016dd",
+        clientId: "<YOUR_CLIENT_ID>",
         /* Pass the div id in which PDF should be rendered */
         divId: "adobe-dc-view",
-        /* Pass the Adobe Analytics report suite ID. */
-        reportSuiteId: "ags1730news"
     });
 
     /* Invoke the file preview API on Adobe DC View object */
@@ -38,7 +28,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
                 url: "https://acrobatservices.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf",
                 /*
                 If the file URL requires some additional headers, then it can be passed as follows:-
-                header: [
+                headers: [
                     {
                         key: "<HEADER_KEY>",
                         value: "<HEADER_VALUE>",
@@ -52,5 +42,20 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
             /* file name */
             fileName: "Bodea Brochure.pdf"
         }
-    }, viewerConfig);
+    }, {});
+
+    /* Register the callback to receive the events */
+    adobeDCView.registerCallback(
+        /* Type of call back */
+        AdobeDC.View.Enum.CallbackType.EVENT_LISTENER,
+        /* call back function */
+        function (event) {
+            console.log(event);
+        },
+        /* options to control the callback execution */
+        {
+            /* Enable PDF analytics events on user interaction. */
+            enablePDFAnalytics: true,
+        }
+    );
 });
