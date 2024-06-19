@@ -51,11 +51,13 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
         /* call back function */
         function (event) {
             console.log(event);
+            document.dispatchEvent(event);
         },
         /* options to control the callback execution */
         {
             /* Enable PDF analytics events on user interaction. */
-            enablePDFAnalytics: true,
+            //enablePDFAnalytics: true,
+            
         }
     );
 });
