@@ -56,7 +56,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
         /* options to control the callback execution */
         {
             /* Enable PDF analytics events on user interaction. */
-            //enablePDFAnalytics: true,
+            enablePDFAnalytics: true,
             
         }
     );
