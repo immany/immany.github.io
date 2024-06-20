@@ -53,9 +53,9 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
             console.log(event);
             if (event.type == "PDF_VIEWER_READY"}{
                 adobeDataLayer.push({"event":event.type);
-            } else if(event.type == "DOCUMENT_OPEN"){
+            }else if (event.type == "DOCUMENT_OPEN"){
                 adobeDataLayer.push({"event": event.type, "pdf.fileName": event.data.fileName});
-            } else if(event.type == "TEXT_SEARCH"){
+            }else if(event.type == "TEXT_SEARCH"){
                 adobeDataLayer.push({"event": event.type, "pdf.fileName": event.data.fileName, "pdf.textSearch": event.data.searchedText});
             }
         },
