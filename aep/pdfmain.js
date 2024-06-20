@@ -52,7 +52,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
         function (event) {
             console.log(event);
             if (event.type == "PDF_VIEWER_READY"}{
-                adobeDataLayer.push({"event":event.type);
+                adobeDataLayer.push({"event":event.type});
             }else if (event.type == "DOCUMENT_OPEN"){
                 adobeDataLayer.push({"event": event.type, "pdf.fileName": event.data.fileName});
             }else if(event.type == "TEXT_SEARCH"){
