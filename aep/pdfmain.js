@@ -51,7 +51,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
         /* call back function */
         function (event) {
             console.log(event);
-            document.dispatchEvent(event);
+            document.addEventListener(event);
         },
         /* options to control the callback execution */
         {
