@@ -12,6 +12,7 @@ written permission of Adobe.
 /* Pass the embed mode option here */
 const viewerConfig = {
     showPrintPDF: false,
+    showDownloadPDF: false,
     embedMode: "LIGHT_BOX"
 };
 
