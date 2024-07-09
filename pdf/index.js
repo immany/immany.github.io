@@ -14,7 +14,7 @@ const viewerConfig = {
     showPrintPDF: true,
     showDownloadPDF: true,
     defaultViewMode: "", /* Allowed possible values are "FIT_PAGE", "FIT_WIDTH", "TWO_COLUMN", "TWO_COLUMN_FIT_PAGE" or "". */
-    embedMode: "FULL_WINDOW" /* Pass the embed mode here. */
+    embedMode: "LIGHT_BOX" /* Pass the embed mode here. */
 };
 
 /* Wait for Adobe Acrobat Services PDF Embed API to be ready */
