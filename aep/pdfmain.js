@@ -42,7 +42,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
             /* file name */
             fileName: "Bodea Brochure.pdf"
         }
-    }, {});
+    }, {embedMode: "IN_LINE"});
 
     /* Register the callback to receive the events */
     adobeDCView.registerCallback(
