@@ -62,7 +62,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
                 adobeDataLayer.push({"event":event.type});
             }else if (event.type == "DOCUMENT_OPEN"){
                 adobeDataLayer.push({"event": event.type, "pdf":{"FileName": event.data.fileName}});
-            else if (event.type == "PAGE_VIEW"){
+            }else if (event.type == "PAGE_VIEW"){
                 adobeDataLayer.push({"event": event.type, "pdf":{"FileName": event.data.fileName, "pageNumber": event.data.pageNumber}});
             }else if(event.type == "TEXT_SEARCH"){
                 adobeDataLayer.push({"event": event.type, "pdf":{"FileName": event.data.fileName, "textSearch": event.data.searchedText}});
