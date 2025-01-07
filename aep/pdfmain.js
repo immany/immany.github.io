@@ -23,8 +23,9 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
     const eventOptions = {
       //Pass the PDF analytics events to receive.
       //If no event is passed in listenOn, then all PDF analytics events will be received.
-      listenOn: [AdobeDC.View.Enum.Events.PDF_VIEWER_OPEN, AdobeDC.View.Enum.PDFAnalyticsEvents.PAGE_VIEW, AdobeDC.View.Enum.PDFAnalyticsEvents.DOCUMENT_OPEN, AdobeDC.View.Enum.PDFAnalyticsEvents.TEXT_SEARCH],
-      enablePDFAnalytics: true
+      //listenOn: [AdobeDC.View.Enum.Events.PDF_VIEWER_OPEN, AdobeDC.View.Enum.PDFAnalyticsEvents.PAGE_VIEW, AdobeDC.View.Enum.PDFAnalyticsEvents.DOCUMENT_OPEN, AdobeDC.View.Enum.PDFAnalyticsEvents.TEXT_SEARCH],
+      enablePDFAnalytics: true,
+      enableFilePreviewEvents: true
     };
     /* Invoke the file preview API on Adobe DC View object */
     adobeDCView.previewFile({
