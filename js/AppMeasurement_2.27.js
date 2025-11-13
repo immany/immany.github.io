@@ -48,8 +48,7 @@ function s_doPlugins(s) {
 s.doPlugins=s_doPlugins;
 
 //s.loadModule("AudienceManagement");
-*
-
+/*
  Start ActivityMap Module
 
  The following module enables ActivityMap tracking in Adobe Analytics, offering
