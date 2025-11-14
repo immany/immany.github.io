@@ -3,7 +3,7 @@ var s=s_gi(s_account);
 /************************** CONFIG SECTION **************************/
 /* You may add or alter any code config here. */
 s.charSet="UTF-8";
-//s.cookieDomainPeriods="2";
+s.cookieDomainPeriods="3";
 /* Conversion Config */
 s.currencyCode="JPY";
 /* Link Tracking Config */
