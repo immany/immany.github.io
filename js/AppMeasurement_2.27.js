@@ -3,7 +3,7 @@ var s=s_gi(s_account);
 /************************** CONFIG SECTION **************************/
 /* You may add or alter any code config here. */
 s.charSet="UTF-8";
-s.cookieDomainPeriods="3";
+s.cookieDomainPeriods="2";
 /* Conversion Config */
 s.currencyCode="JPY";
 /* Link Tracking Config */
@@ -11,7 +11,7 @@ s.trackDownloadLinks=true;
 s.trackExternalLinks=true;
 s.trackInlineStats=true;
 s.linkDownloadFileTypes="exe,zip,wav,mp3,mov,mpg,avi,wmv,pdf,doc,docx,xls,xlsx,ppt,pptx";
-s.linkInternalFilters="javascript:,mnakayama.businesscatalyst.com,mnydev.worldsecuresystems.com";
+s.linkInternalFilters="javascript:immany.github.io";
 s.linkLeaveQueryString=false;
 s.linkTrackVars="None";
 s.linkTrackEvents="None";
@@ -28,7 +28,7 @@ s.trackingServer="adobemcc024.data.adobedc.net";
 //s.trackingServer="adobemcc024.sc.omtrdc.net";
 //s.visitorID = "f28cea7f-598f-4293-b249-0ae153a564e4";
 //fid をセット
-s.visitorID="59116988668BBCA4-2B963853DA44D4D8";
+//s.visitorID="59116988668BBCA4-2B963853DA44D4D8";
 
 s.usePlugins=true;
 function s_doPlugins(s) {
