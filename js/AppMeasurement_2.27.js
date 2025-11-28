@@ -17,7 +17,7 @@ s.linkTrackVars="None";
 s.linkTrackEvents="None";
 
 //s.visitor = Visitor.getInstance("B5A2AA4556FCF6EC7F000101@AdobeOrg");
-
+s.collectHighEntropyUserAgentHints = true;
 
 /* WARNING: Changing any of the below variables will cause drastic
 changes to how your visitor data is collected.  Changes should only be
@@ -26,7 +26,7 @@ s.debugTracking=true;
 s.visitorNamespace="adobemcc024";
 s.trackingServer="adobemcc024.data.adobedc.net";
 //s.trackingServer="adobemcc024.sc.omtrdc.net";
-s.visitorID = "cx20251114001";
+//s.visitorID = "cx20251114001";
 //fid をセット
 //s.visitorID="59116988668BBCA4-2B963853DA44D4D8";
 
