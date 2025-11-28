@@ -13,14 +13,14 @@ window.visitor = Visitor.getInstance("840813355385EAFC0A490D4D@AdobeOrg", {
 
 var s_lastModified = '251216';
 
-var s_account = 'rcrtairrsvbackdev';
-if (location.host === 'airreserve.net') {
+var s_account = 'mcc024wemedia01';
+/*if (location.host === 'airreserve.net') {
 	//譛ｬ逡ｪ迺ｰ蠅�畑RSID
 	s_account = 'rcrtairrsvbackprd';
 } else {
 	//髢狗匱迺ｰ蠅�畑RSID
 	s_account = 'rcrtairrsvbackdev';
-}
+}*/
 var s = s_gi(s_account);
 
 /************************** CONFIG SECTION **************************/
