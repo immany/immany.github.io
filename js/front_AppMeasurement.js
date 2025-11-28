@@ -39,7 +39,7 @@ s.linkTrackVars = 'None';
 s.linkTrackEvents = 'None';
 
 /* User Agent Config */
-s.collectHighEntropyUserAgentHints = true;
+//s.collectHighEntropyUserAgentHints = true;
 
 /* WARNING: Changing any of the below variables will cause drastic
  changes to how your visitor data is collected.  Changes should only be
@@ -47,6 +47,8 @@ s.collectHighEntropyUserAgentHints = true;
 s.visitorNamespace = 'recruit';
 s.trackingServer="aa-metrics.airrsv.net"
 s.visitor = Visitor.getInstance("B5A2AA4556FCF6EC7F000101@AdobeOrg");
+
+s.collectHighEntropyUserAgentHints = true;
 
 /* Plugin Config */
 s.usePlugins = true;
