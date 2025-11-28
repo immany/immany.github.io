@@ -37,7 +37,7 @@ s.linkInternalFilters = 'javascript:,airrsv.net,cdst.airrsv.net,cdst.dev1-shr-rs
 s.linkLeaveQueryString = false;
 s.linkTrackVars = 'None';
 s.linkTrackEvents = 'None';
-
+s.debugTracking=true;
 /* User Agent Config */
 //s.collectHighEntropyUserAgentHints = true;
 
